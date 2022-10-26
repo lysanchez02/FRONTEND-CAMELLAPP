@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import CategoriaView from '../views/CategoriaView.vue'
+import ObraGrisView from '../views/ObraGrisView.vue'
+import ObraBlancaView from '../views/ObraBlancaView.vue'
+import ObraNegraView from '../views/ObraNegraView.vue'
 
 Vue.use(VueRouter)
 
@@ -9,6 +13,26 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/CategoriaView',
+    name: 'CategoriaView',
+    component: CategoriaView
+  },
+  {
+    path: '/ObraGrisView',
+    name: 'ObraGrisView',
+    component: ObraGrisView
+  },
+  {
+    path: '/ObraBlancaView',
+    name: 'ObraBlancaView',
+    component: ObraBlancaView
+  },
+  {
+    path: '/ObraNegraView',
+    name: 'ObraNegraView',
+    component: ObraNegraView
   },
   {
     path: '/about',
