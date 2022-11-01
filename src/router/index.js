@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import LoginView from '../views/login/LoginView.vue'
 import RegistroView from '../views/login/RegistroView.vue'
+import ExperienciaView from '../views/login/ExperienciaView.vue'
+
 
 Vue.use(VueRouter)
 
@@ -21,6 +23,11 @@ const routes = [
     path: '/RegistroView',
     name: 'RegistroView',
     component: RegistroView
+  },
+  {
+    path: '/experiencia',
+    name: 'experiencia',
+    component: ExperienciaView 
   },
   {
     path: '/about',
