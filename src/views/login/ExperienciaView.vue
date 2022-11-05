@@ -49,8 +49,8 @@
                     </b-col>
                 </b-row><br>
                 
-                    <button class="Boton1">EDITAR</button>
-                    <button class="Boton2">GUARDAR</button>
+                    <B-button class="Boton1">EDITAR</B-button>
+                    <B-button class="Boton2">GUARDAR</B-button>
                 
             </div>
 
@@ -64,15 +64,15 @@
 
 <style>
 .formContent1 {
-    max-width: 40em;
-    max-height: 150em;
+    max-width: 35em;
+    max-height: 80em;
     background-color: black;
     margin: auto;
-    font-size: 25px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
-    padding: 5em;
-    line-height: 41px;
+    padding: 1em;
+    line-height: 36px;
     box-shadow: 0px 1px 20px 20px rgba(0, 255, 242, 0.2);
 }
 

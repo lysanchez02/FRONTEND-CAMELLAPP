@@ -73,7 +73,7 @@
 .boton {
     background-color: rgb(255, 255, 255);
     border:15px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 8px 25px;
     text-align: center;
     display: inline-block;
