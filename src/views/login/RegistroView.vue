@@ -139,8 +139,8 @@
                 </b-row><br>
             </b-container>
             <div class="botton">
-                <b-button class="boton1">CANCELAR</b-button>
-                <b-button class="boton2">GUARDAR</b-button>
+                <b-button class="boton1" >CANCELAR</b-button>
+                <b-button class="boton2" >GUARDAR</b-button>
             </div>
         </div>
 
@@ -181,9 +181,10 @@ export default {
 }
 </script>
 <style>
+ 
 .container {
-    width: 60%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
     padding: 50px;
     background-color: rgb(0, 0, 0);
     margin: 1px 30px;

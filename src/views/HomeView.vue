@@ -1,42 +1,30 @@
 <template>
   <div class="contenedor">
-    <div class="home">
-      <b-navbar toggleable="lg" type="dark" variant="info">
-        
-        <b-navbar-brand href="#" >CAMELLAAP</b-navbar-brand>
+    <div>
 
-        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-        <b-collapse id="nav-collapse" is-nav>
-          
-
-        </b-collapse>
+      <b-navbar class="navbar"  type="dark" variant="dark">
+        <b-navbar-nav>
+              <img class="img1" src="@/assets/logocamellapp.png">
+              <b-nav-item href="#">Home</b-nav-item>
+              <b-nav-item href="#">Trabaja con Nosotros</b-nav-item>
+              <b-nav-item href="#">Contactanos</b-nav-item>
+          <div class="botton1">
+              <button class="boton_1">Iniciar Sesion</button><br><br>
+              <button class="boton_1">Registrar</button>
+            </div>
+        </b-navbar-nav>
       </b-navbar>
-      <img src="@/assets/logocamellapp.png" alt="">
-
-      <b-button class="boton" variant="outline-primary">INICIAR SESION</b-button>
-      <b-button class="boton" variant="outline-primary">REGISTRAR</b-button>
-
-    </div><br>
-    <div class="barra">
-      <b-breadcrumb-item href="#home">
-        <b-icon icon="house-fill"></b-icon>
-        Home
-      </b-breadcrumb-item>
-      <b-breadcrumb-item href="#foo">Trabaja Con Nosotros</b-breadcrumb-item>
-      <b-breadcrumb-item href="#foo">Contactanos</b-breadcrumb-item>
     </div>
     <br>
     <div>
-      <h1>BIENVENIDOS A CAMELLAPP</h1>
+      <h3>BIENVENIDOS A CAMELLAPP</h3>
       <b-row class="my-1">
-        <b-col sm="5">
-
-          <img class="img" src="@/assets/imagentrabajo.jpg" alt="">
+        <b-col sm="4">
+          <img class="img2" src="@/assets/imagentrabajo.jpg" alt="">
         </b-col>
-        <b-col lg="5">
-          <P class="p">Aqui encontraras las mejores ofertas de enpleo de contrccion de forma informal e independiente de
-            manera facil y segura</P>
+        <b-col lg="7">
+          <P class="p">Aqui encontraras las mejores ofertas de enpleo de construccion de forma informal e
+            independiente de manera facil y segura</P>
         </b-col>
       </b-row><br>
     </div>
@@ -45,13 +33,17 @@
 </template>
 
 <script>
-
-
 export default {
   name: 'HomeView',
   components: {
 
-  }
+  },
+  methods: {
+    
+ 
+ 
+
+    }
 }
 </script>
 <style>
@@ -62,40 +54,43 @@ export default {
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 20px;
   padding: 150em 12px;
+  
 }
 
-.home {
+.img1 {
+  width: 70px;
+}
 
-  display: flex;
-  width: 60px;
-  height: 50px;
-  border: 30px;
-
-
+.img2 {
+  width: 40em;
 }
 
 .p {
   margin-top: 150px;
-  margin-left: 90px;
+  margin-left: 230px;
   font-size: 20px;
   margin-bottom: 100px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.boton {
-  padding: 100%;
-
-
+.boton_1 {
+  padding: auto;
+  border-radius: 10px;
 }
 
-.img {
-  height: 600px;
-  width: 120%;
-
-
+.boton_1:hover {
+  background-color: rgb(7, 209, 0);
 }
 
-.barra {
+.botton1 {
   display: flex;
+  justify-content: flex-end;
+  width: 850px;
+  height: 45px;
+  
+}
+.navbar{
+  border: 10em;
+  padding: 15px;
 }
 </style>
