@@ -2,9 +2,9 @@
   <div class="contenedor">
     <div>
 
-      <b-navbar class="navbar"  type="dark" variant="dark">
+      <b-navbar class="navbar"  type="dark" variant="dark" >
         <b-navbar-nav>
-              <img class="img1" src="@/assets/logocamellapp.png">
+              <img class="img1" src="@/assets/logocamellapp.png" >
               <b-nav-item href="#">Home</b-nav-item>
               <b-nav-item href="#">Trabaja con Nosotros</b-nav-item>
               <b-nav-item href="#">Contactanos</b-nav-item>
@@ -48,12 +48,12 @@ export default {
 </script>
 <style>
 .container {
-  height: auto;
-  width: auto;
+  height: 80px;
+  width: 80px ;
   background-color: rgb(255, 255, 255);
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: 20px;
-  padding: 150em 12px;
+  padding: 130em 1opx;
   
 }
 
