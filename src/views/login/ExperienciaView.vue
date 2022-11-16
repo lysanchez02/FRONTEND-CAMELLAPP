@@ -1,8 +1,4 @@
 <template>
-
-
-
-
     <div class="contenedor3 ">
         <div>
             <div class="title1">
@@ -37,10 +33,10 @@
                     <label>se encuentra trabajando en el momento </label>
                     <b-row>
                         <b-col sm="3">
-                            <b-form-radio>Si</b-form-radio>
+                            <b-form-radio v-model="option.si">Si</b-form-radio>
                         </b-col>
                         <b-col sm="3">
-                            <b-form-radio>No</b-form-radio>
+                            <b-form-radio v-model="option.no">No</b-form-radio>
                         </b-col>
                     </b-row>
                 </b-col>
@@ -62,12 +58,15 @@ export default {
     name: 'ExperienciaView',
     data() {
         return{
-
+            option:{
+                
+            }
+            
         }
     },
     methods: {
-        methods: {
-  },
+        
+       
     }
 }
 
@@ -75,15 +74,16 @@ export default {
 </script>
 
 <style>
+@import"@/assets/sass/botones/botonesgenerales.scss";
 .contenedor3 {
-    max-width: 35em;
+    max-width: 30em;
     max-height: 50em;
     background-color: rgb(255, 255, 255);
-    margin: auto;
+    border:10px;
     font-size: 15px;
     color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
-    padding: 1em;
+    padding-top: oem;
     line-height: 36px;
     box-shadow: 0px 1px 20px 20px rgba(147, 160, 160, 0.2);
     border-color: rgb(134, 161, 161) 2px;

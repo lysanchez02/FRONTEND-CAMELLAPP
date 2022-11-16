@@ -1,19 +1,26 @@
 <template>
   <div class="cantainer2">
-    
+    <div>
+      <b-navbar toggleable="lg" type="dark" variant="info">
+        <img class="img1" src="@/assets/logocamellapp.png" >
 
-      <b-navbar class="navbar navbar-expand-sm navbar-light bg-light"  >
-        <b-navbar-nav>
-              <img class="img1" src="@/assets/logocamellapp.png" >
-              <b-nav-item href="#">Home</b-nav-item>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav>
+        <b-nav-item href="#">Home</b-nav-item>
               <b-nav-item href="#">Trabaja con Nosotros</b-nav-item>
               <b-nav-item href="#">Contactanos</b-nav-item>
-          <div class="boton1">
-            <b-button  variant="primary" @click="Inicio_sesion()">INICIAR SESION</b-button>
+      </b-navbar-nav>
+
+      <!-- Right aligned nav items -->
+      <b-navbar-nav class="boton1">
+          <b-button  variant="primary" @click="Inicio_sesion()">INICIAR SESION</b-button>
             <b-button  variant="primary" @click="Registrar()">REGISTRAR</b-button>
-            </div>
-        </b-navbar-nav>
-      </b-navbar>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
+    </div>
     
     <br>
     <div>

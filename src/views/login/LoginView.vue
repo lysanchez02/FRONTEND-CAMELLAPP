@@ -36,12 +36,13 @@ export default {
     },
     methods: {
         crear(){
-            this.$router.push("/HomeView");
+            this.$router.push("/RegistroView");
         }
     }
 }
 </script>
 <style>
+
 .wrapper {
     width: 400px;
     height: 500px;

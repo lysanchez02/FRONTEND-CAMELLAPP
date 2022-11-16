@@ -174,7 +174,7 @@ export default {
             this.selected = ctx.selectedYMD
         },
         Cancelar() {
-            this.$router.push("/HomeView");
+            this.$router.push("/");
         },
         Siguiente() {
             this.$router.push("/ExperienciaView");
@@ -183,7 +183,11 @@ export default {
 }
 </script>
 <style>
+.container4{
+    width: 50em;
+}
 .container {
+    width: 40em;
     background-color: rgb(255, 255, 255);
     border: 2px solid #ccc;
     border-radius: 12px;
@@ -204,9 +208,6 @@ export default {
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
-    
-
-    
 }
 
 .form-control {
