@@ -1,11 +1,8 @@
 <template>
-
-    <div>
         <div class="wrapper">
             
             <div class="formContent">
                 <div >
-
                     <img class="img1" src="@/assets/logocamellapp.png" >
                     <p>por favor ingrese el correo y la contraseña!</p>
                     
@@ -17,30 +14,37 @@
                     <div >
                         <input v-model="Password"  type="password" id="typePasswordX" class="form-control form-control-lg" />
                         <label for="typePasswordX">Contraseña</label>
-                    </div><br>
+                    </div>
 
-                    <p class="small mb-5 pb-lg-2"><a  href="#!">olvide mi contraseña?</a></p>
+                    <p class="small mb-5 pb-sm-2"><a  href="#!">olvide mi contraseña?</a></p>
+
                     <button class="boton" >INGRESAR</button>
-                    <p class="small mb-5 pb-lg-2">¿No tienes cuenta?<a  href="#!">Crea una</a></p>
+                    <p class="small mb-5 pb-lg-2">¿Aun no tienes cuenta?<a  href="#!" @click="crear()">Crea una</a></p>
                 </div>
             </div>
         </div>
-    </div>
+    
 </template>
 <script>
 export default {
+    name: 'LoginView',
     data(){
         return{
             Correo:null,
             Password:null,
         }
+    },
+    methods: {
+        crear(){
+            this.$router.push("/HomeView");
+        }
     }
 }
-
 </script>
 <style>
 .wrapper {
-    width: 300px;
+    width: 400px;
+    height: 500px;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -48,14 +52,14 @@ export default {
     font-family:Arial, Helvetica, sans-serif;
     border-radius: 15px;
     box-shadow: 0px 3px 10px 5px rgb(29, 173, 235);
-    font-size: 12px;
+    font-size: 15px;
 }
 .formContent {
     height: 500px;
     width: 95%;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
     max-width: 480px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;

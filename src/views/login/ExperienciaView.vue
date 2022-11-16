@@ -1,94 +1,106 @@
 <template>
 
 
-    <div class="formContent1"> <br>
 
-        <div class="container1 ">
+
+    <div class="contenedor3 ">
+        <div>
             <div class="title1">
-                <h2 class="fw-bold mb-2 text-uppercase"><img src="@/assets/logocamellapp.png" alt=""></h2>
-                <h1>EXPERIENCIA</h1>
-            </div>
-            <div>
-                <b-row>
-                    <b-col lg="6">
-                        <label for="input-default">cargo en que te desempeñas</label>
-                        <select class="form-control form-control-sl">
-                            <option></option>
-                            <option>ayudante de construpcion</option>
-                            <option>electricista</option>
-                            <option>maestro de obras</option>
-                            <option>repellador</option>
-                        </select><br>
-
-                        <label for="input-default">Descripcion</label>
-                        <b-form-input id="input-default" placeholder=""></b-form-input><br>
-                        <label for="input-default">lugar en donde trabajaste</label>
-                        <select class="form-control form-control-sl">
-                            <option></option>
-                            <option>Popayan</option>
-                            <option>Piendamo</option>
-                            <option>Rosas</option>
-                            <option>Tambo</option>
-                        </select><br>
-                        <br>
-                        <label>se encuentra trabajando en el momento </label>
-                        <b-row>
-                            <b-col sm="6">
-                                <b-form-radio>Si</b-form-radio>
-                            </b-col>
-                            <b-col sm="6">
-                                <b-form-radio>No</b-form-radio>
-                            </b-col>
-                        </b-row>
-
-                    </b-col>
-                    <b-col lg="6">
-                        <label>experiecias</label>
-                        <b-form-input class="w-100 p-3 " id="input-default"></b-form-input>
-
-                    </b-col>
-                </b-row><br>
-                
-                    <B-button class="Boton1">EDITAR</B-button>
-                    <B-button class="Boton2">GUARDAR</B-button>
-                
+                <h2 class="fw-bold mb-2 text-uppercase"><img class="img3" src="@/assets/logocamellapp.png" alt=""></h2>
+                <h5>EXPERIENCIA</h5>
             </div>
 
-
+            <b-row>
+                <b-col sm="6">
+                    <label for="input-default">cargo en que te desempeñas</label>
+                    <select class="form-control form-control-sl">
+                        <option></option>
+                        <option>ayudante de construpcion</option>
+                        <option>electricista</option>
+                        <option>maestro de obras</option>
+                        <option>repellador</option>
+                    </select>
+                </b-col>
+                <b-col sm="6">
+                    <label for="input-default">lugar de trabajo anteriormente</label>
+                    <select class="form-control form-control-sl">
+                        <option></option>
+                        <option>Popayan</option>
+                        <option>Piendamo</option>
+                        <option>Rosas</option>
+                        <option>Tambo</option>
+                    </select>
+                </b-col>
+            </b-row><br>
+            <b-row>
+                <b-col>
+                    <label>se encuentra trabajando en el momento </label>
+                    <b-row>
+                        <b-col sm="3">
+                            <b-form-radio>Si</b-form-radio>
+                        </b-col>
+                        <b-col sm="3">
+                            <b-form-radio>No</b-form-radio>
+                        </b-col>
+                    </b-row>
+                </b-col>
+                <b-col>
+                    <label>tiempo de experiencia alquirido </label>
+                    <b-input></b-input>
+                </b-col>
+                
+                <label>Descripcion</label>
+                <b-form-textarea  max-rows="4">
+                </b-form-textarea>
+            </b-row><br>
+            <B-button class="Boton3">GUARDAR</B-button>
         </div>
-
-
     </div>
-
 </template>
+<script>
+export default {
+    name: 'ExperienciaView',
+    data() {
+        return{
+
+        }
+    },
+    methods: {
+        methods: {
+  },
+    }
+}
+
+
+</script>
 
 <style>
-.formContent1 {
+.contenedor3 {
     max-width: 35em;
-    max-height: 80em;
-    background-color: black;
+    max-height: 50em;
+    background-color: rgb(255, 255, 255);
     margin: auto;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
+    font-size: 15px;
+    color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     padding: 1em;
     line-height: 36px;
-    box-shadow: 0px 1px 20px 20px rgba(0, 255, 242, 0.2);
+    box-shadow: 0px 1px 20px 20px rgba(147, 160, 160, 0.2);
+    border-color: rgb(134, 161, 161) 2px;
+    text-align: center;
 }
-
 .title1 {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     padding: 2em;
 }
 
-.Boton2:hover {
+.Boton3:hover {
     background-color: rgb(21, 255, 0);
     border-radius: 10em;
-
 }
-.Boton1:hover{
-    background-color: rgb(248, 145, 1);
-    border-radius: 10em;
-
+.img3 {
+    width: 100px;
+    height: 100px;
 }
+
 </style>
