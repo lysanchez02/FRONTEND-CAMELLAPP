@@ -1,5 +1,4 @@
 <template>
-    <div class="container4">
         <div class="container">
             <b-row class="my-1">
                 <b-col sm="8"> <img class="img1" src="@/assets/logocamellapp.png" alt="">
@@ -139,10 +138,8 @@
                 <b-button   @click="Siguiente()">Siguiente</b-button>
             </div>
         </div>
-    </div>
 </template>
 <script>
-
 export default {
     name: 'RegistroView',
     data() {
@@ -164,7 +161,6 @@ export default {
             },
         }
     },
-
     methods: {
         
         onContext(ctx) {
@@ -182,7 +178,7 @@ export default {
     }
 }
 </script>
-<style>
+<!--<style>
 .container4{
     width: 50em;
 }
@@ -197,24 +193,19 @@ export default {
     color: rgb(0, 0, 0);
     background-color: #ffffff;
 }
-
 .title {
-
     font-family: 'Times New Roman', Times, serif;
     text-align: left;
 }
-
 .boton2 {
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
 }
-
 .form-control {
     max-width: 300px;
     height: 40px;
 }
-
 .container4 {
     width: 50em;
     height: 80em;
@@ -223,8 +214,4 @@ export default {
     left: 20%;
     border: #ffffff;
 }
-</style>
-
-
-
-
+</style>-->
