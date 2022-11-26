@@ -74,33 +74,7 @@ export default {
 </script>
 
 <style>
-@import"@/assets/sass/botones/botonesgenerales.scss";
-.contenedor3 {
-    max-width: 30em;
-    max-height: 50em;
-    background-color: rgb(255, 255, 255);
-    border:10px;
-    font-size: 15px;
-    color: rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: oem;
-    line-height: 36px;
-    box-shadow: 0px 1px 20px 20px rgba(147, 160, 160, 0.2);
-    border-color: rgb(134, 161, 161) 2px;
-    text-align: center;
-}
-.title1 {
-    background-color: rgb(255, 255, 255);
-    padding: 2em;
-}
+@import"@/assets/sass/botones/botonesGenerales.scss"
 
-.Boton3:hover {
-    background-color: rgb(21, 255, 0);
-    border-radius: 10em;
-}
-.img3 {
-    width: 100px;
-    height: 100px;
-}
 
 </style>
