@@ -123,22 +123,19 @@
                         <b-card-text>
                            se solicita maestro de obra con mas de 2 años de experiencia .
                         </b-card-text>
-                        <b-button variant="success">Success</b-button>
-                        <b-button variant="danger">Danger</b-button>
+                        <b-button variant="danger">Eliminar</b-button>
                     </b-card>
                     <b-card bg-variant="light" text-variant="dark" title="Card Title">
                         <b-card-text>
                             With supporting text below as a natural lead-in to additional content.
                         </b-card-text>
-                        <b-button variant="success">Success</b-button>
-                        <b-button variant="danger">Danger</b-button>
+                        <b-button variant="danger">Eliminar</b-button>
                     </b-card>
                     <b-card bg-variant="light" text-variant="dark" title="Card Title">
                         <b-card-text>
                             With supporting text below as a natural lead-in to additional content.
                         </b-card-text>
-                        <b-button variant="success">Success</b-button>
-                        <b-button variant="danger">Danger</b-button>
+                        <b-button variant="danger">Eliminar</b-button>
                     </b-card>
 
 
