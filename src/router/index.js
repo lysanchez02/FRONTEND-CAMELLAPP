@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import PublicarView from'../views/PublicarView.vue'
+import AdmiView from'../views/AdmiView.vue'
+import CategoriaView from'../views/CategoriaView.vue'
 
 Vue.use(VueRouter)
 
@@ -10,6 +13,22 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+  {
+    path: '/AdmiView',
+    name: 'AdmiView',
+    component: AdmiView
+  },
+  {
+    path: '/CategoriaView',
+    name: 'CategoriaView',
+    component: CategoriaView
+  },
+  {
+    path: '/PublicarView',
+    name: 'PublicarView',
+    component: PublicarView
+  },
+  
   {
     path: '/about',
     name: 'about',
