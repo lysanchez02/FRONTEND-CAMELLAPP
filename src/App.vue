@@ -4,6 +4,11 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/LoginView">Login</router-link>|
       <router-link to="/RegistroView">Registro</router-link>|
+      <router-link to="/ArchivosView">archivo</router-link>|
+      <router-link to="/AdministradorView">Adminsitrador</router-link>|
+      <router-link to="/PostulacionesView">Postulaciones</router-link>|
+      <router-link to="/AdmiOfertaView">ADMIN</router-link>|
+      <router-link to="/AdmisubView">subcategorias</router-link>|
 
     </nav>
     <router-view/>
