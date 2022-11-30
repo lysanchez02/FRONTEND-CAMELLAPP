@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import ExperienciaView from '../views/login/ExperienciaView.vue'
 import LoginView from'../views/login/LoginView.vue'
 import RegistroView from'../views/login/RegistroView.vue'
+import ContraseñaView from'../views/login/ContraseñaView.vue'
 import OfertasdeempleoEmpleador from'../views/OfertasdeempleoEmpleador.vue'
 import OfertasdeempleoPostulante from'../views/OfertasdeempleoPostulante.vue'
 import PostulantesView from'../views/PostulantesView.vue'
@@ -32,10 +33,11 @@ const routes = [
     name: 'RegistroView',
     component: RegistroView
   },
+ 
   {
-    path: '/ExperienciaView',
-    name: 'ExperienciaView',
-    component: ExperienciaView 
+    path: '/ContraseñaView',
+    name: 'ContraseñaView',
+    component: ContraseñaView 
   },
   {
     path: '/About',
