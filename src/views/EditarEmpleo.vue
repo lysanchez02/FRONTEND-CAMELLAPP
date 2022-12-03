@@ -1,9 +1,7 @@
 <template>
 <div class="container">
   <div class="row">
-    <div class="col-3">
-      <MenuEmpleador/>
-    </div>
+    <div class="col-3"></div>
     <div class="col-1"></div>
     <div class="col-8">
       <EditarOferta/>
@@ -19,9 +17,7 @@
 }
 
 </style>
-<script>
-import EditarOferta from '@/components/EditarOferta.vue';
-import MenuEmpleador from '@/components/MenuEmpleador.vue';
+<script> import EditarOferta from '@/components/EditarOferta.vue';
 
 export default{
   name:'EditarEmpleo',
@@ -30,8 +26,6 @@ export default{
     }
   },
   components:{
-    EditarOferta,
-    MenuEmpleador
-},
+    EditarOferta},
 }
 </script>

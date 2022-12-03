@@ -6,6 +6,12 @@
     <b-card>
     <template #header>
       <b-card-img src="https://www.semana.com/resizer/JmiB52VJxZmk799j7D2CEeTZ1x4=/arc-anglerfish-arc2-prod-semana/public/R52D6MSO7ZB4DF3W4QM4LECYIA.jpg" img-top class="w-50"></b-card-img>
+      
+      <b-input-group size="lg" prepend="$" append=".00" placeholder="1'000.000">
+    <b-form-input class="bg-opacity-100 border-0" placeholder="Salario" style="height: 2.3rem;"></b-form-input>
+  </b-input-group>
+      <!--
+         class="" placeholder="$ 1'000.000
       <br>  <br>
       <h4 class="mb-0 m-1"> <input type="text" class="border-0 bg-opacity-100" placeholder="Ayudante General"></h4>
       <input type="text" placeholder="ej: Se requiere ayudante de construccion por 6 meses" class="border-0 bg-opacity-100">
@@ -13,10 +19,9 @@
       
       <div class="row d-flex">
         <div class="col-4"><p class="d-flex justify-content-end">Pago:</p></div>
-        <div class="col-4"><input type="number" class="bg-opacity-100 border-0" placeholder="$ 1'000.000" prepend="$"></div>
-        <div class="col-4"><p class="d-flex justify-content-top">COP</p></div>
-        
-      </div>
+        <div class="col-4"><input type="number"" prepend="$"></div>
+        <div class="col-4"><p class="d-flex justify-content-top">COP</p></div></div>
+        -->
       </template>
       <b-card-body class="p-0">
         <b-card-title><input type="text" placeholder="Leyder Yesid Sanchez Benachi" class="border-0"></b-card-title>

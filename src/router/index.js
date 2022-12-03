@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+
 import HomeView from '../views/HomeView.vue'
 import InicioView from'../views/InicioView.vue'
 import LoginView from'../views/login/LoginView.vue'
@@ -10,10 +11,13 @@ import PostulantesView from'../views/PostulantesView.vue'
 import PerfilPostulanteView from'../views/perfil/PerfilPostulanteView.vue'
 import MiPerfilPostulante from'../views/perfil/MiPerfilPostulante.vue'
 import PerfilAdministrador from'../views/perfil/PerfilAdministrador.vue'
+import PerfilEmpleador from'../views/perfil/PerfilEmpleador.vue'
 import EditarEmpleo from'../views/EditarEmpleo.vue'
 import PlantillaPerfil from'../views/perfil/PlantillaPerfil.vue'
 import DetalleOfertaView from'../views/DetalleOfertaView.vue'
 
+import { VBVisible } from 'bootstrap-vue'
+Vue.directive('b-visible', VBVisible)
 Vue.use(VueRouter)
 
 const routes = [
@@ -74,6 +78,11 @@ const routes = [
     path: '/PerfilAdministrador',
     name: 'PerfilAdministrador',
     component: PerfilAdministrador
+  },
+  {
+    path: '/PerfilEmpleador',
+    name: 'PerfilEmpleador',
+    component: PerfilEmpleador
   },
   {
     path: '/EditarEmpleo',

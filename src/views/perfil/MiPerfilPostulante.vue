@@ -2,10 +2,41 @@
     <div class="container">
 <div class="row">
 <div class="col-3">
-<MenuPostulante/>
-</div>
+  <div>
+    <b-card
+      no-body
+      style="max-width: 20rem;"
+      img-src="https://st3.depositphotos.com/6582994/13117/v/450/depositphotos_131177892-stock-illustration-user-icon-in-trendy-flat.jpg"
+      img-alt="Image"
+      img-top>
+      <template #header>
+        <h4 class="mb-0">Leyder Yesid Sanchez Benachi</h4>
+      </template>
+      <b-card-body>
+        <b-card-title>Ayudante Construccion</b-card-title>
+        <b-card-sub-title class="mb-2">Popayan - Cauca</b-card-sub-title>
+      </b-card-body>
+      <b-list-group flush>
+        <b-list-group-item href="">Actualizar Datos Personales</b-list-group-item>
+        <b-list-group-item button @click="show = 'Experiencia'">Mi Experiencia</b-list-group-item>
+        <b-list-group-item button @click="show = 'Ofertas'">Ofertas de Empleo</b-list-group-item>
+        <b-list-group-item >Mis Empleos</b-list-group-item>
+      </b-list-group>
+  
+      <b-card-body>
+        <h6>Contacto:</h6>
+        <a href="#" class="card-link">Facebook</a>
+        <a href="#" class="card-link">Whatsapp</a>
+      </b-card-body>
+  
+      <b-card-footer>This is a footer</b-card-footer>
+  
+      <b-card-img src="https://placekitten.com/480/210" alt="Image" bottom></b-card-img>
+    </b-card>
+</div></div>
 <div class="col-1"></div>
 <div class="col-8">
+  <div v-if="show === 'Experiencia'">
     <h4>Experiencia</h4>
 <!--start card-->
 <div class="d-flex justify-content-center">
@@ -51,24 +82,28 @@
       <b-icon icon="plus-circle-dotted"></b-icon>
       <b-card-text>Añadir experiencia</b-card-text>      
     </b-card></a>
-
+   </div><!--Experiencia--> 
+  <div v-else-if="show === 'Ofertas'"><OfertasPostulante/></div>
   </div>             
  </div>
 </div>
-</template>
-<script>
-import MenuPostulante from '@/components/MenuPostulante.vue';
+</template><script>
+
+
+import OfertasPostulante from '@/components/OfertasPostulante.vue'
 
 export default{
   name:'MiPerfilPostulante',
   data(){
     return{
+      show: null ,
       value1: null,
       value2: null
     }
   },
   components:{
-    MenuPostulante
-},
+    OfertasPostulante
+  },
+
 }
 </script>

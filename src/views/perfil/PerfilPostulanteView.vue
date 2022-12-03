@@ -2,7 +2,6 @@
     <div class="container">
 <div class="row">
 <div class="col-3">
-<MenuEmpleador/>
 </div>
 <div class="col-1"></div>
 <div class="col-8">
@@ -13,7 +12,6 @@
 </div>
 </template>
 <script>
-import MenuEmpleador from '@/components/MenuEmpleador.vue';
 import PerfilPostulante from '@/components/PerfilPostulante.vue';
 
 export default{
@@ -26,7 +24,6 @@ export default{
     }
   },
   components:{
-    MenuEmpleador,
     PerfilPostulante
 },
 }
