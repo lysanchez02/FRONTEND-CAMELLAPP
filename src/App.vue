@@ -26,6 +26,9 @@
        <br>
        <router-link to="/ObraNegraView">ObraNegraView</router-link>
        <br>
+      <router-link to="/PublicarView">publicar</router-link>|
+      <router-link to="AdmiView">admiempleos</router-link>|
+      <router-link to="CategoriaView">categoria</router-link>
     </nav>
     <router-view/>
   </div>

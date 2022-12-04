@@ -113,254 +113,41 @@
                         </b-row>
                     </b-container>
                 </div>
+            
+       
+            <div class="col-6">
+                <div>
 
-<div class="col-1"></div>
-                <div class="col-8 d-flex justify-content-center">
-                    <b-col sm="5">
-                        <P>ADMINISTRADOR</P>
-                        <p>
-                            <b-button class="agregar" @click="guardar()" variant="success">AGREGAR SUBCATEGORIA
-                            </b-button> <br>
-                        </p>
-                        <div class="icon">
-                            <b-row>
-                                <b-col sm="10">
-                                    <h5 class="problemas">MAESTRO DE CONSTRUCCION </h5>
-                                </b-col>
 
-                                <b-col sm="2">
-                                    <b-input-group class="buscar" size="sm">
-                                        <b-input-group-prepend is-text>
-                                            <b-icon icon="search"></b-icon>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
-                                </b-col>
-                            </b-row>
-                        </div>
-                        <br>
-                        <div class="icon">
-                            <b-row>
-                                <b-col sm="10">
-                                    <h5 class="problemas">AUXILIAR DE CONSTRUCCION </h5>
-                                </b-col>
-
-                                <b-col sm="2">
-                                    <b-input-group class="buscar" size="sm">
-                                        <b-input-group-prepend is-text>
-                                            <b-icon icon="search"></b-icon>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
-                                </b-col>
-                            </b-row>
-                        </div>
-                        <br>
-                        <div class="icon">
-                            <b-row>
-                                <b-col sm="10">
-                                    <h5 class="problemas">ALMACENISTA</h5>
-                                </b-col>
-
-                                <b-col sm="2">
-                                    <b-input-group class="buscar" size="sm">
-                                        <b-input-group-prepend is-text>
-                                            <b-icon icon="search"></b-icon>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
-                                </b-col>
-                            </b-row>
-                        </div>
-                        <br>
-                        <div class="icon">
-                            <b-row>
-                                <b-col sm="10">
-                                    <h5 class="problemas">TOPOGRAFO</h5>
-                                </b-col>
-
-                                <b-col sm="2">
-                                    <b-input-group class="buscar" size="sm">
-                                        <b-input-group-prepend is-text>
-                                            <b-icon icon="search"></b-icon>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
-                                </b-col>
-                            </b-row>
-                        </div>
-                        <br>
-                        <div class="icon">
-                            <b-row>
-                                <b-col sm="10">
-                                    <h5 class="problemas">PLOMERO</h5>
-                                </b-col>
-
-                                <b-col sm="2">
-                                    <b-input-group class="buscar" size="sm">
-                                        <b-input-group-prepend is-text>
-                                            <b-icon icon="search"></b-icon>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
-                                </b-col>
-                            </b-row>
-                        </div>
-                        <br>
-                        <div class="icon">
-                            <b-row>
-                                <b-col sm="10">
-                                    <h5 class="problemas">MAESTRO DE CERAMICA </h5>
-                                </b-col>
-
-                                <b-col sm="2">
-                                    <b-input-group class="buscar" size="sm">
-                                        <b-input-group-prepend is-text>
-                                            <b-icon icon="search"></b-icon>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
-                                </b-col>
-                            </b-row>
-                        </div>
-                        <br>
-                        <div class="icon">
-                            <b-row>
-                                <b-col sm="10">
-                                    <h5 class="problemas">ELECTRICISTA</h5>
-                                </b-col>
-
-                                <b-col sm="2">
-                                    <b-input-group class="buscar" size="sm">
-                                        <b-input-group-prepend is-text>
-                                            <b-icon icon="search"></b-icon>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
-                                </b-col>
-                            </b-row>
-                        </div>
-                        <br>
-                        <div class="icon">
-                            <b-row>
-                                <b-col sm="10">
-                                    <h5 class="problemas">PINTOR</h5>
-                                </b-col>
-
-                                <b-col sm="2">
-                                    <b-input-group class="buscar" size="sm">
-                                        <b-input-group-prepend is-text>
-                                            <b-icon icon="search"></b-icon>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
-                                </b-col>
-                            </b-row>
-                        </div>
-                        <br>
-                        <div class="icon">
-                            <b-row>
-                                <b-col sm="10">
-                                    <h5 class="problemas">ESTUCADOR</h5>
-                                </b-col>
-
-                                <b-col sm="2">
-                                    <b-input-group class="buscar" size="sm">
-                                        <b-input-group-prepend is-text>
-                                            <b-icon icon="search"></b-icon>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
-                                </b-col>
-                            </b-row>
-                        </div>
-                        <br>
-                        <div class="icon">
-                            <b-row>
-                                <b-col sm="10">
-                                    <h5 class="problemas">INSTALADOR DE VIDRIOS</h5>
-                                </b-col>
-
-                                <b-col sm="2">
-                                    <b-input-group class="buscar" size="sm">
-                                        <b-input-group-prepend is-text>
-                                            <b-icon icon="search"></b-icon>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
-                                </b-col>
-                            </b-row>
-                        </div>
-                        <br>
-                        <div class="icon">
-                            <b-row>
-                                <b-col sm="10">
-                                    <h5 class="problemas">CARPINTERO</h5>
-                                </b-col>
-
-                                <b-col sm="2">
-                                    <b-input-group class="buscar" size="sm">
-                                        <b-input-group-prepend is-text>
-                                            <b-icon icon="search"></b-icon>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
-                                </b-col>
-                            </b-row>
-                        </div>
-                        <br>
-                    </b-col>
-
-                    <b-col class="botones" sm="2">
-                        <div class="">
-                            <b-button @click="guardar()" variant="outline-light">Eliminar</b-button>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="iliminar">
-                            <b-button @click="guardar()" variant="outline-danger">Eliminar</b-button>
-                        </div>
-                        <br>
-                        <div class="iliminar">
-                            <b-button @click="guardar()" variant="outline-danger">Eliminar</b-button>
-                        </div>
-                        <br>
-                        <div class="iliminar">
-                            <b-button @click="guardar()" variant="outline-danger">Eliminar</b-button>
-                        </div>
-                        <br>
-                        <div class="iliminar">
-                            <b-button @click="guardar()" variant="outline-danger">Eliminar</b-button>
-                        </div>
-                        <br>
-                        <div class="iliminar">
-                            <b-button @click="guardar()" variant="outline-danger">Eliminar</b-button>
-                        </div>
-                        <br>
-                        <div class="iliminar">
-                            <b-button @click="guardar()" variant="outline-danger">Eliminar</b-button>
-                        </div>
-                        <br>
-                        <div class="iliminar">
-                            <b-button @click="guardar()" variant="outline-danger">Eliminar</b-button>
-                        </div>
-                        <br>
-                        <div class="iliminar">
-                            <b-button @click="guardar()" variant="outline-danger">Eliminar</b-button>
-                        </div>
-                        <br>
-                        <div class="iliminar">
-                            <b-button @click="guardar()" variant="outline-danger">Eliminar</b-button>
-                        </div>
-                        <br>
-                        <div class="iliminar">
-                            <b-button @click="guardar()" variant="outline-danger">Eliminar</b-button>
-                        </div>
-                        <br>
-                        <div class="iliminar">
-                            <b-button @click="guardar()" variant="outline-danger">Eliminar</b-button>
-                        </div>
-                        <br>
-                    </b-col>
+                    <b-card bg-variant="light" text-variant="dark" title="maestro de obra">
+                        <b-card-text>
+                           se solicita maestro de obra con mas de 2 años de experiencia .
+                        </b-card-text>
+                        <b-button variant="danger">Eliminar</b-button>
+                    </b-card>
+                    <b-card bg-variant="light" text-variant="dark" title="Card Title">
+                        <b-card-text>
+                            With supporting text below as a natural lead-in to additional content.
+                        </b-card-text>
+                        <b-button variant="danger">Eliminar</b-button>
+                    </b-card>
+                    <b-card bg-variant="light" text-variant="dark" title="Card Title">
+                        <b-card-text>
+                            With supporting text below as a natural lead-in to additional content.
+                        </b-card-text>
+                        <b-button variant="danger">Eliminar</b-button>
+                    </b-card>
 
 
 
                 </div>
+
+
             </div>
         </div>
+        </div>
+
     </div>
-    
-
-
 
 
 
@@ -381,7 +168,7 @@ export default {
 
 }
 </script>
-  
+
 <style>
 .preguntas {
 

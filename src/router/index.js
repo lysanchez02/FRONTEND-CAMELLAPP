@@ -20,6 +20,10 @@ import PerfilEmpleador from'../views/perfil/PerfilEmpleador.vue'
 import EditarEmpleo from'../views/EditarEmpleo.vue'
 import PlantillaPerfil from'../views/perfil/PlantillaPerfil.vue'
 import DetalleOfertaView from'../views/DetalleOfertaView.vue';
+import PublicarView from'../views/PublicarView.vue'
+import AdmiView from'../views/AdmiView.vue'
+import CategoriaView from'../views/CategoriaView.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -27,42 +31,6 @@ const routes = [
     path: '/',
     name: 'HomeView',
     component: HomeView
-  },
-  {
-    path: '/LoginView',
-    name: 'LoginView',
-    component: LoginView
-  },
-  {
-    path: '/RegistroView',
-    name: 'RegistroView',
-    component: RegistroView
-  },
- 
-  {
-    path: '/ContraseñaView',
-    name: 'ContraseñaView',
-    component: ContraseñaView 
-  },
-  {
-    path: '/CategoriaView',
-    name: 'CategoriaView',
-    component: CategoriaView
-  },
-  {
-    path: '/ObraGrisView',
-    name: 'ObraGrisView',
-    component: ObraGrisView
-  },
-  {
-    path: '/ObraBlancaView',
-    name: 'ObraBlancaView',
-    component: ObraBlancaView
-  },
-  {
-    path: '/ObraNegraView',
-    name: 'ObraNegraView',
-    component: ObraNegraView
   },
   {
     path: '/about',
