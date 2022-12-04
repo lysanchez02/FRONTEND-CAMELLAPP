@@ -22,7 +22,7 @@
   </div>
 </template>
 <script>
-import NavBarLogin from './components/NavBarLogin.vue';
+
 
 export default{
   name:'App',
@@ -30,9 +30,6 @@ export default{
     return{
     }
   },
-  components:{
-    NavBarLogin
-},
 }
 </script>
 <style lang="scss">

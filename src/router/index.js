@@ -2,9 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import HomeView from '../views/HomeView.vue'
-import InicioView from'../views/InicioView.vue'
+import ExperienciaView from '../views/login/ExperienciaView.vue'
 import LoginView from'../views/login/LoginView.vue'
 import RegistroView from'../views/login/RegistroView.vue'
+import ContraseñaView from'../views/login/ContraseñaView.vue'
 import OfertasdeempleoEmpleador from'../views/OfertasdeempleoEmpleador.vue'
 import OfertasdeempleoPostulante from'../views/OfertasdeempleoPostulante.vue'
 import PostulantesView from'../views/PostulantesView.vue'
@@ -23,13 +24,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'HomeView',
     component: HomeView
-  },
-  {
-    path: '/Inicioview',
-    name: 'Inicioview',
-    component: InicioView
   },
   {
     path: '/LoginView',
@@ -41,9 +37,15 @@ const routes = [
     name: 'RegistroView',
     component: RegistroView
   },
+ 
   {
-    path: '/about',
-    name: 'about',
+    path: '/ContraseñaView',
+    name: 'ContraseñaView',
+    component: ContraseñaView 
+  },
+  {
+    path: '/About',
+    name: 'About',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

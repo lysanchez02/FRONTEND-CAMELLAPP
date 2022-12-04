@@ -173,7 +173,7 @@ export default {
             this.$router.push("/");
         },
         Siguiente() {
-            this.$router.push("/ExperienciaView");
+            this.$router.push("");
         }
     }
 }
