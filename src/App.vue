@@ -1,13 +1,19 @@
 <template>
   <div id="app">
-
-    <NavBarLogin/>
-   <nav>
+    <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>  |
+      <router-link to="/LoginView">Login</router-link>|
+      <router-link to="/RegistroView">Registro</router-link>|
+      <router-link to="/ArchivosView">archivo</router-link>|
+      <router-link to="/AdministradorView">Adminsitrador</router-link>|
+      <router-link to="/PostulacionesView">Postulaciones</router-link>|
+      <router-link to="/AdmiOfertaView">ADMIN</router-link>|
+      <router-link to="/AdmisubView">subcategorias</router-link>|
+    <NavBarLogin/>
+
       <router-link to="/Inicioview">Inicio</router-link>  |
-      <router-link to="/LoginView">Login</router-link>   |
-      <router-link to="/RegistroView">Registro</router-link>   |
+
       <router-link to="/OfertasdeempleoEmpleador">OfertasEmpleador</router-link>   |
       <router-link to="/OfertasdeempleoPostulante">OfertasPostulante</router-link>   |
       <router-link to="/PostulantesView">Postulantes</router-link>   |
@@ -16,7 +22,7 @@
       <router-link to="/PerfilEmpleador">PerfilEmpleador</router-link>   |
       <router-link to="/MiPerfilPostulante">MiPerfilPostulante</router-link>   |
       <router-link to="/EditarEmpleo">Editar Empleo</router-link>   |
-      <router-link to="/DetalleOfertaView">Detalles del Empleo</router-link>   |
+
       <router-link to="/PlantillaPerfil">Plantilla Perfil</router-link>   |
       <router-link to="/CategoriaView">CategoriaView</router-link>
        <br>

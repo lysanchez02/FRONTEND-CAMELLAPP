@@ -15,7 +15,7 @@
           
               <template #prepend>
                 <b-dropdown text="Mas Opciones" variant="success">
-                  <b-dropdown-item>Todas las ofertas</b-dropdown-item>
+                  <b-dropdown-item button @click="show = 'Ofertas'">Todas las ofertas</b-dropdown-item>
                   <b-dropdown-item>Mis postulaciones</b-dropdown-item>
                   <b-dropdown-item>Trabajos Terminados</b-dropdown-item>
                 </b-dropdown>
@@ -31,7 +31,9 @@
     </div>
     
         </div>
-        <div class="row">  
+        <div class="row"> 
+          <div v-if="show === 'DetalleOferta'"><DetalleOferta/></div>
+          <div class="row" v-else-if="show === 'Ofertas'">
 <!--start card-->
             <b-card
             title="Ayudante General"
@@ -44,7 +46,7 @@
             >
             <b-card-text>Se requiere ayudante de construccion por 6 meses</b-card-text>
             <b-card-text>Pago: $1'000.000</b-card-text>
-            <b-button href="#" variant="primary" class="m-1">Ver Detalles</b-button>
+            <b-button @click="show = 'DetalleOferta'" variant="primary" class="m-1">Ver Detalles</b-button>
             <b-button href="#" variant="success" class="m-1">Aplicar a esta oferta</b-button>
             </b-card>
 <!--end card-->
@@ -152,18 +154,23 @@
             <b-card-text>Pago: $1'000.000</b-card-text>
             <b-button href="#" variant="primary" class="m-1">Ver Detalles</b-button>
             <b-button href="#" variant="success" class="m-1">Aplicar a esta oferta</b-button></b-card>
-<!--end card--></div>
-</div>   
-    </div>
+<!--end card-->
+   </div>
+  </div> 
+ </div>   
+</div>
 </template>
 <script>
+import DetalleOferta from '@/components/DetalleOferta.vue'
 export default{
   name:'OfertasPostulante',
   data(){
     return{
+      show: 'Ofertas'
     }
   },
   components:{
+    DetalleOferta
   },
 }
 </script>

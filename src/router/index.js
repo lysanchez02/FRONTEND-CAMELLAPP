@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import HomeView from '../views/HomeView.vue'
-import CategoriaView from '../views/CategoriaView.vue'
+
 import ObraGrisView from '../views/ObraGrisView.vue'
 import ObraBlancaView from '../views/ObraBlancaView.vue'
 import ObraNegraView from '../views/ObraNegraView.vue'
@@ -19,10 +19,16 @@ import PerfilAdministrador from'../views/perfil/PerfilAdministrador.vue'
 import PerfilEmpleador from'../views/perfil/PerfilEmpleador.vue'
 import EditarEmpleo from'../views/EditarEmpleo.vue'
 import PlantillaPerfil from'../views/perfil/PlantillaPerfil.vue'
-import DetalleOfertaView from'../views/DetalleOfertaView.vue';
+
 import PublicarView from'../views/PublicarView.vue'
 import AdmiView from'../views/AdmiView.vue'
 import CategoriaView from'../views/CategoriaView.vue'
+
+import ArchivosView from '../views/ArchivosView.vue'
+import AdministradorView from'../views/AdministradorView.vue'
+import PostulacionesView from'../views/PostulacionesView.vue'
+import AdmiOfertaView from'../views/AdmiOfertaView.vue'
+import AdmisubView from'../views/AdmisubView.vue'
 
 Vue.use(VueRouter)
 
@@ -31,6 +37,41 @@ const routes = [
     path: '/',
     name: 'HomeView',
     component: HomeView
+  },
+  {
+    path: '/LoginView',
+    name: 'LoginView',
+    component: LoginView
+  },
+  {
+    path: '/AdmisubView',
+    name: 'AdmisubView',
+    component: AdmisubView
+  },
+  {
+    path: '/AdministradorView',
+    name: 'AdministradorView',
+    component: AdministradorView
+  },
+  {
+    path: '/AdmiOfertaView',
+    name: 'AdmiOfertaView',
+    component: AdmiOfertaView
+  },
+  {
+    path: '/PostulacionesView',
+    name: 'PostulacionesView',
+    component: PostulacionesView
+  },
+  {
+    path: '/RegistroView',
+    name: 'RegistroView',
+    component: RegistroView
+  },
+  {
+    path: '/ArchivosView',
+    name: 'ArchivosView',
+    component: ArchivosView
   },
   {
     path: '/about',
@@ -84,10 +125,34 @@ const routes = [
     path: '/PlantillaPerfil',
     name: 'PlantillaPerfil',
     component: PlantillaPerfil
-  },  {
-    path: '/DetalleOfertaView',
-    name: 'DetalleOfertaView',
-    component: DetalleOfertaView
+  },{
+    path: '/CategoriaView',
+    name: 'CategoriaView',
+    component: CategoriaView
+  },{
+    path: '/ObraGrisView',
+    name: 'ObraGrisView',
+    component: ObraGrisView
+  },{
+    path: '/ObraNegraView',
+    name: 'ObraNegraView',
+    component: ObraNegraView
+  },{
+    path: '/ObraBlancaView',
+    name: 'ObraBlancaView',
+    component: ObraBlancaView
+  },{
+    path: '/ContraseñaView',
+    name: 'ContraseñaView',
+    component: ContraseñaView
+  },{
+    path: '/PublicarView',
+    name: 'PublicarView',
+    component: PublicarView
+  },{
+    path: '/AdmiView',
+    name: 'AdmiView',
+    component: AdmiView
   },
 
 ]

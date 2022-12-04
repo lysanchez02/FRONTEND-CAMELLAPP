@@ -1,51 +1,62 @@
 <template>
     <div>
         <div class="container">
-        <div class="row">
-  <div>
-    <b-card>
-    <template #header>
-      <b-card-img src="https://www.semana.com/resizer/JmiB52VJxZmk799j7D2CEeTZ1x4=/arc-anglerfish-arc2-prod-semana/public/R52D6MSO7ZB4DF3W4QM4LECYIA.jpg" img-top class="w-50"></b-card-img>
-      
-      <b-input-group size="lg" prepend="$" append=".00" placeholder="1'000.000">
-    <b-form-input class="bg-opacity-100 border-0" placeholder="Salario" style="height: 2.3rem;"></b-form-input>
-  </b-input-group>
-      <!--
-         class="" placeholder="$ 1'000.000
-      <br>  <br>
-      <h4 class="mb-0 m-1"> <input type="text" class="border-0 bg-opacity-100" placeholder="Ayudante General"></h4>
-      <input type="text" placeholder="ej: Se requiere ayudante de construccion por 6 meses" class="border-0 bg-opacity-100">
-      <h6></h6>
-      
-      <div class="row d-flex">
-        <div class="col-4"><p class="d-flex justify-content-end">Pago:</p></div>
-        <div class="col-4"><input type="number"" prepend="$"></div>
-        <div class="col-4"><p class="d-flex justify-content-top">COP</p></div></div>
-        -->
-      </template>
-      <b-card-body class="p-0">
-        <b-card-title><input type="text" placeholder="Leyder Yesid Sanchez Benachi" class="border-0"></b-card-title>
-        <b-card-sub-title class="mb-2 justify-content-center"><input type="text" placeholder="Popayan - Cauca" class="border-0"></b-card-sub-title>
-<input type="text" class="border-0 align-content-center" placeholder="Nombre de la empresa">
-      </b-card-body>
-      <b-list-group flush class="b-0"><hr class="m-0">
-        <b-list-group-item href="">Detalles de la Oferta</b-list-group-item>
-
-        <b-list-group-item href="#">Postulados</b-list-group-item>
-        <b-list-group-item href="#"></b-list-group-item>
-      </b-list-group>
-  
-      <b-card-body class="p-2">
-        <h6>Contacto:</h6>
-        <a href="#" class="card-link">Facebook</a>
-        <a href="#" class="card-link">Whatsapp</a>
-      </b-card-body>
-  
-      <b-card-footer footer-bg-variant="secondary" footer-text-variant="white">Guardar</b-card-footer>
-      <b-card-footer footer-bg-variant="danger" footer-text-variant="white">Eliminar</b-card-footer>
-      </b-card>
-  </div>
-</div>
+          <div class="row">
+              
+              <b-card>
+                <template #header>
+                  <b-card-img
+                    src="https://www.semana.com/resizer/JmiB52VJxZmk799j7D2CEeTZ1x4=/arc-anglerfish-arc2-prod-semana/public/R52D6MSO7ZB4DF3W4QM4LECYIA.jpg"
+                    img-top class="w-20"></b-card-img>
+                  <br> <br>
+                  <div class="row d-flex">
+                    <div class="col-4">
+                      <label for="">Titulo</label>
+                    </div>
+                    <div class="col-8">
+                      <input class="from_control" placeholder="titulo"> 
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row d-flex">
+                    <div class="col-4">
+                     <label for="">Descripcion Del Trabajo</label> 
+                    </div>
+                    <div class="col-8">
+                     <b-form-textarea placeholder="se permite al menos 500 caracteres" rows="3"> </b-form-textarea> 
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row d-flex">
+                    <div class="col-4">
+                      <label for="">Pago</label>
+                    </div>
+                    <div class="col-8">
+                      <input class="from_control" placeholder="$"> 
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row d-flex">
+                    <div class="col-2">
+                      <label for="">Inicio del trabajo</label>
+                    </div>  
+                    <div class="col-4">
+                      <b-form-datepicker v-model="value" :min="min" :max="max" locale="es"></b-form-datepicker>
+                    </div>  
+                    <div class="col-2">
+                      <label for="">Terminar el trabajo</label>
+                    </div>  
+                      <div class="col-4">
+                      <b-form-datepicker v-model="value" :min="min" :max="max" locale="es"></b-form-datepicker>
+                    </div>
+                  </div>
+                  <br>
+                </template>
+<b-button href="#" variant="primary" class="m-1"><b-icon icon="hdd"></b-icon>  Guardar</b-button> 
+<b-button href="#" variant="danger" class="m-1"><b-icon icon="x-circle"></b-icon> Cancelar</b-button>             
+              </b-card>
+            
+          </div>
     </div>
     </div>
 </template>

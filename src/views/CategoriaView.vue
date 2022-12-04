@@ -369,6 +369,7 @@
 <script>
 
 export default {
+    name: 'CategoriaView',
     data() {
         return {
             form: {
