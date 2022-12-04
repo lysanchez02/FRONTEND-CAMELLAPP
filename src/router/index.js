@@ -2,7 +2,11 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import HomeView from '../views/HomeView.vue'
-import ExperienciaView from '../views/login/ExperienciaView.vue'
+import CategoriaView from '../views/CategoriaView.vue'
+import ObraGrisView from '../views/ObraGrisView.vue'
+import ObraBlancaView from '../views/ObraBlancaView.vue'
+import ObraNegraView from '../views/ObraNegraView.vue'
+ 
 import LoginView from'../views/login/LoginView.vue'
 import RegistroView from'../views/login/RegistroView.vue'
 import ContraseñaView from'../views/login/ContraseñaView.vue'
@@ -15,10 +19,7 @@ import PerfilAdministrador from'../views/perfil/PerfilAdministrador.vue'
 import PerfilEmpleador from'../views/perfil/PerfilEmpleador.vue'
 import EditarEmpleo from'../views/EditarEmpleo.vue'
 import PlantillaPerfil from'../views/perfil/PlantillaPerfil.vue'
-import DetalleOfertaView from'../views/DetalleOfertaView.vue'
-
-import { VBVisible } from 'bootstrap-vue'
-Vue.directive('b-visible', VBVisible)
+import DetalleOfertaView from'../views/DetalleOfertaView.vue';
 Vue.use(VueRouter)
 
 const routes = [
@@ -44,8 +45,28 @@ const routes = [
     component: ContraseñaView 
   },
   {
-    path: '/About',
-    name: 'About',
+    path: '/CategoriaView',
+    name: 'CategoriaView',
+    component: CategoriaView
+  },
+  {
+    path: '/ObraGrisView',
+    name: 'ObraGrisView',
+    component: ObraGrisView
+  },
+  {
+    path: '/ObraBlancaView',
+    name: 'ObraBlancaView',
+    component: ObraBlancaView
+  },
+  {
+    path: '/ObraNegraView',
+    name: 'ObraNegraView',
+    component: ObraNegraView
+  },
+  {
+    path: '/about',
+    name: 'about',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

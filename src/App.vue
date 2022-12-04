@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <NavBarLogin/>
    <nav>
       <router-link to="/">Home</router-link> |
@@ -17,6 +18,14 @@
       <router-link to="/EditarEmpleo">Editar Empleo</router-link>   |
       <router-link to="/DetalleOfertaView">Detalles del Empleo</router-link>   |
       <router-link to="/PlantillaPerfil">Plantilla Perfil</router-link>   |
+      <router-link to="/CategoriaView">CategoriaView</router-link>
+       <br>
+      <router-link to="/ObraGrisView">ObraGrisView</router-link>
+       <br>
+       <router-link to="/ObraBlancaView">ObraBlancaView</router-link>
+       <br>
+       <router-link to="/ObraNegraView">ObraNegraView</router-link>
+       <br>
     </nav>
     <router-view/>
   </div>
