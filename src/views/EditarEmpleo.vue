@@ -10,7 +10,7 @@
 </div>
 </template>
 <style lang="scss">
-@import "@/assets/sass/botones/botonesGenerales.scss";
+@import "@/assets/sass/botones/botonesgenerales.scss";
 .contentfooter{
     display: flex;
     margin-top: 600px;
