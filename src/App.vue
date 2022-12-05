@@ -2,6 +2,7 @@
   <div id="app">
     <nav>
       <router-link to="/">Home</router-link> |
+      <router-link to="/Inicioview">Inicio</router-link>  |
       <router-link to="/about">About</router-link>  |
       <router-link to="/LoginView">Login</router-link>|
       <router-link to="/RegistroView">Registro</router-link>|
@@ -9,29 +10,15 @@
       <router-link to="/AdministradorView">Adminsitrador</router-link>|
       <router-link to="/PostulacionesView">Postulaciones</router-link>|
       <router-link to="/AdmiOfertaView">ADMIN</router-link>|
-      <router-link to="/AdmisubView">subcategorias</router-link>|
-    <NavBarLogin/>
-
-      <router-link to="/Inicioview">Inicio</router-link>  |
-
-      <router-link to="/OfertasdeempleoEmpleador">OfertasEmpleador</router-link>   |
-      <router-link to="/OfertasdeempleoPostulante">OfertasPostulante</router-link>   |
+      <router-link to="/AdmisubView">subcategorias</router-link> |
       <router-link to="/PostulantesView">Postulantes</router-link>   |
       <router-link to="/PerfilPostulanteView">PerfilPostulante</router-link>   |
       <router-link to="/PerfilAdministrador">PerfilAdministrador</router-link>   |
       <router-link to="/PerfilEmpleador">PerfilEmpleador</router-link>   |
-      <router-link to="/MiPerfilPostulante">MiPerfilPostulante</router-link>   |
-      <router-link to="/EditarEmpleo">Editar Empleo</router-link>   |
-
+      <router-link to="/MiPerfilPostulante">MiPerfilPostulante</router-link>|  
       <router-link to="/PlantillaPerfil">Plantilla Perfil</router-link>   |
       <router-link to="/CategoriaView">CategoriaView</router-link>
-       <br>
-      <router-link to="/ObraGrisView">ObraGrisView</router-link>
-       <br>
-       <router-link to="/ObraBlancaView">ObraBlancaView</router-link>
-       <br>
-       <router-link to="/ObraNegraView">ObraNegraView</router-link>
-       <br>
+      
       <router-link to="/PublicarView">publicar</router-link>|
       <router-link to="AdmiView">admiempleos</router-link>|
       <router-link to="CategoriaView">categoria</router-link>

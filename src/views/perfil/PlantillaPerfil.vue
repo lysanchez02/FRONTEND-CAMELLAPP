@@ -46,7 +46,11 @@
       <b-icon icon="plus-circle-dotted"></b-icon>
       <b-card-text>Añadir experiencia</b-card-text>      
     </b-card></a>
-
+    <div class="row d-flex justify-content-center">
+  <div class="col-6 mt-3">
+    <b-button><b-icon icon="plus-circle-dotted"></b-icon>  Nueva Categoria</b-button>
+   </div>  
+</div>
   </div>             
  </div>
 </div>

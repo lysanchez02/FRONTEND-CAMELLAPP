@@ -1,9 +1,10 @@
 <template>
-    <div>
+  <div>
     <div class="container">
         <div class="row">
             <h2>CAMELLAPP</h2>
-              <div class="col-10">
+            <div class="col-1"></div>
+              <div class="col-8">
                   <div>
                       <b-input-group>
                         <template #append>
@@ -12,7 +13,7 @@
                         <b-form-input></b-form-input>
                         <template #prepend>
                           <b-dropdown text="Mas Opciones">
-                            <b-dropdown-item>Todas las ofertas</b-dropdown-item>
+                            <b-dropdown-item button @click="show = 'OfertasEmpleador'">Todas las ofertas</b-dropdown-item>
                             <b-dropdown-item>Mis Ofertas</b-dropdown-item>
                             <b-dropdown-item>Mis Ofertas</b-dropdown-item>
                             <b-dropdown-item>Trabajos Terminados</b-dropdown-item>
@@ -22,8 +23,8 @@
                   </div>
                     <br>
               </div>
-        <div class="col-2">
-          <b-button variant="success">
+        <div class="col-3">
+          <b-button variant="success" @click="show = 'PublicarView'" v-b-popover.hover.top="'Publica Un Nuevo Empleo'">
             <b-icon icon="plus">
             </b-icon>Nueva Oferta
           </b-button>
@@ -33,9 +34,11 @@
         <br>
         <div>
           <div v-if="show === 'EditarOferta'"><EditarOferta/></div>
-          <div  class="row d-flex" v-else-if="show === 'OfertasEmpleador'">  
+          <div v-if="show === 'PublicarView'"><PublicarView/></div>
+          <div v-if="show === 'OfertasEmpleador'">  
+            <div class="row d-flex">
 <!--start card-->
-            <div v-show="eliminar" class="col-6">
+            <div v-show="eliminar" class="col-lg-6">
             <b-card
             title="Ayudante General"
             img-src="https://www.semana.com/resizer/JmiB52VJxZmk799j7D2CEeTZ1x4=/arc-anglerfish-arc2-prod-semana/public/R52D6MSO7ZB4DF3W4QM4LECYIA.jpg"
@@ -47,8 +50,8 @@
             >
             <b-card-text>Se requiere ayudante de construccion por 6 meses</b-card-text>
             <b-card-text>Pago: $1'000.000</b-card-text>
-            <b-button button @click="eliminar = !eliminar" variant="danger" class="m-1">Eliminar oferta</b-button>
-            <b-button button @click="show = 'EditarOferta'" variant="primary" class="m-1">Editar oferta</b-button>
+            <b-button button @click="eliminar = !eliminar" variant="danger" class="m-1"><b-icon icon="trash"></b-icon>Eliminar oferta</b-button>
+            <b-button button @click="show = 'EditarOferta'" variant="primary" class="m-1"><b-icon icon="pencil"></b-icon>  Editar oferta</b-button>
             </b-card>
             </div>
 <!--end card-->
@@ -66,8 +69,8 @@
             >
             <b-card-text>Empresa requiere personal para el area de pintura por tiempo indefinido</b-card-text>
             <b-card-text>Pago: $1'000.000</b-card-text>
-            <b-button button @click="!eliminar" variant="danger" class="m-1">Eliminar oferta</b-button>
-            <b-button href="#" variant="primary">Ver Detalles</b-button>
+            <b-button button @click="!eliminar" variant="danger" class="m-1"><b-icon icon="trash"></b-icon>Eliminar oferta</b-button>
+            <b-button href="#" variant="primary"><b-icon icon="pencil"></b-icon>  Editar oferta</b-button>
           </b-card>
 </div>
 <!--end card-->
@@ -84,8 +87,8 @@
           >
           <b-card-text>Se requiere electricista para obra de construccion por 8 meses</b-card-text>
           <b-card-text>Pago: $2'000.000</b-card-text>
-          <b-button button @click="!eliminar" variant="danger" class="m-1">Eliminar oferta</b-button>
-          <b-button href="#" variant="primary">Ver Detalles</b-button>
+          <b-button button @click="!eliminar" variant="danger" class="m-1"><b-icon icon="trash"></b-icon>Eliminar oferta</b-button>
+          <b-button href="#" variant="primary"><b-icon icon="pencil"></b-icon>  Editar oferta</b-button>
           </b-card>
 </div>
 <!--end card-->
@@ -102,8 +105,8 @@
           >
           <b-card-text>Busco soldador para instalar puertas metalicas</b-card-text>
           <b-card-text>Pago: $80.000 x dia</b-card-text>
-          <b-button href="#" variant="danger" class="m-1">Eliminar oferta</b-button>
-          <b-button href="#" variant="primary" class="m-1">Editar oferta</b-button>          
+          <b-button href="#" variant="danger" class="m-1"><b-icon icon="trash"></b-icon>Eliminar oferta</b-button>
+          <b-button href="#" variant="primary" class="m-1"><b-icon icon="pencil"></b-icon>  Editar oferta</b-button>          
   </b-card>
 </div>
 <!--end card-->
@@ -120,8 +123,8 @@
           >
           <b-card-text>solicito a una persona para instalar dos baños</b-card-text>
           <b-card-text>Pago: a convenir</b-card-text>
-          <b-button button @click="show = 'eliminar'" variant="danger" class="m-1">Eliminar oferta</b-button>
-          <b-button href="#" variant="primary">Ver Detalles</b-button>
+          <b-button button @click="show = 'eliminar'" variant="danger" class="m-1"><b-icon icon="trash"></b-icon>Eliminar oferta</b-button>
+          <b-button href="#" variant="primary"><b-icon icon="pencil"></b-icon>  Editar oferta</b-button>
           </b-card>
 </div>
 <!--end card-->
@@ -138,8 +141,8 @@
             >
             <b-card-text>Se requiere soldador por tiempo indefinido</b-card-text>
             <b-card-text>Pago: $1'000.000</b-card-text>
-            <b-button button @click="show = 'eliminar'" variant="danger" class="m-1">Eliminar oferta</b-button>
-            <b-button href="#" variant="primary">Ver Detalles</b-button>
+            <b-button button @click="show = 'eliminar'" variant="danger" class="m-1"><b-icon icon="trash"></b-icon>Eliminar oferta</b-button>
+            <b-button href="#" variant="primary"><b-icon icon="pencil"></b-icon>  Editar oferta</b-button>
             </b-card>
 </div>
 <!--end card-->
@@ -156,8 +159,8 @@
             >
             <b-card-text>Necesito un jardinero para cortar el pasto en un lote de 100m2</b-card-text>
             <b-card-text>Pago: $a convenir</b-card-text>
-            <b-button button @click="show = 'eliminar'" variant="danger" class="m-1">Eliminar oferta</b-button>
-            <b-button href="#" variant="primary">Ver Detalles</b-button>
+            <b-button button @click="show = 'eliminar'" variant="danger" class="m-1"><b-icon icon="trash"></b-icon>Eliminar oferta</b-button>
+            <b-button href="#" variant="primary"><b-icon icon="pencil"></b-icon>  Editar oferta</b-button>
             </b-card>
 </div>
 <!--end card-->
@@ -174,18 +177,21 @@
             >
             <b-card-text>Se requieren 5 ayudantes de construccion por 4 meses</b-card-text>
             <b-card-text>Pago: $1'000.000</b-card-text>
-            <b-button button @click="show = 'eliminar'" variant="danger" class="m-1">Eliminar oferta</b-button>
-            <b-button href="#" variant="primary">Ver Detalles</b-button>
+            <b-button button @click="show = 'eliminar'" variant="danger" class="m-1"><b-icon icon="trash"></b-icon>Eliminar oferta</b-button>
+            <b-button href="#" variant="primary"><b-icon icon="pencil"></b-icon>  Editar oferta</b-button>
             </b-card>
 </div>
 <!--end card-->
           </div>
+          </div>
+          <div></div>
         </div>
     </div> 
 </div>
 </template>
 <script>
 import EditarOferta from '@/components/EditarOferta.vue'
+import PublicarView from '@/components/PublicarView.vue'
 
 export default{
   name:'OfertasEmpleador',
@@ -196,7 +202,8 @@ export default{
     }
   },
   components:{
-    EditarOferta
-  },
+    EditarOferta,
+    PublicarView
+},
 }
 </script>

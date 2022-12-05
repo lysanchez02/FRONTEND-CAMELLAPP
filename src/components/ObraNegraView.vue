@@ -3,45 +3,44 @@
         <b-input-group class="mt-3">
             <b-form-input value="Ingeniero Civil" disabled></b-form-input>
             <b-input-group-append>
-            <b-button  @click="show=true" variant="primary">Button</b-button>
+            <b-button  @click="show=true" variant="secondary"><b-icon icon="arrow-right-short"></b-icon></b-button>
             </b-input-group-append>
         </b-input-group>
 
         <b-input-group class="mt-3">
             <b-form-input value="Maestro de Construccion" disabled></b-form-input>
             <b-input-group-append>
-            <b-button  @click="show=true" variant="primary">Button</b-button>
+            <b-button  @click="show=true" variant="secondary"><b-icon icon="arrow-right-short"></b-icon></b-button>
             </b-input-group-append>
         </b-input-group>
 
         <b-input-group class="mt-3">
             <b-form-input value="Auxiliar de Construccion" disabled></b-form-input>
             <b-input-group-append>
-            <b-button  @click="show=true" variant="primary">Button</b-button>
+            <b-button  @click="show=true" variant="secondary"><b-icon icon="arrow-right-short"></b-icon></b-button>
             </b-input-group-append>
         </b-input-group>
 
         <b-input-group class="mt-3">
             <b-form-input value="Almacenista" disabled></b-form-input>
             <b-input-group-append>
-            <b-button  @click="show=true" variant="primary">Button</b-button>
+            <b-button  @click="show=true" variant="secondary"><b-icon icon="arrow-right-short"></b-icon></b-button>
             </b-input-group-append>
         </b-input-group>
 
         <b-input-group class="mt-3">
             <b-form-input value="topografo" disabled></b-form-input>
             <b-input-group-append>
-            <b-button  @click="show=true" variant="primary">Button</b-button>
+            <b-button  @click="show=true" variant="secondary"><b-icon icon="arrow-right-short"></b-icon></b-button>
             </b-input-group-append>
         </b-input-group>
 
         <b-input-group class="mt-3">
             <b-form-input value="Aseadora de Residuos de Construccion" disabled></b-form-input>
             <b-input-group-append>
-            <b-button  @click="show=true" variant="primary">Button</b-button>
+            <b-button  @click="show=true" variant="secondary"><b-icon icon="arrow-right-short"></b-icon></b-button>
             </b-input-group-append>
         </b-input-group>
-        
     <b-modal
       v-model="show"
       title="Modal Variants"
@@ -127,6 +126,7 @@
 
 <script>
   export default {
+    name:'ObraNegra',
     data() {
       return {
         show: false,

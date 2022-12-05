@@ -1,26 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import HomeView from '../views/HomeView.vue'
-
-import ObraGrisView from '../views/ObraGrisView.vue'
-import ObraBlancaView from '../views/ObraBlancaView.vue'
-import ObraNegraView from '../views/ObraNegraView.vue'
- 
+import HomeView from '../views/HomeView.vue';
 import LoginView from'../views/login/LoginView.vue'
 import RegistroView from'../views/login/RegistroView.vue'
 import ContraseñaView from'../views/login/ContraseñaView.vue'
-import OfertasdeempleoEmpleador from'../views/OfertasdeempleoEmpleador.vue'
-import OfertasdeempleoPostulante from'../views/OfertasdeempleoPostulante.vue'
+
 import PostulantesView from'../views/PostulantesView.vue'
 import PerfilPostulanteView from'../views/perfil/PerfilPostulanteView.vue'
 import MiPerfilPostulante from'../views/perfil/MiPerfilPostulante.vue'
 import PerfilAdministrador from'../views/perfil/PerfilAdministrador.vue'
 import PerfilEmpleador from'../views/perfil/PerfilEmpleador.vue'
-import EditarEmpleo from'../views/EditarEmpleo.vue'
+
 import PlantillaPerfil from'../views/perfil/PlantillaPerfil.vue'
 
-import PublicarView from'../views/PublicarView.vue'
+import PublicarView from'../components/PublicarView.vue'
 import AdmiView from'../views/AdmiView.vue'
 import CategoriaView from'../views/CategoriaView.vue'
 
@@ -81,16 +75,7 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   }, 
-   {
-    path: '/OfertasdeempleoEmpleador',
-    name: 'OfertasdeempleoEmpleador',
-    component: OfertasdeempleoEmpleador
-  },
-  {
-    path: '/OfertasdeempleoPostulante',
-    name: 'OfertasdeempleoPostulante',
-    component: OfertasdeempleoPostulante
-  },
+
   {
     path: '/PostulantesView',
     name: 'PostulantesView',
@@ -116,11 +101,7 @@ const routes = [
     name: 'PerfilEmpleador',
     component: PerfilEmpleador
   },
-  {
-    path: '/EditarEmpleo',
-    name: 'EditarEmpleo',
-    component: EditarEmpleo
-  },
+
   {
     path: '/PlantillaPerfil',
     name: 'PlantillaPerfil',
@@ -129,19 +110,8 @@ const routes = [
     path: '/CategoriaView',
     name: 'CategoriaView',
     component: CategoriaView
-  },{
-    path: '/ObraGrisView',
-    name: 'ObraGrisView',
-    component: ObraGrisView
-  },{
-    path: '/ObraNegraView',
-    name: 'ObraNegraView',
-    component: ObraNegraView
-  },{
-    path: '/ObraBlancaView',
-    name: 'ObraBlancaView',
-    component: ObraBlancaView
-  },{
+  },
+  {
     path: '/ContraseñaView',
     name: 'ContraseñaView',
     component: ContraseñaView

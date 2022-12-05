@@ -3,11 +3,11 @@
         <div class="container">
         <div class="row">
             <h2>CAMELLAPP</h2>
-    <div class="col-2">
-    </div>
-    <div class="col-8">
+    <div class="col">
         <div>
-            <b-input-group>
+          <b-input-group>
+
+
               <template #append>
                 <b-button><b-icon icon="search"></b-icon></b-button>                   
                 </template>
@@ -16,6 +16,7 @@
               <template #prepend>
                 <b-dropdown text="Mas Opciones" variant="success">
                   <b-dropdown-item button @click="show = 'Ofertas'">Todas las ofertas</b-dropdown-item>
+                  <b-dropdown-item button @click="show = 'Categorias'">Categorias</b-dropdown-item>
                   <b-dropdown-item>Mis postulaciones</b-dropdown-item>
                   <b-dropdown-item>Trabajos Terminados</b-dropdown-item>
                 </b-dropdown>
@@ -26,13 +27,22 @@
           <!--aqui termina la barra de busqueda-->
           
     </div>
-    <div class="col-2">
 
-    </div>
-    
-        </div>
+
+</div>
+
+
         <div class="row"> 
+          <div v-if="show === 'Categorias'">
+            <h5 class="m-2">Selecciona Una Categoria:</h5>
+          <b-button class="mt-5" style="width: 10rem;" @click="show = 'ObraNegra'">Obra Negra</b-button><br>
+          <b-button class="mt-5" style="width: 10rem;" @click="show = 'ObraBlanca'">Obra Blanca</b-button><br>
+          <b-button class="mt-5" style="width: 10rem;" @click="show = 'ObraGris'">Obra Gris</b-button>
+          </div>
           <div v-if="show === 'DetalleOferta'"><DetalleOferta/></div>
+          <div v-if="show === 'ObraNegra'"><ObraNegraView/></div>
+          <div v-if="show === 'ObraBlanca'"><ObraBlancaView/></div>
+          <div v-if="show === 'ObraGris'"><ObraGrisView/></div>
           <div class="row" v-else-if="show === 'Ofertas'">
 <!--start card-->
             <b-card
@@ -162,15 +172,21 @@
 </template>
 <script>
 import DetalleOferta from '@/components/DetalleOferta.vue'
+import ObraBlancaView from './ObraBlancaView.vue';
+import ObraGrisView from './ObraGrisView.vue';
+import ObraNegraView from './ObraNegraView.vue';
 export default{
   name:'OfertasPostulante',
   data(){
     return{
-      show: 'Ofertas'
+      show: 'Categorias'
     }
   },
   components:{
-    DetalleOferta
-  },
+    DetalleOferta,
+    ObraNegraView,
+    ObraBlancaView,
+    ObraGrisView
+},
 }
 </script>

@@ -1,15 +1,13 @@
 <template>
         <div class="container">
             <b-row class="my-1">
-                <b-col sm="8"> <img class="img1" src="@/assets/logocamellapp.png" alt="">
+                <b-col sm="12"> <img class="img1" src="@/assets/logocamellapp.png" alt="">
                     <h3>Formulario de Registro</h3>
                 </b-col>
             </b-row><br>
 
             <b-row class="my-1">
-                <b-col sm="2">
-                    <label for="input-small">Tipo de Persona</label>
-                </b-col>
+                <b-col sm="5"></b-col>
                 <b-col sm="2">
                     <b-dropdown variant="info" right text="Tipo de Persona">
                         <b-dropdown-item>Persona natural</b-dropdown-item>
@@ -17,6 +15,7 @@
                         <b-dropdown-item>Pasaporte</b-dropdown-item>
                     </b-dropdown>
                 </b-col>
+                <b-col sm="5"></b-col>
             </b-row>
             <b-row class="my-1">
                 <b-col sm="6">

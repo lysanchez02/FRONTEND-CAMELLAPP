@@ -16,10 +16,10 @@
                         <label for="typePasswordX">Contraseña</label>
                     </div>
 
-                    <p class="small mb-5 pb-sm-2"><a  href="#!">olvide mi contraseña?</a></p>
+                    <p class="small mb-1 pb-sm-2"><a  href="#!">olvide mi contraseña?</a></p>
 
-                    <button class="boton" >INGRESAR</button>
-                    <p class="small mb-5 pb-lg-2">¿Aun no tienes cuenta?<a  href="#!" @click="crear()">Crea una</a></p>
+                    <button class="boton mb-2" >INGRESAR</button>
+                    <p class="small mb-5 pb-lg-2">¿Aun no tienes cuenta?<a  href="#!" @click="crear()">Registrarse</a></p>
                 </div>
             </div>
         </div>
