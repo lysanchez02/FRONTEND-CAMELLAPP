@@ -1,11 +1,13 @@
 <template>
   <div id="app">
     <nav>
+      <!--
+      <router-link to="/RegistroView">Registro</router-link>|
       <router-link to="/">Home</router-link> |
       <router-link to="/Inicioview">Inicio</router-link>  |
       <router-link to="/about">About</router-link>  |
       <router-link to="/LoginView">Login</router-link>|
-      <router-link to="/RegistroView">Registro</router-link>|
+      
       <router-link to="/ArchivosView">archivo</router-link>|
       <router-link to="/AdministradorView">Adminsitrador</router-link>|
       <router-link to="/PostulacionesView">Postulaciones</router-link>|
@@ -22,6 +24,7 @@
       <router-link to="/PublicarView">publicar</router-link>|
       <router-link to="AdmiView">admiempleos</router-link>|
       <router-link to="CategoriaView">categoria</router-link>
+    -->
     </nav>
     <router-view/>
   </div>

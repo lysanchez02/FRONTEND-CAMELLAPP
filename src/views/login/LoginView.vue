@@ -18,7 +18,7 @@
 
                     <p class="small mb-1 pb-sm-2"><a  href="#!">olvide mi contraseña?</a></p>
 
-                    <button class="boton mb-2" >INGRESAR</button>
+                    <button class="boton mb-2" @click="login()">INGRESAR</button>
                     <p class="small mb-5 pb-lg-2">¿Aun no tienes cuenta?<a  href="#!" @click="crear()">Registrarse</a></p>
                 </div>
             </div>
@@ -26,6 +26,7 @@
     
 </template>
 <script>
+
 export default {
     name: 'LoginView',
     data(){
@@ -37,6 +38,9 @@ export default {
     methods: {
         crear(){
             this.$router.push("/RegistroView");
+        },
+        login(){
+            this.$router.push("/MiPerfilPostulante")
         }
     }
 }

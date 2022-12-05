@@ -20,8 +20,7 @@
     <label for="input-live">Nombre:</label>
     <b-form-input
     id="input-live"
-    v-model="nombre"
-    :state="nombreState"
+    v-model="form.nombre"
     aria-describedby="input-live-help input-live-feedback"
     placeholder="Escribe tu nombre."
     trim
@@ -32,13 +31,28 @@
     </b-form-invalid-feedback>
   </div><br>
 <!--Nombre-->
+<!--foto-->
+<div role="group">
+    <label for="input-live">foto:</label>
+    <b-form-input
+    id="input-live"
+    v-model="form.foto"
+    aria-describedby="input-live-help input-live-feedback"
+    placeholder="Escribe tu foto."
+    trim
+    ></b-form-input>
+    <!-- This will only be shown if the preceding input has an invalid state -->
+    <b-form-invalid-feedback id="input-live-feedback">
+      El campo está vacío.
+    </b-form-invalid-feedback>
+  </div><br>
+<!--foto-->
 <!--Apellido-->
 <div role="group">
     <label for="input-live">Apellidos:</label>
     <b-form-input
     id="input-live"
-    v-model="apellido"
-    :state="apellidoState"
+    v-model="form.apellido"
     aria-describedby="input-live-help input-live-feedback"
     placeholder="Escribe tus apellidos."
     trim
@@ -54,8 +68,7 @@
     <b-form-input
     type="tel"
     id="input-live"
-    v-model="celular"
-    :state="celularState"
+    v-model="form.celular"
     aria-describedby="input-live-help input-live-feedback"
     placeholder="Escribe tu Celular."
     trim
@@ -71,8 +84,7 @@
     <label for="input-live">Direccion:</label>
     <b-form-input
     id="input-live"
-    v-model="direccion"
-    :state="direccionState"
+    v-model="form.direccion"
     aria-describedby="input-live-help input-live-feedback"
     placeholder="Escribe tu Direccion."
     trim
@@ -89,8 +101,7 @@
     <b-form-input
     type="email"
     id="input-live"
-    v-model="correo"
-    :state="correoState"
+    v-model="form.correo"
     aria-describedby="input-live-help input-live-feedback"
     placeholder="Escribe tu Correo."
     trim
@@ -105,7 +116,7 @@
 <template>
   <div>    
     <label for="input-live">Disponibilidad:</label><br>
-        <b-form-select v-model="selected" :options="disponibilidad" style="width: 53.5rem; height: 2.5rem; border-radius: 0.35rem;"></b-form-select>
+        <b-form-select v-model="form.disponibilidad" :options="disponibilidad" style="width: 53.5rem; height: 2.5rem; border-radius: 0.35rem;"></b-form-select>
   </div>
 </template><br>
 <!--Disponibilidad-->
@@ -114,7 +125,7 @@
     <label for="input-live">Nacionalidad:</label>
     <b-form-input
     type="text"
-    v-model="nacionalidad"
+    v-model="form.nacionalidad"
     aria-describedby="input-live-help input-live-feedback"
     placeholder="Ej: Colombia."
     trim
@@ -122,13 +133,12 @@
   </div><br>
 <!--Documento-->
 <div role="group">
-    <label for="input-live">Documento:</label>
+   <label for="input-live">Documento:</label>
 <b-input-group>
     <b-form-input
     type="number"
     id="input-live"
-    v-model="cedula"
-    :state="cedulaState"
+    v-model="form.cedula"
     aria-describedby="input-live-help input-live-feedback"
     placeholder="Numero de Documento."
     trim
@@ -138,55 +148,63 @@
     </b-form-invalid-feedback>
     <template #prepend>
      <div>
-      <b-form-select  style="max-width: 4rem; height: 2.5rem;" v-model="selected" :options="options"></b-form-select>
+     <!-- <b-form-select  style="max-width: 4rem; height: 2.5rem;" v-model="form.disponibilidad" :options="options"></b-form-select>-->
      </div>
     </template>
 </b-input-group>
   </div><br>
 <!--Documento-->
-<b-button href="#" variant="primary" class="m-1"><b-icon icon="hdd"></b-icon>  Guardar</b-button> 
+<b-button @click="GuardarPostulante()" variant="primary" class="m-1"><b-icon icon="hdd"></b-icon>  Guardar</b-button> 
 <b-button href="#" variant="danger" class="m-1"><b-icon icon="x-circle"></b-icon> Cancelar</b-button>
 </div>
     </div>
 </template>
 <script>
-
+import axios from 'axios'
 export default {
     name: 'EditarPerfil',
 
     data(){
         return{
-            nombre: '',
-            apellido: '',
-            cedula: '',
-            correo: '',
-            celular: '',
+          form:{
+            nombre: null,
+            apellido: null,
+            foto: null,
+            cedula: null,
+            correo: null,
+            celular: null,
+            disponibilidad:null
+          },
             show: null,
-            options: [
+    /*        options: [
       { value: null, text: 'Tipo de documento' },
-      { value: 'a', text: 'Cédula de Ciudadanía' },
-      { value: 'b', text: 'Cédula Extranjería' },
-      { value: 'c', text: 'PEP' },
-      { value: 'd', text: 'Otro', disabled: true }
-    ],
+      { value: 'cc', text: 'Cédula de Ciudadanía' },
+      { value: 'ce', text: 'Cédula Extranjería' },
+      { value: 'pep', text: 'PEP' },
+      { value: 'otro', text: 'Otro', disabled: true }
+    ],*/
     disponibilidad: [
-        {value: 'a', text: 'Tiempo Completo'},
-        {value: 'b', text: 'Medio Tiempo'},
-        {value: 'c', text: 'Por Horas'},
-        {value: 'c', text: 'Por Dias'},
-        {value: 'd', text: 'Por Contrato'},
-        {value: 'e', text: 'A Convenir'},
+        {value: 'TiempoCompleto', text: 'Tiempo Completo'},
+        {value: 'MedioTiempo', text: 'Medio Tiempo'},
+        {value: 'PorHoras', text: 'Por Horas'},
+        {value: 'PorDias', text: 'Por Dias'},
+        {value: 'PorCon', text: 'Por Contrato'},
+        {value: 'aConvenir', text: 'A Convenir'},
     ]
         }
     },
     components:{
  },
  computed: {
-  nombreState() {return this.nombre.length > 0 ? true : false},
-  apellidoState() {return this.apellido.length > 0 ? true : false},
-  cedulaState(){return this.cedula.length > 0 ? true : false},
-  correoState(){return this.correo.length > 0 ? true : false},
-  celularState(){return this.celular.length == 10 ? true : false},
+
 },
+methods:{
+GuardarPostulante(){
+  axios.post("http://localhost:3000/GuardarPostulante",this.form).then(response=>{
+    console.log(response)  
+  })
+}
+
+}
 }
 </script>
