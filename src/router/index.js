@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue';
 import LoginView from'../views/login/LoginView.vue'
 import RegistroView from'../views/login/RegistroView.vue'
-import ContraseñaView from'../views/login/ContraseñaView.vue'
+import ContrasenaView from'../views/login/ContrasenaView.vue'
 
 import PostulantesView from'../views/PostulantesView.vue'
 import PerfilPostulanteView from'../views/perfil/PerfilPostulanteView.vue'
@@ -112,9 +112,9 @@ const routes = [
     component: CategoriaView
   },
   {
-    path: '/ContraseñaView',
-    name: 'ContraseñaView',
-    component: ContraseñaView
+    path: '/ContrasenaView',
+    name: 'ContrasenaView',
+    component: ContrasenaView
   },{
     path: '/PublicarView',
     name: 'PublicarView',
