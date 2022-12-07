@@ -1,216 +1,142 @@
 <template>
-        <div class="container">
-            <b-row class="my-1">
-                <b-col sm="12"> <img class="img1" src="@/assets/logocamellapp.png" alt="">
-                    <h3>Formulario de Registro</h3>
-                </b-col>
-            </b-row><br>
-
-            <b-row class="my-1">
-                <b-col sm="5"></b-col>
-                <b-col sm="2">
-                    <b-dropdown variant="info" right text="Tipo de Persona">
-                        <b-dropdown-item>Persona natural</b-dropdown-item>
-                        <b-dropdown-item>Cedula extrangera</b-dropdown-item>
-                        <b-dropdown-item>Pasaporte</b-dropdown-item>
-                    </b-dropdown>
-                </b-col>
-                <b-col sm="5"></b-col>
-            </b-row>
-            <b-row class="my-1">
-                <b-col sm="6">
-                    <label for="input-small">Primer Nombre:</label>
-                    <b-form-input class="form-control" placeholder="digite su primer nombre" id="Nombre" name="P_Nombre"
-                        v-model="Registro.p_Nombre"></b-form-input>
-                </b-col>
-                <b-col sm="6">
-                    <label for="input-small">Segundo Nombre:</label>
-                    <b-form-input class="form-control" placeholder="digite su segundo nombre" id="S_Nombre"
-                        name="S_Nombre" v-model="Registro.S_Nombre"></b-form-input>
-                </b-col>
-            </b-row><br>
-
-            <b-row class="my-1">
-                <b-col sm="6">
-                    <label for="input-default">Primer Apellido:</label>
-                    <b-form-input class="form-control" id="Apellido" name="Apellido"
-                        placeholder="digite su primer apellido" v-model="Registro.P_Apellido"></b-form-input>
-                </b-col>
-                <b-col sm="6">
-                    <label for="input-default">Segundo Apellido:</label>
-                    <b-form-input class="form-control" id="S_Apellido" name="S_Apellido"
-                        placeholder="digite su segundo apellido" v-model="Registro.S_Apellido"></b-form-input>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col sm="6">
-                    <label for="Email1">Correo Electronico :</label>
-                    <b-form-input class="form-control" type="email" id="Email1" aria-describedby="emailHelp"
-                        placeholder="Enter email" v-model="Registro.Correo"></b-form-input>
-                </b-col>
-                <b-col sm="6">
-                    <label for="input-default">Edad:</label>
-                    <b-form-input class="form-control" id="edad" name="edad" placeholder="digite su edad"
-                        v-model="Registro.Edad">
-                    </b-form-input>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col xs="2">
-                    <label for="input-default">Contraseña:</label>
-                    <b-form-input class="form-control" id="input-default" placeholder="digite su contraseña"
-                        v-model="Registro.Contraseña">
-                    </b-form-input>
-                </b-col>
-                <b-col xs="2">
-                    <label for="input-default">Confirmar Contraseña:</label>
-                    <b-form-input class="form-control" id="input-default" placeholder="confirmar su contraseña"
-                        v-model="Registro.Confirmar_contrasena">
-                    </b-form-input>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col lg="4">
-                    <label for="input-default">Tipo de Documento</label>
-                    <select class="form-control" v-model="Registro.T_Documento">
-                        <option>Tipo de Documento</option>
-                        <option>Cedula de Ciudania</option>
-                        <option>numero de pasaporte</option>
-                    </select>
-                </b-col>
-                <b-col xs="10">
-                </b-col>
-                <b-col sm="6">
-                    <label for="input-default">Numero de Documento:</label>
-                    <b-form-input class="form-control" id="input-default" v-model="Registro.N_Documento"></b-form-input>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col xs="2">
-                    <label for="input-default">Direccion:</label>
-                    <b-form-input class="form-control" id="input-default" placeholder="" v-model="Registro.Direccion">
-                    </b-form-input>
-                </b-col>
-                <b-col sm="6">
-                    <label for="input-default">Sexo:</label>
-                    <b-row>
-                        <b-col sm="4">
-                            <b-form-radio>Hombre</b-form-radio>
-                        </b-col>
-                        <b-col sm="4">
-                            <b-form-radio>Mujer</b-form-radio>
-                        </b-col>
-                    </b-row>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col sm="10">
-                    <label for="input-default">Fecha de Nacimiento:</label>
-                    <b-input-group class="mb-6">
-                        <b-form-input class="form-control" id="example-input" v-model="Registro.F_Nacimiento"
-                            type="text" placeholder="AAAA-MM-DD" autocomplete="off">
-                        </b-form-input>
-                        <b-input-group-append>
-                            <b-form-datepicker v-model="Registro.F_Nacimiento" button-only right locale="en-es"
-                                aria-controls="example-input" @context="onContext"></b-form-datepicker>
-                        </b-input-group-append>
-                    </b-input-group>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col xs="2">
-                    <label for="input-default">Ciudad/Municipio</label>
-                    <select class="form-control ">
-                        <option>Ciudad/Municipio</option>
-                        <option>Popayan</option>
-                        <option>Piendamo</option>
-                        <option>Rosas</option>
-                    </select>
-                </b-col>
-                <b-col xs="2">
-                    <label for="input-default">Numero de Celular:</label>
-                    <b-form-input class="form-control" id="input-default" v-model="Registro.Celular"></b-form-input>
-                </b-col>
-            </b-row><br>
-            <div class="boton2  "  >
-                <b-button   @click="Cancelar()">Cancelar</b-button>
-                <b-button   @click="Siguiente()">Siguiente</b-button>
-            </div>
+    <div class="container">
+        <div class="row">
+            <h1 class="">Completa tus datos personales</h1>
+            <div class="col-2"></div>
+            <div class="col-8">
+        <div>
+        <div>
+        <h5>Selecciona una imagen de perfil:</h5>
+        <div>
+        <b-avatar-group size="4rem" class="d-flex justify-content-center">
+            <b-avatar button src="https://i.ibb.co/ZxFjSC0/logocamellapp.png"></b-avatar>
+            <b-avatar variant="success" button></b-avatar>
+            <b-avatar variant="danger" button></b-avatar>
+            <b-avatar variant="warning" button></b-avatar>
+            <b-avatar variant="info" button></b-avatar>
+            <b-avatar button icon="plus" variant="light" v-b-popover.hover="'Subir foto'"></b-avatar>
+        </b-avatar-group>
         </div>
-</template>
-<script>
-export default {
-    name: 'RegistroView',
-    data() {
-        return {
-            Registro: {
-                p_Nombre: null,
-                S_Nombre: null,
-                P_Apellido: null,
-                S_Apellido: "",
-                Correo: null,
-                Edad: null,
-                Contraseña: null,
-                Confirmar_contrasena: null,
-                T_Documento: null,
-                N_Documento: null,
-                Direccion: null,
-                F_Nacimiento: null,
-                Celular: null,
-            },
-        }
-    },
-    methods: {
-        
-        onContext(ctx) {
-            // The date formatted in the locale, or the `label-no-date-selected` string
-            this.formatted = ctx.selectedFormatted
-            // The following will be an empty string until a valid date is entered
-            this.selected = ctx.selectedYMD
+      </div><br>
+      <div id="user" class="user">
+      <b-form>
+      <!--id_usuario-->
+    <div role="group">
+        <label for="input-live">id_usuario:</label>
+        <input v-model="form.id_usuario" id="id_usuario" class="form-control" type="text" placeholder="Escribe tu id_usuario">
+      </div><br>
+    <!--id_usuario-->
+    <!--Nombre-->
+    <div role="group">
+        <label for="input-live">Nombre:</label>
+        <input v-model="form.nombres" id="nombre" class="form-control" type="text" placeholder="Escribe tu nombre">
+      </div><br>
+    <!--Nombre-->
+    <!--foto-->
+    <div role="group">
+        <label for="input-live">foto:</label>
+        <input v-model="form.foto_perfil" id="nombre" class="form-control" type="text" placeholder="">
+      </div><br>
+    <!--foto-->
+    <!--Apellido-->
+    <div role="group">
+        <label for="input-live">Apellidos:</label>
+        <input v-model="form.apellidos" id="nombre" class="form-control" type="text" placeholder="Escribe tu sapellido">
+    
+      </div><br>
+    <!--Apellido-->
+    <!--Celular-->
+    <div role="group">
+        <label for="input-live">Celular:</label>
+        <input v-model="form.telefono" id="nombre" class="form-control" type="text" placeholder="Escribe tu celular">
+      </div><br>
+    <!--Celular-->
+    <!--Direccion-->
+    <div role="group">
+        <label for="input-live">Direccion:</label>
+        <input v-model="form.direccion" id="nombre" class="form-control" type="text" placeholder="Escribe tu direccion">
+      </div><br>
+    <!--Direccion-->
+    <!--Correo-->
+    <div role="group">
+        <label for="input-live">Correo:</label>
+        <input v-model="form.correo" id="nombre" class="form-control" type="text" placeholder="Escribe tu correo">
+      </div><br>
+    <!--Correo-->
+    <!--Disponibilidad-->
+    <template>
+      <div>    
+        <label for="input-live">Disponibilidad:</label><br>
+            <b-form-select  v-model="form.disponibilidad" :options="ListaDisponibilidad" style="width: 53.5rem; height: 2.5rem; border-radius: 0.35rem;"></b-form-select>
+      </div>
+    </template><br>
+    <!--Disponibilidad-->
+    <!--Nacionalidad-->
+    <div role="group">
+        <label for="input-live">Nacionalidad:</label>
+        <input v-model="form.nacionalidad" id="nombre" class="form-control" type="text" placeholder="Escribe pais de origen">
+      </div><br>
+    <!--Documento-->
+    <div role="group">
+       <label for="input-live">Documento:</label>
+    <b-input-group>
+      <input v-model="form.documento" id="nombre" class="form-control" type="text" placeholder="Escribe tu Documento">
+    </b-input-group>
+      </div><br>
+    <!--Documento-->
+    </b-form>
+    
+    </div>
+    <b-button @click="GuardarPostulante()" variant="primary" class="m-1"><b-icon icon="search"></b-icon>  Busco Empleo</b-button>
+    <b-button @click="GuardarEmpleador()" variant="primary" class="m-1"><b-icon icon="lightbulb"></b-icon>  Ofrezco Empleo</b-button><br>
+    <b-button href="#" variant="danger" class="m-1"><b-icon icon="x-circle"></b-icon> Cancelar</b-button>
+    </div>  
+            </div>
+            <div class="col-2"></div>
+        </div>
+       
+        </div>
+    </template>
+    <script>
+    import axios from 'axios'
+    
+    export default {
+        name: 'EditarPerfil',
+    
+        data(){
+            return{
+              show: null,
+              form : {
+                id_usuario:null,
+                nombres: null,
+                apellidos: null,
+                direccion: null,
+                foto_perfil: null,
+                nacionalidad: null,
+                documento: null,
+                correo: null,
+                telefono: null,
+                disponibilidad:null
+              },
+        ListaDisponibilidad: [
+            {value: 'TiempoCompleto', text: 'Tiempo Completo'},
+            {value: 'MedioTiempo', text: 'Medio Tiempo'},
+            {value: 'PorHoras', text: 'Por Horas'},
+            {value: 'PorDias', text: 'Por Dias'},
+            {value: 'PorContrato', text: 'Por Contrato'},
+            {value: 'aConvenir', text: 'A Convenir'},
+        ]
+            }
         },
-        Cancelar() {
-            this.$router.push("/");
-        },
-        Siguiente() {
-            this.$router.push("");
-        }
-    }
-}
-</script>
-<!--<style>
-.container4{
-    width: 50em;
-}
-.container {
-    width: 40em;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid #ccc;
-    border-radius: 12px;
-    font-size: 15px;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-}
-.title {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: left;
-}
-.boton2 {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-}
-.form-control {
-    max-width: 300px;
-    height: 40px;
-}
-.container4 {
-    width: 50em;
-    height: 80em;
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    border: #ffffff;
-}
-</style>-->
+        components:{},
+        computed: {},
+    methods:{
+    GuardarPostulante(){
+      alert('Te has registrado Exitosamente');
+      axios.post(" http://localhost:4000/GuardarPostulante",this.form)
+      .then((data) => {
+        console.log(data);
+      });
+  },
+ },
+}</script>
