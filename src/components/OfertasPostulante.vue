@@ -14,7 +14,7 @@
               <b-form-input></b-form-input>
           
               <template #prepend>
-                <b-dropdown text="Mas Opciones" variant="success">
+                <b-dropdown text="Mas Opciones" variant="info">
                   <b-dropdown-item button @click="show = 'Ofertas'">Todas las ofertas</b-dropdown-item>
                   <b-dropdown-item button @click="show = 'Categorias'">Categorias</b-dropdown-item>
                   <b-dropdown-item>Mis postulaciones</b-dropdown-item>
@@ -27,16 +27,16 @@
           <!--aqui termina la barra de busqueda-->
     </div></div>
         <div class="row"> 
+        <div> 
           <div v-if="show === 'Categorias'">
-            <h5 class="m-2">Selecciona Una Categoria:</h5>
-          <b-button class="mt-5" style="width: 10rem;" @click="show = 'ObraNegra'">Obra Negra</b-button><br>
-          <b-button class="mt-5" style="width: 10rem;" @click="show = 'ObraBlanca'">Obra Blanca</b-button><br>
-          <b-button class="mt-5" style="width: 10rem;" @click="show = 'ObraGris'">Obra Gris</b-button>
-          </div>
+          <b-list-group v-for="categoria in listarCategoria" :key="listarCategoria.id" >
+            <b-list-group-item class="m-1" button :title="categoria.descripcion">{{categoria.nombre}}
+              <b-badge variant="primary"><b-icon icon="x"></b-icon></b-badge>
+            </b-list-group-item>
+          </b-list-group>
+        </div>
+        </div>
           <div v-if="show === 'DetalleOferta'"><DetalleOferta/></div>
-          <div v-if="show === 'ObraNegra'"><ObraNegraView/></div>
-          <div v-if="show === 'ObraBlanca'"><ObraBlancaView/></div>
-          <div v-if="show === 'ObraGris'"><ObraGrisView/></div>
           <div class="row" v-else-if="show === 'Ofertas'">
 <!--start card-->
 <div class="row d-flex">
@@ -68,9 +68,7 @@
 <script>
 import axios from "axios"
 import DetalleOferta from '@/components/DetalleOferta.vue'
-import ObraBlancaView from './ObraBlancaView.vue';
-import ObraGrisView from './ObraGrisView.vue';
-import ObraNegraView from './ObraNegraView.vue';
+
 export default{
   name:'OfertasPostulante',
   data(){
@@ -81,14 +79,15 @@ export default{
   },
   components:{
     DetalleOferta,
-    ObraNegraView,
-    ObraBlancaView,
-    ObraGrisView
+
 },
 mounted(){
     axios.get("http://localhost:4000/consultaOfertas/").then(response=>{
      this.listar=response.data
+   });
+   axios.get("http://localhost:4000/Listarcategorianew/").then(response2=>{
+     this.listarCategoria=response2.data
    })
-  }
+  },
 }
 </script>
