@@ -1,90 +1,16 @@
 <template>
-        <div class="wrapper">
-            
-            <div class="formContent">
-                <div >
-                    <img class="img1" src="@/assets/logocamellapp.png" >
-                    <p>por favor ingrese el correo y la contraseña!</p>
-                    
-                    <div >
-                        <input v-model="Correo" type="email" id="typeEmailX" class="form-control form-control-lg" />
-                        <label  for="typeEmailX">Correo Electronico</label>
-                    </div><br>
+<div class="container">
+    <div>
+     <div class="container"><br>
+      <div class="container col-4">
+        <div class="d-flex"><h1 class="m-2"><strong>!Bienvenido¡</strong></h1></div><br>
+         <input class="form-control" type="email" placeholder="Correo"><br>
+         <input class="form-control" type="password" placeholder="Contraseña"><br>
+         <a href="">Olvidé mi Contraseña</a><br><br>
+        <b-button href="/MiPerfilPostulante" class="mb-2" variant="info">Iniciar Sesion</b-button><p>ó</p>
+        <b-button href="/RegistroView" class="mt-o">Registrarte</b-button>
+      </div>
+     </div>
+    </div>
 
-                    <div >
-                        <input v-model="Password"  type="password" id="typePasswordX" class="form-control form-control-lg" />
-                        <label for="typePasswordX">Contraseña</label>
-                    </div>
-
-                    <p class="small mb-1 pb-sm-2"><a  href="#!">olvide mi contraseña?</a></p>
-
-                    <button class="boton mb-2" @click="login()">INGRESAR</button>
-                    <p class="small mb-5 pb-lg-2">¿Aun no tienes cuenta?<a  href="#!" @click="crear()">Registrarse</a></p>
-                </div>
-            </div>
-        </div>
-    
-</template>
-<script>
-
-export default {
-    name: 'LoginView',
-    data(){
-        return{
-            Correo:null,
-            Password:null,
-        }
-    },
-    methods: {
-        crear(){
-            this.$router.push("/RegistroView");
-        },
-        login(){
-            this.$router.push("/MiPerfilPostulante")
-        }
-    }
-}
-</script>
-<style>
-
-.wrapper {
-    width: 400px;
-    height: 500px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-    font-family:Arial, Helvetica, sans-serif;
-    border-radius: 15px;
-    box-shadow: 0px 3px 10px 5px rgb(29, 173, 235);
-    font-size: 15px;
-}
-.formContent {
-    height: 500px;
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    max-width: 480px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    border-radius: 12px;
-  
-}
-.boton {
-    background-color: rgb(255, 255, 255);
-    padding: 8px 25px;
-    text-align: center;
-    display: inline-block;
-    font-size: 10px;
-    cursor: pointer;
-    border-radius: 8px;
-    width: 100px;
-    height: 30px;
-}
-.boton:hover {background-color: #1bcb1e;}
-.img{
-    width: 20px;
-    height: 20px;
-}
-</style>
+</div></template>

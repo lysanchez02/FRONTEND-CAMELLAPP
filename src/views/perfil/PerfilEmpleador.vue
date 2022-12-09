@@ -61,7 +61,7 @@
                 cedula: '',
                 correo: '',
                 celular: '',
-                show: null,
+                show: 'MisEmpleos',
                 options: [
           { value: null, text: 'Tipo de documento' },
           { value: 'a', text: 'Cédula de Ciudadanía' },

@@ -25,13 +25,7 @@
           </div>
           <br>
           <!--aqui termina la barra de busqueda-->
-          
-    </div>
-
-
-</div>
-
-
+    </div></div>
         <div class="row"> 
           <div v-if="show === 'Categorias'">
             <h5 class="m-2">Selecciona Una Categoria:</h5>
@@ -45,8 +39,10 @@
           <div v-if="show === 'ObraGris'"><ObraGrisView/></div>
           <div class="row" v-else-if="show === 'Ofertas'">
 <!--start card-->
+<div class="row d-flex">
+<div class="col-6" v-for="listar in listar" :key="listar.id">
             <b-card
-            title="Ayudante General"
+            :title="listar.nombres"
             img-src="https://www.semana.com/resizer/JmiB52VJxZmk799j7D2CEeTZ1x4=/arc-anglerfish-arc2-prod-semana/public/R52D6MSO7ZB4DF3W4QM4LECYIA.jpg"
             img-alt="Image"
             img-top
@@ -54,116 +50,15 @@
             style="max-width: 25rem;"
             class="mb-2 m-1"
             >
-            <b-card-text>Se requiere ayudante de construccion por 6 meses</b-card-text>
-            <b-card-text>Pago: $1'000.000</b-card-text>
+            <b-card-text>{{listar.descripcion}}</b-card-text>
+            <b-card-text>{{listar.horario}}</b-card-text>
+            <b-card-text>{{listar.tiempo_estimado}}</b-card-text>
+            <b-card-text>Pago: {{listar.salario}}</b-card-text>
             <b-button @click="show = 'DetalleOferta'" variant="primary" class="m-1">Ver Detalles</b-button>
             <b-button href="#" variant="success" class="m-1">Aplicar a esta oferta</b-button>
             </b-card>
-<!--end card-->
-<!--start card-->
-            <b-card
-            title="Pintor"
-            img-src="https://www.spime.com.co/wp-content/uploads/2021/06/pintura-industrial.png"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 25rem;"
-            class="mb-2 m-1"
-            >
-            <b-card-text>Empresa requiere personal para el area de pintura por tiempo indefinido</b-card-text>
-            <b-card-text>Pago: $1'000.000</b-card-text>
-            <b-button href="#" variant="primary" class="m-1">Ver Detalles</b-button>
-            <b-button href="#" variant="success" class="m-1">Aplicar a esta oferta</b-button>          </b-card>
-<!--end card-->
-<!--start card-->
-          <b-card
-          title="Electricista"
-          img-src="https://electricossuramerica.com/elecsura/wp-content/uploads/2017/06/tipos-de-instalaciones-electricas.jpg"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 25rem;"
-          class="mb-2 m-1"
-          >
-          <b-card-text>Se requiere electricista para obra de construccion por 8 meses</b-card-text>
-          <b-card-text>Pago: $2'000.000</b-card-text>
-          <b-button href="#" variant="primary" class="m-1">Ver Detalles</b-button>
-          <b-button href="#" variant="success" class="m-1">Aplicar a esta oferta</b-button>          </b-card>
-<!--end card-->
-<!--start card-->
-          <b-card
-          title="Soldador"
-          img-src="https://concreacero.com.co/wp-content/uploads/2019/05/concreacero_planta-produccion14.jpg"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 25rem;"
-          class="mb-2 m-1"
-          >
-          <b-card-text>Busco soldador para instalar puertas metalicas</b-card-text>
-          <b-card-text>Pago: $80.000 x dia</b-card-text>
-          <b-button href="#" variant="primary" class="m-1">Ver Detalles</b-button>
-          <b-button href="#" variant="success" class="m-1">Aplicar a esta oferta</b-button>          </b-card>
-<!--end card-->
-<!--start card-->
-          <b-card
-          title="Plomero"
-          img-src="https://construmaster.com.mx/wp-content/uploads/2021/04/5_plomeria.jpg"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style="max-width: 25rem;"
-          class="mb-2 m-1"
-          >
-          <b-card-text>solicito a una persona para instalar dos baños</b-card-text>
-          <b-card-text>Pago: a convenir</b-card-text>
-          <b-button href="#" variant="primary" class="m-1">Ver Detalles</b-button>
-          <b-button href="#" variant="success" class="m-1">Aplicar a esta oferta</b-button>          </b-card>
-<!--end card-->
-<!--start card-->
-            <b-card
-            title="Soldador"
-            img-src="https://img.freepik.com/fotos-premium/trabajador-construccion-soldadura-barras-refuerzo-metal-vertido-cimientos-gente-sincera-real_508835-4417.jpg?w=2000"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 25rem;"
-            class="mb-2 m-1"
-            >
-            <b-card-text>Se requiere soldador por tiempo indefinido</b-card-text>
-            <b-card-text>Pago: $1'000.000</b-card-text>
-            <b-button href="#" variant="primary" class="m-1">Ver Detalles</b-button>
-            <b-button href="#" variant="success" class="m-1">Aplicar a esta oferta</b-button>            </b-card>
-<!--end card-->
-<!--start card-->
-            <b-card
-            title="Jardinero"
-            img-src="https://img.clasf.co/2019/01/26/servicio-guadaa-podas-tala-y-jardineria-20190126073932.4159630015.jpg"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 25rem;"
-            class="mb-2 m-1"
-            >
-            <b-card-text>Necesito un jardinero para cortar el pasto en un lote de 100m2</b-card-text>
-            <b-card-text>Pago: $a convenir</b-card-text>
-            <b-button href="#" variant="primary" class="m-1">Ver Detalles</b-button>
-            <b-button href="#" variant="success" class="m-1">Aplicar a esta oferta</b-button>            </b-card>
-<!--end card-->
-<!--start card-->
-            <b-card
-            title="Ayudante General "
-            img-src="https://www.semana.com/resizer/JmiB52VJxZmk799j7D2CEeTZ1x4=/arc-anglerfish-arc2-prod-semana/public/R52D6MSO7ZB4DF3W4QM4LECYIA.jpg"
-            img-alt="Image"
-            img-top
-            tag="article"
-            style="max-width: 25rem;"
-            class="mb-2 m-1"
-            >
-            <b-card-text>Se requieren 5 ayudantes de construccion por 4 meses</b-card-text>
-            <b-card-text>Pago: $1'000.000</b-card-text>
-            <b-button href="#" variant="primary" class="m-1">Ver Detalles</b-button>
-            <b-button href="#" variant="success" class="m-1">Aplicar a esta oferta</b-button></b-card>
+</div>
+</div>
 <!--end card-->
    </div>
   </div> 
@@ -171,6 +66,7 @@
 </div>
 </template>
 <script>
+import axios from "axios"
 import DetalleOferta from '@/components/DetalleOferta.vue'
 import ObraBlancaView from './ObraBlancaView.vue';
 import ObraGrisView from './ObraGrisView.vue';
@@ -179,6 +75,7 @@ export default{
   name:'OfertasPostulante',
   data(){
     return{
+      listar: null,
       show: 'Categorias'
     }
   },
@@ -188,5 +85,10 @@ export default{
     ObraBlancaView,
     ObraGrisView
 },
+mounted(){
+    axios.get("http://localhost:4000/consultaOfertas/").then(response=>{
+     this.listar=response.data
+   })
+  }
 }
 </script>

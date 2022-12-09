@@ -98,7 +98,7 @@ export default{
   name:'MiPerfilPostulante',
   data(){
     return{
-      show: null ,
+      show: 'Experiencia' ,
       value1: null,
       value2: null
     }

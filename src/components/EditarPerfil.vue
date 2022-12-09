@@ -1,6 +1,7 @@
 <template>
 <div>
  <div>
+  <h1 class="">Completa tus datos personales</h1>
   <div>
     <h5>Selecciona una imagen de perfil:</h5>
     <div>
@@ -54,12 +55,7 @@
     <input id="nombre" class="form-control" type="text" value='' :value="[[user.direccion]]">
   </div><br>
 <!--Direccion-->
-<!--Correo-->
-<div role="group">
-    <label for="input-live">Correo:</label>
-    <input id="nombre" class="form-control" type="text" value='' :value="[[user.correo]]">
-  </div><br>
-<!--Correo-->
+
 <!--Disponibilidad-->
 <template>
   <div>    
@@ -127,14 +123,10 @@ export default {
         {value: 'PorContrato', text: 'Por Contrato'},
         {value: 'aConvenir', text: 'A Convenir'},
     ]
-        }
-    },
-    components:{
-
- },
- computed: {
-
+ }
 },
+components:{},
+computed: {},
 methods:{
 GuardarPostulante(){
   alert();
