@@ -14,11 +14,10 @@
               <b-form-input></b-form-input>
           
               <template #prepend>
-                <b-dropdown text="Mas Opciones" variant="info">
+                <b-dropdown text="Mas Opciones" variant="outline-info">
                   <b-dropdown-item button @click="show = 'Ofertas'">Todas las ofertas</b-dropdown-item>
                   <b-dropdown-item button @click="show = 'Categorias'">Categorias</b-dropdown-item>
-                  <b-dropdown-item>Mis postulaciones</b-dropdown-item>
-                  <b-dropdown-item>Trabajos Terminados</b-dropdown-item>
+
                 </b-dropdown>
               </template>
             </b-input-group>
@@ -74,7 +73,7 @@ export default{
   data(){
     return{
       listar: null,
-      show: 'Categorias'
+      show: 'Ofertas'
     }
   },
   components:{

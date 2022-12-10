@@ -12,27 +12,21 @@
       <template #header>
         <h4 class="mb-0">Leyder Yesid Sanchez Benachi</h4>
       </template>
-      <b-card-body>
-        <b-card-title>Ayudante Construccion</b-card-title>
-        <b-card-sub-title class="mb-2">Popayan - Cauca</b-card-sub-title>
-      </b-card-body>
+
       <b-list-group flush>
-        <b-list-group-item button @click="show = 'EditarPerfil'">Actualizar Datos Personales</b-list-group-item>
+        <b-list-group-item button @click="show = 'EditarPerfil'">Datos Personales</b-list-group-item>
         <b-list-group-item button @click="show = 'Experiencia'">Mi Experiencia</b-list-group-item>
         <b-list-group-item button @click="show = 'Ofertas'">Ofertas de Empleo</b-list-group-item>
-        <b-list-group-item >Mis Empleos</b-list-group-item>
+        <b-list-group-item button @click="show = 'Ofertas'">Mis Postulaciones</b-list-group-item>
+
       </b-list-group>
-  
+
       <b-card-body>
         <h6>Contacto:</h6>
         <a href="#" class="card-link">Facebook</a>
         <a href="#" class="card-link">Whatsapp</a>
       </b-card-body>
-  
-      <b-card-footer>This is a footer</b-card-footer>
-  
-      <b-card-img src="https://placekitten.com/480/210" alt="Image" bottom></b-card-img>
-    </b-card>
+      <b-card-footer>camellapp</b-card-footer></b-card>
 </div></div>
 <div class="col-1"></div>
 <div class="col-8">
@@ -98,7 +92,7 @@ export default{
   name:'MiPerfilPostulante',
   data(){
     return{
-      show: 'Experiencia' ,
+      show: 'Ofertas' ,
       value1: null,
       value2: null
     }

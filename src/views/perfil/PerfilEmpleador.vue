@@ -14,12 +14,8 @@
       <template #header>
         <h4 class="mb-0">Leyder Yesid Sanchez Benachi</h4>
       </template>
-  
-      <b-card-body>
-        <b-card-title>oficio y/o empresa</b-card-title>
-        <b-card-sub-title class="mb-2">Popayan - Cauca</b-card-sub-title>
-<p>persona natural</p>
-      </b-card-body>
+
+
       <b-list-group flush>
         <b-list-group-item button @click="show = 'EditarPerfil'">Editar Perfil</b-list-group-item>
         <b-list-group-item button @click="show = 'MisEmpleos'">Mis Empleos</b-list-group-item>
@@ -61,7 +57,7 @@
                 cedula: '',
                 correo: '',
                 celular: '',
-                show: 'MisEmpleos',
+                show: 'ListaPostulantes',
                 options: [
           { value: null, text: 'Tipo de documento' },
           { value: 'a', text: 'Cédula de Ciudadanía' },

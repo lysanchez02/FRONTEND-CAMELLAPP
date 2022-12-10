@@ -73,15 +73,11 @@ export default{
 }
 },
   mounted(){
-    alert()
+
     axios.get("http://localhost:4000/ListarPostulante").then(response=>{
       this.listar=response.data
     })
   },
-  mounted(){
-    axios.get("http://localhost:4000/consultaPostulantexCategoria").then(response=>{
-     this.listar=response.data
-   })
-  }
+
 }
 </script>

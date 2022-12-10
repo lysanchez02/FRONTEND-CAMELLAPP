@@ -163,7 +163,7 @@ export default {
 </script>
 
 <style>
-@import "C:\Users\Leyder\camellapp\src\assets\sass\botones\botonesgenerales.scss";
+
 .preguntas {
 
     text-align: center;

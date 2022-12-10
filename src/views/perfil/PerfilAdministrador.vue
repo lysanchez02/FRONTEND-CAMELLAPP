@@ -16,12 +16,11 @@
       </template>
       <b-card-body>
         <b-card-title>Administrador</b-card-title>
-        <b-card-sub-title class="mb-2">Popayan - Cauca</b-card-sub-title>
-          <a href="">Ver mas...</a>
+
       </b-card-body>
       <b-list-group flush>
-        <b-list-group-item button @click="show = ''">Ofertas</b-list-group-item>
-        <b-list-group-item button @click="show = ''">Empleadores</b-list-group-item>
+        <b-list-group-item button @click="show = 'Ofertas'">Ofertas de Empleo</b-list-group-item>
+        <b-list-group-item button @click="show = 'ListaEmpleadores'">Empleadores</b-list-group-item>
         <b-list-group-item button @click="show = 'ListaPostulantes'">Postulantes</b-list-group-item>
         <b-list-group-item button @click="show = ''">Usuarios Bloqueados</b-list-group-item>
         <b-list-group-item button @click="show = ''">Comentarios</b-list-group-item>
@@ -37,23 +36,54 @@
 
 <div class="col-1"></div>
    <div class="col-8">
+    <div v-if="show === 'Ofertas'"><OfertasPostulante/></div>
+    <div v-if="show === 'ListaEmpleadores'">
+      <div class="row d-flex">  
+<!--start card-->
+            <div class="col-6" v-for="empleador in empleador" :key="empleador.id">
+            <b-card
+            :title="empleador.nombres+' '+empleador.apellidos"
+            img-src="https://st3.depositphotos.com/6582994/13117/v/450/depositphotos_131177880-stock-illustration-user-icon-in-trendy-flat.jpg"
+            :img-alt=empleador.foto_perfil
+            img-top
+            tag="article"
+            style="max-width: 25rem;"
+            >
+            {{empleador.nacionalidad}}<br>
+            <b-card-text><p>{{empleador.telefono}}</p></b-card-text>
+            <b-button href="#" variant="primary" class="m-1">Ver Perfil</b-button>
+            <b-button href="#" variant="danger" class="m-1">Eliminar</b-button>
+          </b-card><br>
+        </div>
+<!--end card-->
+  </div>
+    </div>
     <div v-if="show === 'ListaPostulantes'"><ListaPostulantes/></div>
    </div>             
 </div>
 </div>
 </template>
 <script> 
+import axios from "axios";
 import ListaPostulantes from '@/components/ListaPostulantes.vue';
+import OfertasPostulante from '@/components/OfertasPostulante.vue';
 
 export default{
   name:'PerfilAdministrador',
   data(){
     return{
+      empleador:null,
       show:null
     }
   },
   components:{
-    ListaPostulantes
+    ListaPostulantes,
+    OfertasPostulante
+},
+mounted(){
+    axios.get("http://localhost:4000/ListarEmpleador").then(response=>{
+      this.empleador=response.data
+    })
   },
 }
 </script>

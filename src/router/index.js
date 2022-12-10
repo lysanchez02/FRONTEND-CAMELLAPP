@@ -6,7 +6,7 @@ import LoginView from'../views/login/LoginView.vue'
 import RegistroView from'../views/login/RegistroView.vue'
 import ContrasenaView from'../views/login/ContrasenaView.vue'
 
-import PostulantesView from'../views/PostulantesView.vue'
+
 import PerfilPostulanteView from'../views/perfil/PerfilPostulanteView.vue'
 import MiPerfilPostulante from'../views/perfil/MiPerfilPostulante.vue'
 import PerfilAdministrador from'../views/perfil/PerfilAdministrador.vue'
@@ -74,14 +74,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }, 
-
-  {
-    path: '/PostulantesView',
-    name: 'PostulantesView',
-    component: PostulantesView
-  },
-  {
+  }, {
     path: '/PerfilPostulanteView',
     name: 'PerfilPostulanteView',
     component: PerfilPostulanteView
