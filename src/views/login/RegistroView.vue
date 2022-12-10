@@ -8,9 +8,9 @@
          <div class="col-6"><input v-model="form.nombres" class="form-control" type="text" placeholder="Nombre"></div>
          <div class="col-6"><input v-model="form.apellidos" class="form-control" type="text" placeholder="Apellidos"></div>
          </div><br>
-        <input v-model="form.correo" class="form-control" type="email" placeholder="Correo"><br>
+        <input v-model="user.correo" class="form-control" type="email" placeholder="Correo"><br>
         <input class="form-control" type="password" placeholder="Contraseña"><br>
-        <input v-model="form.contrasena" class="form-control" type="password" placeholder="Confirma tu Contraseña">
+        <input v-model="user.contrasena" class="form-control" type="password" placeholder="Confirma tu Contraseña">
         <br>
         <b-button @click="registro = 'registro2'" variant="info">Siguiente</b-button>
        </div>
