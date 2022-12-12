@@ -12,24 +12,18 @@
                 </template>
               <b-form-input></b-form-input>
               <template #prepend>
+                <div>
                 <b-dropdown text="Categorias">
-                  <b-dropdown-item>Ayudante General</b-dropdown-item>
-                  <b-dropdown-item>Oficial de construccion</b-dropdown-item>
-                  <b-dropdown-item>Soldadura</b-dropdown-item>
-                  <b-dropdown-item>Pintado en general</b-dropdown-item>
-                  <b-dropdown-item>Plomeria</b-dropdown-item>
-                  <b-dropdown-item>Jardineria</b-dropdown-item>
-                  <b-dropdown-item>Otros Servicios</b-dropdown-item>
+                  <b-dropdown-item v-for="categoria in listarCategoria" :key="listarCategoria.id" :title="categoria.descripcion">{{categoria.nombre}}</b-dropdown-item>
                 </b-dropdown>
+              </div>
               </template>
             </b-input-group>
-          </div>
+        </div>
           <br>
           <!--aqui termina la barra de busqueda--> 
     </div>
-    <div class="col-3">
-        <b-button variant="outline-success">Nueva Oferta<b-icon icon="plus"></b-icon></b-button>
-    </div>
+
         </div><br>
         <div class="row d-flex">  
 <!--start card-->
@@ -61,7 +55,8 @@ export default{
   name:'ListaPostulantes',
   data(){
     return{
-      listar:null
+      listar:null,
+      listarCategoria: null
     }
   },
   components:{
@@ -74,6 +69,9 @@ export default{
 },
   mounted(){
 
+    axios.get("http://localhost:4000/Listarcategorianew/").then(response2=>{
+     this.listarCategoria=response2.data
+   }),
     axios.get("http://localhost:4000/ListarPostulante").then(response=>{
       this.listar=response.data
     })

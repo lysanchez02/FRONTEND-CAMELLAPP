@@ -21,7 +21,7 @@
   <!--id_usuario-->
 <div role="group">
     <label for="input-live">id_usuario:</label>
-    <input id="nombre" class="form-control" type="text" value='' :value="[[user.id_usuario]]">
+    <input id="nombre" class="form-control" type="number" value='' :value="[[user.id_usuario]]">
   </div><br>
 <!--id_usuario-->
 <!--Nombre-->

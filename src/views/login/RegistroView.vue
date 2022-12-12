@@ -1,8 +1,9 @@
 <template>
-    <div class="container">
-      <div class="container col-8">
+<div><NavBarLogin/><br>
+ <div class="container">
+  <div class="container col-8">
        <div v-if="registro === 'registro1'">
-        <div class="d-flex"><h1><strong>Registrate</strong></h1></div>
+        <div class="d-flex"><h1 class="mt-5"><strong>Registrate</strong></h1></div>
         <div class="d-flex"><h5>! Bienvenido ¡</h5></div>
          <div class="row">
          <div class="col-6"><input v-model="form.nombres" class="form-control" type="text" placeholder="Nombre"></div>
@@ -15,7 +16,7 @@
         <b-button @click="registro = 'registro2'" variant="info">Siguiente</b-button>
        </div>
        <div v-else-if="registro === 'registro2'">
-        <div class="d-flex"><h1><strong>Registrate</strong></h1></div>
+        <div class="d-flex"><h1 class="mt-5"><strong>Registrate</strong></h1></div>
         <div class="d-flex"><h5>Como podemos encontrarte</h5></div>
          <div class="row">
          <div class="col-6"><input v-model="form.nacionalidad" class="form-control" type="text" placeholder="Pais de Origen"></div>
@@ -31,28 +32,17 @@
        <div id="usuario" class="usuario" v-for="usuario in listar" :key="listar" v-if="registro === 'registro3'">
         <div class="row">
           <div class="col-6">
-            <div class="d-flex"><h1><strong>Registrate</strong></h1></div>
+            <div class="d-flex"><h1 class="mt-5"><strong>Registrate</strong></h1></div>
             <div class="d-flex justify-content-between"><h5>Estas a un solo paso</h5></div>
           </div>
-          <div class="col-6">
-        <div>
-        <h5>Selecciona una imagen de perfil:</h5>
-        <b-avatar-group size="4rem" class="d-flex justify-content-start">
-          <b-avatar button src="https://i.ibb.co/ZxFjSC0/logocamellapp.png"></b-avatar>
-          <b-avatar variant="success" button></b-avatar>
-          <b-avatar variant="danger" button></b-avatar>
-          <b-avatar variant="warning" button></b-avatar>
-          <b-avatar variant="info" button></b-avatar>
-          <b-avatar button icon="plus" variant="light" v-b-popover.hover="'Subir foto'"></b-avatar>
-        </b-avatar-group>
-        </div></div>
+
         </div>
 <br>
 <br>
 <div class="row d-flex m-5">
   <input v-show="false" v-model="form.foto_perfil" class="form-control" type="text" value="IMAGEN">
-   <div class="col-6"><h5>Su ID de usuario es:      {{usuario.id}}</h5></div>
-   <div class="col-6"><input  class="form-control" type="text" v-model="form.id_usuario" placeholder="Confirma tu ID"></div><br>
+   <div class="col-6"><h1 class="w-25"><strong>{{usuario.id}}</strong></h1></div>
+   <div class="col-6"><input  class="form-control" type="text" v-model="form.id_usuario" placeholder="Escribe el numero que está en la pantalla"></div><br>
   </div>
    
    <br><br>
@@ -62,7 +52,7 @@
       
  <div v-if="registro === 'registroPostulante'">
 
-  <div class="d-flex"><h1><strong>Registrate</strong></h1></div>
+  <div class="d-flex"><h1 class="mt-5"><strong>Registrate</strong></h1></div>
             <div class="d-flex justify-content-between"><h5>Ya casi terminamos.</h5></div>
           <template>
         <div class="m-5">
@@ -75,10 +65,11 @@
           </template>
           <b-button @click="GuardarUsuario(),GuardarPostulante()" variant="info" class="m-1"><b-icon icon="box-arrow-in-right"></b-icon>  Registrarme</b-button>
  </div>
-</div></div>
+</div></div></div>
     </template>
     <script>
-    import axios from 'axios'
+    import NavBarLogin from '@/components/NavBarLogin.vue';
+import axios from 'axios'
     
     export default {
         name: 'EditarPerfil',
@@ -114,7 +105,7 @@
         ]
             }
         },
-        components:{},
+        components:{ NavBarLogin },
         computed: {},
     methods:{
     GuardarPostulante(){
@@ -123,7 +114,8 @@
       .then((data) => {
         console.log(data);
       });
-  },    GuardarEmpleador(){
+  },
+   GuardarEmpleador(){
       alert('hecho');
       axios.post(" http://localhost:4000/GuardarEmpleador",this.form)
       .then((data) => {
@@ -134,13 +126,13 @@
     axios.post("http://localhost:4000/Guardarusuario",this.user)
     .then((data) => {
       console.log(data);
-    }
-    )
-  }
- },
+   }
+  )
+ }
+},
  mounted(id=1){
     axios.get("http://localhost:4000/usuario/"+id).then(response=>{
-      this.listar=response.data
-    })
-  },
+    this.listar=response.data
+  })
+ },
 }</script>

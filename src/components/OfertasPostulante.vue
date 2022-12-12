@@ -26,11 +26,11 @@
           <!--aqui termina la barra de busqueda-->
     </div></div>
         <div class="row"> 
-        <div> 
-          <div v-if="show === 'Categorias'">
+        <div class="d-flex justify-content-center" >
+          <div v-if="show === 'Categorias'" class="col-8">
           <b-list-group v-for="categoria in listarCategoria" :key="listarCategoria.id" >
-            <b-list-group-item class="m-1" button :title="categoria.descripcion">{{categoria.nombre}}
-              <b-badge variant="primary"><b-icon icon="x"></b-icon></b-badge>
+            <b-list-group-item class="d-flex justify-content-between m-1" button :title="categoria.descripcion">{{categoria.nombre}}
+              <b-icon icon="arrow-right-short"></b-icon>
             </b-list-group-item>
           </b-list-group>
         </div>

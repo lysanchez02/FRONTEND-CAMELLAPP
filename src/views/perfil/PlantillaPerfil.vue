@@ -64,6 +64,22 @@
 </div>
 </template>
 
+
+
+
+
+          <div class="col-6">
+        <div>
+        <h5>Selecciona una imagen de perfil:</h5>
+        <b-avatar-group size="4rem" class="d-flex justify-content-start">
+          <b-avatar button src="https://i.ibb.co/ZxFjSC0/logocamellapp.png"></b-avatar>
+          <b-avatar variant="success" button></b-avatar>
+          <b-avatar variant="danger" button></b-avatar>
+          <b-avatar variant="warning" button></b-avatar>
+          <b-avatar variant="info" button></b-avatar>
+          <b-avatar button icon="plus" variant="light" v-b-popover.hover="'Subir foto'"></b-avatar>
+        </b-avatar-group>
+        </div></div>
 -->
 
 </template>

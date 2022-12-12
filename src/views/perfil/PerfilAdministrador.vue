@@ -1,4 +1,5 @@
 <template>
+<div><NavBar/><br>
     <div class="container">
 
 <div class="row">
@@ -38,7 +39,16 @@
    <div class="col-8">
     <div v-if="show === 'Ofertas'"><OfertasPostulante/></div>
     <div v-if="show === 'ListaEmpleadores'">
-      <div class="row d-flex">  
+      <div class="row d-flex justify-content-center"> 
+        <h2>CAMELLAPP</h2>
+        <div class="col-8">
+            <b-input-group class="mb-5">
+              <template #append>
+                <b-button><b-icon icon="search"></b-icon></b-button>                   
+                </template>
+              <b-form-input></b-form-input>
+            </b-input-group>
+        </div><br>
 <!--start card-->
             <div class="col-6" v-for="empleador in empleador" :key="empleador.id">
             <b-card
@@ -61,12 +71,13 @@
     <div v-if="show === 'ListaPostulantes'"><ListaPostulantes/></div>
    </div>             
 </div>
-</div>
+</div></div>
 </template>
 <script> 
 import axios from "axios";
 import ListaPostulantes from '@/components/ListaPostulantes.vue';
 import OfertasPostulante from '@/components/OfertasPostulante.vue';
+import NavBar from "@/components/NavBar.vue";
 
 export default{
   name:'PerfilAdministrador',
@@ -78,7 +89,8 @@ export default{
   },
   components:{
     ListaPostulantes,
-    OfertasPostulante
+    OfertasPostulante,
+    NavBar
 },
 mounted(){
     axios.get("http://localhost:4000/ListarEmpleador").then(response=>{

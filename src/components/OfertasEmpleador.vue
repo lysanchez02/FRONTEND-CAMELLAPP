@@ -15,7 +15,7 @@
                           <b-dropdown text="Mas Opciones">
                             <b-dropdown-item button @click="show = 'OfertasEmpleador'">Todas las ofertas</b-dropdown-item>
                             <b-dropdown-item>Mis Ofertas</b-dropdown-item>
-                            <b-dropdown-item>Mis Ofertas</b-dropdown-item>
+
                             <b-dropdown-item>Trabajos Terminados</b-dropdown-item>
                           </b-dropdown>
                         </template>

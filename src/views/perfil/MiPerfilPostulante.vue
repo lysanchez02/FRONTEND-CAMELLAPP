@@ -1,7 +1,8 @@
 <template>
-    <div class="container">
-<div class="row">
-<div class="col-3">
+<div><NavBar/><br>
+ <div class="container">
+  <div class="row">
+   <div class="col-3">
   <div>
     <b-card
       no-body
@@ -11,10 +12,11 @@
       img-top>
       <template #header>
         <h4 class="mb-0">Leyder Yesid Sanchez Benachi</h4>
+        <h5></h5>
       </template>
 
       <b-list-group flush>
-        <b-list-group-item button @click="show = 'EditarPerfil'">Datos Personales</b-list-group-item>
+        <b-list-group-item button @click="show = 'EditarPerfil'">Editar Perfil</b-list-group-item>
         <b-list-group-item button @click="show = 'Experiencia'">Mi Experiencia</b-list-group-item>
         <b-list-group-item button @click="show = 'Ofertas'">Ofertas de Empleo</b-list-group-item>
         <b-list-group-item button @click="show = 'Ofertas'">Mis Postulaciones</b-list-group-item>
@@ -33,15 +35,12 @@
   <div v-if="show === 'Experiencia'">
     <h4>Experiencia</h4>
 <!--start card-->
-<div class="d-flex justify-content-center">
-  <b-card no-body class="overflow-hidden" style="max-width: 1540px;">
+<div v-for="experiencia in lista" :key="lista" class="d-flex justify-content-center">
+  <b-card no-body class="my-4 overflow-hidden" style="max-width: 1540px;">
     <b-row no-gutters>
       <b-col md="7">
-        <b-card-body title="Trabajo de construccion">
-          <b-card-text>
-            This is a wider card with supporting text as a natural lead-in to additional content.
-            This content is a little bit longer.
-          </b-card-text><br>
+        <b-card-body class="my-4" :title="experiencia.titulo">
+          <b-card-text  class="my-4">{{experiencia.descripcion}}</b-card-text><br>
         </b-card-body>
       </b-col>
       <b-col md="5">
@@ -52,46 +51,83 @@
 </div>
 <br>
 <!--end card-->
-<!--start card-->
-<div class="d-flex justify-content-center">
-  <b-card no-body class="overflow-hidden" style="max-width: 1540px;">
-    <b-row no-gutters>
-      <b-col md="7">
-        <b-card-body title="Trabajo de construccion">
-          <b-card-text>
-            This is a wider card with supporting text as a natural lead-in to additional content.
-            This content is a little bit longer.
-          </b-card-text><br>
-        </b-card-body>
-      </b-col>
-      <b-col md="5">
-        <b-card-img src="https://technodesing.com/wp-content/uploads/2019/06/Noticia-133479-construccion.jpg" alt="Image" class="rounded-0"></b-card-img>
-      </b-col>
-    </b-row>
-  </b-card>
-</div><br>
-<!--end card-->
-<a href="">
-    <b-card img-src="" img-alt="Card image" img-left class="mb-3">
+      <a href="" @click="show = 'nuevoRegistroCatalogo'"><b-card img-src="" img-alt="Card image" img-left class="mb-3">
       <b-icon icon="plus-circle-dotted"></b-icon>
-      <b-card-text>Añadir experiencia</b-card-text>      
-    </b-card></a>
-   </div><!--Experiencia--> 
-  <div v-else-if="show === 'Ofertas'"><OfertasPostulante/></div>
-  <div v-else-if="show === 'EditarPerfil'"><EditarPerfil/></div>
-  </div>             
+      <b-card-text>Añadir experiencia</b-card-text></b-card></a>
+      </div><!--Experiencia--> 
+     <div v-else-if="show === 'Ofertas'"><OfertasPostulante/></div>
+    <div v-else-if="show === 'EditarPerfil'"><EditarPerfil/></div>
+    <div v-else-if="show === 'nuevoRegistroCatalogo'">
+      <div class="row">
+              <b-card>
+                <template #header>
+                  <b-card-img
+                    src="https://help.fromdoppler.com/wp-content/uploads/2016/12/Alto_y_ancho-1024x531.png"
+                    img-top class="w-20"></b-card-img>
+                  <br> <br>
+                  <div class="row d-flex">
+                    <div class="col-4">
+                      <label for="">Titulo</label>
+                    </div>
+                    <div class="col-8">
+                      <input class="from_control" placeholder="titulo"> 
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row d-flex">
+                    <div class="col-4">
+                     <label for="">Descripcion Del Trabajo</label> 
+                    </div>
+                    <div class="col-8">
+                     <b-form-textarea placeholder="se permite al menos 500 caracteres" rows="3"> </b-form-textarea> 
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row d-flex">
+                    <div class="col-4">
+                      <label for="">Pago</label>
+                    </div>
+                    <div class="col-8">
+                      <input class="from_control" placeholder="$"> 
+                    </div>
+                  </div>
+                  <br>
+                  <div class="row d-flex">
+                    <div class="col-2">
+                      <label for="">Fecha de Inicio del trabajo</label>
+                    </div>  
+                    <div class="col-4">
+                      <b-form-datepicker v-model="value" :min="min" :max="max" locale="es"></b-form-datepicker>
+                    </div>  
+                    <div class="col-2">
+                      <label for="">Fecha de Finalizacion</label>
+                    </div>  
+                      <div class="col-4">
+                      <b-form-datepicker v-model="value" :min="min" :max="max" locale="es"></b-form-datepicker>
+                    </div>
+                  </div>
+                  <br>
+                </template>
+                <b-button href="#" variant="primary" class="m-1"><b-icon icon="check2"></b-icon>  Publicar Oferta</b-button> 
+                <b-button href="#" variant="danger" class="m-1"><b-icon icon="x-circle"></b-icon> Cancelar</b-button>                 
+              </b-card>
+          </div>
+    </div>
+   </div>             
+  </div>
  </div>
 </div>
-</template><script>
-
-
+</template>
+<script>
+import axios from 'axios'
 import OfertasPostulante from '@/components/OfertasPostulante.vue'
 import EditarPerfil from '@/components/EditarPerfil.vue'
-
+import NavBar from '@/components/NavBar.vue';
 export default{
   name:'MiPerfilPostulante',
   data(){
     return{
+      lista: null,
       show: 'Ofertas' ,
       value1: null,
       value2: null
@@ -100,7 +136,12 @@ export default{
   components:{
     OfertasPostulante,
     EditarPerfil,
+    NavBar
 },
-
+mounted(){
+    axios.get("http://localhost:4000/Listarmultimedia/").then(response=>{
+      this.lista=response.data
+    })
+  },
 }
 </script>

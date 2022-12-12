@@ -1,5 +1,5 @@
 <template>
-    <div>
+<div><NavBar/><br>
       <div class="container">
         <div class="row">
           <div class="col-3">
@@ -43,13 +43,13 @@
     </template>
     <script>
     import OfertasEmpleador from '@/components/OfertasEmpleador.vue';
+    import ListaPostulantes from '@/components/ListaPostulantes.vue';
     import EditarPerfil from '@/components/EditarPerfil.vue';
     import PublicarView from '@/components/PublicarView.vue';
-    import ListaPostulantes from '@/components/ListaPostulantes.vue';
-    
+    import NavBar from '@/components/NavBar.vue';
     export default {
         name: 'PerfilEmpleador',
-
+        
         data(){
             return{
                 nombre: '',
@@ -76,11 +76,12 @@
             }
         },
         components:{
-        EditarPerfil,
-        OfertasEmpleador,
-        PublicarView,
-        ListaPostulantes
-     },
+    EditarPerfil,
+    OfertasEmpleador,
+    PublicarView,
+    ListaPostulantes,
+    NavBar
+},
      computed: {
       nombreState() {return this.nombre.length > 0 ? true : false},
       apellidoState() {return this.apellido.length > 0 ? true : false},

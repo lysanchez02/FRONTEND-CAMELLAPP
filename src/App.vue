@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <nav>
-      <!--
+    <!--  <nav>
       <router-link to="/RegistroView">Registro</router-link>|
       <router-link to="/">Home</router-link> |
       <router-link to="/Inicioview">Inicio</router-link>  |
@@ -24,8 +23,7 @@
       <router-link to="/PublicarView">publicar</router-link>|
       <router-link to="AdmiView">admiempleos</router-link>|
       <router-link to="CategoriaView">categoria</router-link>
-    -->
-    </nav>
+    </nav>-->
     <router-view/>
   </div>
 </template>
