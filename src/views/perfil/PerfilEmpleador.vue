@@ -12,7 +12,7 @@
       img-top
     >
       <template #header>
-        <h4 class="mb-0">Leyder Yesid Sanchez Benachi</h4>
+        <h4 class="mb-0">Empleador</h4>
       </template>
 
 

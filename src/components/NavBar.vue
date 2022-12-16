@@ -5,8 +5,7 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav >
             <b-nav-item href="/">Inicio</b-nav-item>
-            <b-nav-item href="#">Trabaja con Nosotros</b-nav-item>
-            <b-nav-item href="#">Contactanos</b-nav-item>
+
           </b-navbar-nav>
           </b-collapse>
         <b-button class="mx-5" variant="secondary" href="/">Salir    <b-icon icon="box-arrow-right"></b-icon></b-button>

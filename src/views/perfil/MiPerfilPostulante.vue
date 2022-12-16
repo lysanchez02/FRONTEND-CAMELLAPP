@@ -11,7 +11,7 @@
       img-alt="Image"
       img-top>
       <template #header>
-        <h4 class="mb-0">Leyder Yesid Sanchez Benachi</h4>
+        <h4 class="mb-0">Postulante</h4>
         <h5></h5>
       </template>
 

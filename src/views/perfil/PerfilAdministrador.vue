@@ -13,13 +13,8 @@
       img-top
     >
       <template #header>
-        <h4 class="mb-0">CAMELLAPP</h4>
-      </template>
-      <b-card-body>
-        <b-card-title>Administrador</b-card-title>
-
-      </b-card-body>
-      <b-list-group flush>
+        <h4 class="mb-0">Administrador</h4>
+      </template>      <b-list-group flush>
         <b-list-group-item button @click="show = 'Ofertas'">Ofertas de Empleo</b-list-group-item>
         <b-list-group-item button @click="show = 'ListaEmpleadores'">Empleadores</b-list-group-item>
         <b-list-group-item button @click="show = 'ListaPostulantes'">Postulantes</b-list-group-item>

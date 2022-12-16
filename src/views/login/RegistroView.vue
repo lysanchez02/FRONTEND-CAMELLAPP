@@ -20,10 +20,10 @@
         <div class="d-flex"><h5>Como podemos encontrarte</h5></div>
          <div class="row">
          <div class="col-6"><input v-model="form.nacionalidad" class="form-control" type="text" placeholder="Pais de Origen"></div>
-         <div class="col-6"><input v-model="form.direccion" class="form-control" type="text" placeholder="Ciudad"></div>
+         <div class="col-6"><input v-model="form.direccion" class="form-control" type="text" placeholder="Direccion de Residencia"></div>
          </div><br>
-        <input v-model="form.direccion" class="form-control" type="email" placeholder="Direccion"><br>
-        <input v-model="form.telefono" class="form-control" type="number" placeholder="Numero de Celular"><br>
+
+         <input v-model="form.telefono" class="form-control" type="number" placeholder="Numero de Celular"><br>
         <input v-model="form.documento" class="form-control" type="number" placeholder="Numero de Documento">
         <br>
         <div class="d-flex"><p>Algunos datos no seran visibles por tu seguridad*</p></div><br>
