@@ -5,20 +5,26 @@ import HomeView from '../views/HomeView.vue'
 
 import LoginView from'../views/login/LoginView.vue'
 import RegistroView from'../views/login/RegistroView.vue'
-import ContraseñaView from'../views/login/ContraseñaView.vue'
-import OfertasdeempleoEmpleador from'../views/OfertasdeempleoEmpleador.vue'
-import OfertasdeempleoPostulante from'../views/OfertasdeempleoPostulante.vue'
+import ContrasenaView from'../views/login/ContrasenaView.vue'
+
 import PostulantesView from'../views/PostulantesView.vue'
 import PerfilPostulanteView from'../views/perfil/PerfilPostulanteView.vue'
 import MiPerfilPostulante from'../views/perfil/MiPerfilPostulante.vue'
 import PerfilAdministrador from'../views/perfil/PerfilAdministrador.vue'
 import PerfilEmpleador from'../views/perfil/PerfilEmpleador.vue'
-import EditarEmpleo from'../views/EditarEmpleo.vue'
-import PlantillaPerfil from'../views/perfil/PlantillaPerfil.vue'
-import DetalleOfertaView from'../views/DetalleOfertaView.vue'
 
-import { VBVisible } from 'bootstrap-vue'
-Vue.directive('b-visible', VBVisible)
+import PlantillaPerfil from'../views/perfil/PlantillaPerfil.vue'
+
+import PublicarView from'../components/PublicarView.vue'
+import AdmiView from'../views/AdmiView.vue'
+import CategoriaView from'../views/CategoriaView.vue'
+
+import ArchivosView from '../views/ArchivosView.vue'
+import AdministradorView from'../views/AdministradorView.vue'
+import PostulacionesView from'../views/PostulacionesView.vue'
+import AdmiOfertaView from'../views/AdmiOfertaView.vue'
+import AdmisubView from'../views/AdmisubView.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -33,34 +39,44 @@ const routes = [
     component: LoginView
   },
   {
+    path: '/AdmisubView',
+    name: 'AdmisubView',
+    component: AdmisubView
+  },
+  {
+    path: '/AdministradorView',
+    name: 'AdministradorView',
+    component: AdministradorView
+  },
+  {
+    path: '/AdmiOfertaView',
+    name: 'AdmiOfertaView',
+    component: AdmiOfertaView
+  },
+  {
+    path: '/PostulacionesView',
+    name: 'PostulacionesView',
+    component: PostulacionesView
+  },
+  {
     path: '/RegistroView',
     name: 'RegistroView',
     component: RegistroView
   },
- 
   {
-    path: '/ContraseñaView',
-    name: 'ContraseñaView',
-    component: ContraseñaView 
+    path: '/ArchivosView',
+    name: 'ArchivosView',
+    component: ArchivosView
   },
   {
-    path: '/About',
-    name: 'About',
+    path: '/about',
+    name: 'about',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   }, 
-   {
-    path: '/OfertasdeempleoEmpleador',
-    name: 'OfertasdeempleoEmpleador',
-    component: OfertasdeempleoEmpleador
-  },
-  {
-    path: '/OfertasdeempleoPostulante',
-    name: 'OfertasdeempleoPostulante',
-    component: OfertasdeempleoPostulante
-  },
+
   {
     path: '/PostulantesView',
     name: 'PostulantesView',
@@ -86,19 +102,28 @@ const routes = [
     name: 'PerfilEmpleador',
     component: PerfilEmpleador
   },
-  {
-    path: '/EditarEmpleo',
-    name: 'EditarEmpleo',
-    component: EditarEmpleo
-  },
+
   {
     path: '/PlantillaPerfil',
     name: 'PlantillaPerfil',
     component: PlantillaPerfil
-  },  {
-    path: '/DetalleOfertaView',
-    name: 'DetalleOfertaView',
-    component: DetalleOfertaView
+  },{
+    path: '/CategoriaView',
+    name: 'CategoriaView',
+    component: CategoriaView
+  },
+  {
+    path: '/ContrasenaView',
+    name: 'ContrasenaView',
+    component: ContrasenaView
+  },{
+    path: '/PublicarView',
+    name: 'PublicarView',
+    component: PublicarView
+  },{
+    path: '/AdmiView',
+    name: 'AdmiView',
+    component: AdmiView
   },
 
 ]

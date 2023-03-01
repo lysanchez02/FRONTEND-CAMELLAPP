@@ -17,7 +17,7 @@
         <b-card-sub-title class="mb-2">Popayan - Cauca</b-card-sub-title>
       </b-card-body>
       <b-list-group flush>
-        <b-list-group-item href="">Actualizar Datos Personales</b-list-group-item>
+        <b-list-group-item button @click="show = 'EditarPerfil'">Actualizar Datos Personales</b-list-group-item>
         <b-list-group-item button @click="show = 'Experiencia'">Mi Experiencia</b-list-group-item>
         <b-list-group-item button @click="show = 'Ofertas'">Ofertas de Empleo</b-list-group-item>
         <b-list-group-item >Mis Empleos</b-list-group-item>
@@ -84,6 +84,7 @@
     </b-card></a>
    </div><!--Experiencia--> 
   <div v-else-if="show === 'Ofertas'"><OfertasPostulante/></div>
+  <div v-else-if="show === 'EditarPerfil'"><EditarPerfil/></div>
   </div>             
  </div>
 </div>
@@ -91,19 +92,21 @@
 
 
 import OfertasPostulante from '@/components/OfertasPostulante.vue'
+import EditarPerfil from '@/components/EditarPerfil.vue'
 
 export default{
   name:'MiPerfilPostulante',
   data(){
     return{
-      show: null ,
+      show: 'Experiencia' ,
       value1: null,
       value2: null
     }
   },
   components:{
-    OfertasPostulante
-  },
+    OfertasPostulante,
+    EditarPerfil,
+},
 
 }
 </script>

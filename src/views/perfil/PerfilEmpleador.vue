@@ -23,7 +23,7 @@
       <b-list-group flush>
         <b-list-group-item button @click="show = 'EditarPerfil'">Editar Perfil</b-list-group-item>
         <b-list-group-item button @click="show = 'MisEmpleos'">Mis Empleos</b-list-group-item>
-        <b-list-group-item button @click="show = 'Postulantes'">Postulantes</b-list-group-item>
+        <b-list-group-item button @click="show = 'ListaPostulantes'">Postulantes</b-list-group-item>
         <b-list-group-item button @click="show = ''">Trabajos terminados</b-list-group-item>
         <b-list-group-item button @click="show = ''">Mi grupo de trabajo</b-list-group-item>
       </b-list-group>
@@ -39,6 +39,8 @@
           <div class="col-8">
 <div v-if="show === 'EditarPerfil'"><EditarPerfil/></div>
   <div v-else-if="show === 'MisEmpleos'"><OfertasEmpleador/></div>
+  <div v-else-if="show === 'PublicarView'"><PublicarView/></div>
+  <div v-else-if="show === 'ListaPostulantes'"><ListaPostulantes/></div>
           </div>
         </div></div>
     </div>
@@ -46,6 +48,8 @@
     <script>
     import OfertasEmpleador from '@/components/OfertasEmpleador.vue';
     import EditarPerfil from '@/components/EditarPerfil.vue';
+    import PublicarView from '@/components/PublicarView.vue';
+    import ListaPostulantes from '@/components/ListaPostulantes.vue';
     
     export default {
         name: 'PerfilEmpleador',
@@ -57,7 +61,7 @@
                 cedula: '',
                 correo: '',
                 celular: '',
-                show: null,
+                show: 'MisEmpleos',
                 options: [
           { value: null, text: 'Tipo de documento' },
           { value: 'a', text: 'Cédula de Ciudadanía' },
@@ -78,6 +82,8 @@
         components:{
         EditarPerfil,
         OfertasEmpleador,
+        PublicarView,
+        ListaPostulantes
      },
      computed: {
       nombreState() {return this.nombre.length > 0 ? true : false},

@@ -1,217 +1,146 @@
 <template>
-        <div class="container">
-            <b-row class="my-1">
-                <b-col sm="8"> <img class="img1" src="@/assets/logocamellapp.png" alt="">
-                    <h3>Formulario de Registro</h3>
-                </b-col>
-            </b-row><br>
-
-            <b-row class="my-1">
-                <b-col sm="2">
-                    <label for="input-small">Tipo de Persona</label>
-                </b-col>
-                <b-col sm="2">
-                    <b-dropdown variant="info" right text="Tipo de Persona">
-                        <b-dropdown-item>Persona natural</b-dropdown-item>
-                        <b-dropdown-item>Cedula extrangera</b-dropdown-item>
-                        <b-dropdown-item>Pasaporte</b-dropdown-item>
-                    </b-dropdown>
-                </b-col>
-            </b-row>
-            <b-row class="my-1">
-                <b-col sm="6">
-                    <label for="input-small">Primer Nombre:</label>
-                    <b-form-input class="form-control" placeholder="digite su primer nombre" id="Nombre" name="P_Nombre"
-                        v-model="Registro.p_Nombre"></b-form-input>
-                </b-col>
-                <b-col sm="6">
-                    <label for="input-small">Segundo Nombre:</label>
-                    <b-form-input class="form-control" placeholder="digite su segundo nombre" id="S_Nombre"
-                        name="S_Nombre" v-model="Registro.S_Nombre"></b-form-input>
-                </b-col>
-            </b-row><br>
-
-            <b-row class="my-1">
-                <b-col sm="6">
-                    <label for="input-default">Primer Apellido:</label>
-                    <b-form-input class="form-control" id="Apellido" name="Apellido"
-                        placeholder="digite su primer apellido" v-model="Registro.P_Apellido"></b-form-input>
-                </b-col>
-                <b-col sm="6">
-                    <label for="input-default">Segundo Apellido:</label>
-                    <b-form-input class="form-control" id="S_Apellido" name="S_Apellido"
-                        placeholder="digite su segundo apellido" v-model="Registro.S_Apellido"></b-form-input>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col sm="6">
-                    <label for="Email1">Correo Electronico :</label>
-                    <b-form-input class="form-control" type="email" id="Email1" aria-describedby="emailHelp"
-                        placeholder="Enter email" v-model="Registro.Correo"></b-form-input>
-                </b-col>
-                <b-col sm="6">
-                    <label for="input-default">Edad:</label>
-                    <b-form-input class="form-control" id="edad" name="edad" placeholder="digite su edad"
-                        v-model="Registro.Edad">
-                    </b-form-input>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col xs="2">
-                    <label for="input-default">Contraseña:</label>
-                    <b-form-input class="form-control" id="input-default" placeholder="digite su contraseña"
-                        v-model="Registro.Contraseña">
-                    </b-form-input>
-                </b-col>
-                <b-col xs="2">
-                    <label for="input-default">Confirmar Contraseña:</label>
-                    <b-form-input class="form-control" id="input-default" placeholder="confirmar su contraseña"
-                        v-model="Registro.Confirmar_contrasena">
-                    </b-form-input>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col lg="4">
-                    <label for="input-default">Tipo de Documento</label>
-                    <select class="form-control" v-model="Registro.T_Documento">
-                        <option>Tipo de Documento</option>
-                        <option>Cedula de Ciudania</option>
-                        <option>numero de pasaporte</option>
-                    </select>
-                </b-col>
-                <b-col xs="10">
-                </b-col>
-                <b-col sm="6">
-                    <label for="input-default">Numero de Documento:</label>
-                    <b-form-input class="form-control" id="input-default" v-model="Registro.N_Documento"></b-form-input>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col xs="2">
-                    <label for="input-default">Direccion:</label>
-                    <b-form-input class="form-control" id="input-default" placeholder="" v-model="Registro.Direccion">
-                    </b-form-input>
-                </b-col>
-                <b-col sm="6">
-                    <label for="input-default">Sexo:</label>
-                    <b-row>
-                        <b-col sm="4">
-                            <b-form-radio>Hombre</b-form-radio>
-                        </b-col>
-                        <b-col sm="4">
-                            <b-form-radio>Mujer</b-form-radio>
-                        </b-col>
-                    </b-row>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col sm="10">
-                    <label for="input-default">Fecha de Nacimiento:</label>
-                    <b-input-group class="mb-6">
-                        <b-form-input class="form-control" id="example-input" v-model="Registro.F_Nacimiento"
-                            type="text" placeholder="AAAA-MM-DD" autocomplete="off">
-                        </b-form-input>
-                        <b-input-group-append>
-                            <b-form-datepicker v-model="Registro.F_Nacimiento" button-only right locale="en-es"
-                                aria-controls="example-input" @context="onContext"></b-form-datepicker>
-                        </b-input-group-append>
-                    </b-input-group>
-                </b-col>
-            </b-row><br>
-            <b-row class="my-1">
-                <b-col xs="2">
-                    <label for="input-default">Ciudad/Municipio</label>
-                    <select class="form-control ">
-                        <option>Ciudad/Municipio</option>
-                        <option>Popayan</option>
-                        <option>Piendamo</option>
-                        <option>Rosas</option>
-                    </select>
-                </b-col>
-                <b-col xs="2">
-                    <label for="input-default">Numero de Celular:</label>
-                    <b-form-input class="form-control" id="input-default" v-model="Registro.Celular"></b-form-input>
-                </b-col>
-            </b-row><br>
-            <div class="boton2  "  >
-                <b-button   @click="Cancelar()">Cancelar</b-button>
-                <b-button   @click="Siguiente()">Siguiente</b-button>
-            </div>
+    <div class="container">
+      <div class="container col-8">
+       <div v-if="registro === 'registro1'">
+        <div class="d-flex"><h1><strong>Registrate</strong></h1></div>
+        <div class="d-flex"><h5>! Bienvenido ¡</h5></div>
+         <div class="row">
+         <div class="col-6"><input v-model="form.nombres" class="form-control" type="text" placeholder="Nombre"></div>
+         <div class="col-6"><input v-model="form.apellidos" class="form-control" type="text" placeholder="Apellidos"></div>
+         </div><br>
+        <input v-model="form.correo" class="form-control" type="email" placeholder="Correo"><br>
+        <input class="form-control" type="password" placeholder="Contraseña"><br>
+        <input v-model="form.contrasena" class="form-control" type="password" placeholder="Confirma tu Contraseña">
+        <br>
+        <b-button @click="registro = 'registro2'" variant="info">Siguiente</b-button>
+       </div>
+       <div v-else-if="registro === 'registro2'">
+        <div class="d-flex"><h1><strong>Registrate</strong></h1></div>
+        <div class="d-flex"><h5>Como podemos encontrarte</h5></div>
+         <div class="row">
+         <div class="col-6"><input v-model="form.nacionalidad" class="form-control" type="text" placeholder="Pais de Origen"></div>
+         <div class="col-6"><input v-model="form.direccion" class="form-control" type="text" placeholder="Ciudad"></div>
+         </div><br>
+        <input v-model="form.direccion" class="form-control" type="email" placeholder="Direccion"><br>
+        <input v-model="form.telefono" class="form-control" type="number" placeholder="Numero de Celular"><br>
+        <input v-model="form.documento" class="form-control" type="number" placeholder="Numero de Documento">
+        <br>
+        <div class="d-flex"><p>Algunos datos no seran visibles por tu seguridad*</p></div><br>
+        <b-button @click="registro = 'registro3'" variant="info">Siguiente</b-button>
+       </div>
+       <div id="usuario" class="usuario" v-for="usuario in listar" :key="listar" v-if="registro === 'registro3'">
+        <div class="row">
+          <div class="col-6">
+            <div class="d-flex"><h1><strong>Registrate</strong></h1></div>
+            <div class="d-flex justify-content-between"><h5>Estas a un solo paso</h5></div>
+          </div>
+          <div class="col-6">
+        <div>
+        <h5>Selecciona una imagen de perfil:</h5>
+        <b-avatar-group size="4rem" class="d-flex justify-content-start">
+          <b-avatar button src="https://i.ibb.co/ZxFjSC0/logocamellapp.png"></b-avatar>
+          <b-avatar variant="success" button></b-avatar>
+          <b-avatar variant="danger" button></b-avatar>
+          <b-avatar variant="warning" button></b-avatar>
+          <b-avatar variant="info" button></b-avatar>
+          <b-avatar button icon="plus" variant="light" v-b-popover.hover="'Subir foto'"></b-avatar>
+        </b-avatar-group>
+        </div></div>
         </div>
-</template>
-<script>
-export default {
-    name: 'RegistroView',
-    data() {
-        return {
-            Registro: {
-                p_Nombre: null,
-                S_Nombre: null,
-                P_Apellido: null,
-                S_Apellido: "",
-                Correo: null,
-                Edad: null,
-                Contraseña: null,
-                Confirmar_contrasena: null,
-                T_Documento: null,
-                N_Documento: null,
-                Direccion: null,
-                F_Nacimiento: null,
-                Celular: null,
-            },
-        }
-    },
-    methods: {
-        
-        onContext(ctx) {
-            // The date formatted in the locale, or the `label-no-date-selected` string
-            this.formatted = ctx.selectedFormatted
-            // The following will be an empty string until a valid date is entered
-            this.selected = ctx.selectedYMD
+<br>
+<br>
+<div class="row d-flex m-5">
+  <input v-show="false" v-model="form.foto_perfil" class="form-control" type="text" value="IMAGEN">
+   <div class="col-6"><h5>Su ID de usuario es:      {{usuario.id}}</h5></div>
+   <div class="col-6"><input  class="form-control" type="text" v-model="form.id_usuario" placeholder="Confirma tu ID"></div><br>
+  </div>
+   
+   <br><br>
+  <b-button @click="registro = 'registroPostulante'" variant="info" class="m-1"><b-icon icon="search"></b-icon>  Busco Empleo</b-button>
+  <b-button @click="GuardarUsuario(),GuardarEmpleador()" variant="info" class="m-1"><b-icon icon="megaphone"></b-icon>  Ofrezco Empleo</b-button><br>
+</div>
+      
+ <div v-if="registro === 'registroPostulante'">
+
+  <div class="d-flex"><h1><strong>Registrate</strong></h1></div>
+            <div class="d-flex justify-content-between"><h5>Ya casi terminamos.</h5></div>
+          <template>
+        <div class="m-5">
+          <b-form-input placeholder="Cual es tu disponibilidad" v-model="form.disponibilidad" list="my-list-id"></b-form-input>
+          <datalist id="my-list-id">
+          <option v-for="size in ListaDisponibilidad">{{ size }}</option>
+          <option>Otra</option>
+          </datalist>
+        </div>
+          </template>
+          <b-button @click="GuardarUsuario(),GuardarPostulante()" variant="info" class="m-1"><b-icon icon="box-arrow-in-right"></b-icon>  Registrarme</b-button>
+ </div>
+</div></div>
+    </template>
+    <script>
+    import axios from 'axios'
+    
+    export default {
+        name: 'EditarPerfil',
+    
+        data(){
+            return{
+              registro: 'registro1',
+              listar:null,
+              show: null,
+              user:{
+                correo:null,
+                contrasena:null,
+              },
+              form : {
+                id_usuario:null,
+                nombres: null,
+                apellidos: null,
+                direccion: null,
+                foto_perfil: null,
+                nacionalidad: null,
+                documento: null,
+                
+                telefono: null,
+                disponibilidad:null
+              },
+        ListaDisponibilidad: [
+             'Tiempo Completo',
+             'Medio Tiempo',
+             'Por Horas',
+             'Por Dias',,
+             'Por Contrato',
+             'A Convenir',,
+        ]
+            }
         },
-        Cancelar() {
-            this.$router.push("/");
-        },
-        Siguiente() {
-            this.$router.push("");
-        }
+        components:{},
+        computed: {},
+    methods:{
+    GuardarPostulante(){
+      alert('hecho');
+      axios.post(" http://localhost:4000/GuardarPostulante",this.form)
+      .then((data) => {
+        console.log(data);
+      });
+  },    GuardarEmpleador(){
+      alert('hecho');
+      axios.post(" http://localhost:4000/GuardarEmpleador",this.form)
+      .then((data) => {
+        console.log(data);
+      });
+  },
+  GuardarUsuario(){
+    axios.post("http://localhost:4000/Guardarusuario",this.user)
+    .then((data) => {
+      console.log(data);
     }
-}
-</script>
-<!--<style>
-.container4{
-    width: 50em;
-}
-.container {
-    width: 40em;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid #ccc;
-    border-radius: 12px;
-    font-size: 15px;
-    text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-}
-.title {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: left;
-}
-.boton2 {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-}
-.form-control {
-    max-width: 300px;
-    height: 40px;
-}
-.container4 {
-    width: 50em;
-    height: 80em;
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    border: #ffffff;
-}
-</style>-->
+    )
+  }
+ },
+ mounted(id=1){
+    axios.get("http://localhost:4000/usuario/"+id).then(response=>{
+      this.listar=response.data
+    })
+  },
+}</script>
