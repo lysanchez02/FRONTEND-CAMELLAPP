@@ -12,6 +12,7 @@
       <router-link to="/PostulantesView">Postulantes</router-link>   |
       <router-link to="/PerfilPostulanteView">PerfilPostulante</router-link>   |
       <router-link to="/PerfilAdministrador">PerfilAdministrador</router-link>   |
+      <router-link to="/PerfilEmpleador">PerfilEmpleador</router-link>   |
       <router-link to="/MiPerfilPostulante">MiPerfilPostulante</router-link>   |
       <router-link to="/EditarEmpleo">Editar Empleo</router-link>   |
       <router-link to="/DetalleOfertaView">Detalles del Empleo</router-link>   |
