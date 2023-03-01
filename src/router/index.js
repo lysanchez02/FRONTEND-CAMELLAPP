@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import ExperienciaView from '../views/login/ExperienciaView.vue'
+
 import LoginView from'../views/login/LoginView.vue'
 import RegistroView from'../views/login/RegistroView.vue'
 import ContraseñaView from'../views/login/ContraseñaView.vue'
