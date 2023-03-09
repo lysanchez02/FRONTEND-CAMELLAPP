@@ -1,7 +1,6 @@
 <template >
-
     <div>
-        <b-navbar class="serna" >
+        <b-navbar class="serna">
             <b-navbar-nav>
                 <div class="d-flex flex-row mb-2">
                 </div>
@@ -15,26 +14,19 @@
 
                 <nav class="navbar bg-danger-fluid">
                     <div class="row">
-                        <div class ="col-md-4"><button type="button" class="btn1 btn-danger">INICIO</button>
+                        <div class="col-md-4"><button type="button" class="btn1 btn-danger">INICIO</button>
                         </div>
                         <div class="col-md-4 offset-md-4"><button type="button" class="btn2 btn-success">SALIR</button>
                         </div>
-                        </div>
-                        
-                            
-                        
-                   
+                    </div>
 
                     <form class="container-fluid">
                         <div class="row">
                             <div class="col-md-2">
                                 <a class="justify-content-start">
                                 </a>
-
                             </div>
                             <div class="justify-content-end">
-
-
                             </div>
                         </div>
 
@@ -60,25 +52,29 @@
                     <div class="combo">
                         <img src="" class="icon">
                         <div class="preguntas1">
-                            
+
                             <div class="preguntas">
-                                <b-button class="button1" @click="guardar()" variant="outline-primary">Datos Personales</b-button>
+                                <b-button class="button1" @click="guardar()" variant="outline-primary">Datos
+                                    Personales</b-button>
                                 <br>
                                 <br>
-                                <b-button class="button1  " sm="4" @click="guardar()" variant="outline-primary">Mis Archivos</b-button>
+                                <b-button class="button1  " sm="4" @click="guardar()" variant="outline-primary">Mis
+                                    Archivos</b-button>
                                 <br>
                                 <br>
-                                <b-button class="button1" @click="guardar()" variant="outline-primary">Mis Postulaciones</b-button>
+                                <b-button class="button1" @click="guardar()" variant="outline-primary">Mis
+                                    Postulaciones</b-button>
                                 <br>
                                 <br>
-                                <b-button class="button1" @click="guardar()" variant="outline-primary">Mas Opciones</b-button>
+                                <b-button class="button1" @click="guardar()" variant="outline-primary">Mas
+                                    Opciones</b-button>
                                 <br>
                                 <br>
                                 <b-button class="button1" @click="guardar()" variant="outline-primary">Estadiscas</b-button>
                                 <br>
                                 <br>
                             </div>
-                            
+
                         </div>
                     </div>
                 </b-col>
@@ -94,15 +90,17 @@
                         <div class="tarjeta1">
                             <b-row>
                                 <b-col sm="2">
-                                    <img class="img5" src="https://i.pinimg.com/originals/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg">
+                                    <img class="img5"
+                                        src="https://i.pinimg.com/originals/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg">
                                 </b-col>
 
                                 <b-col sm="10">
                                     <h5 class="problemas">Ayudante de constrccion</h5>
                                     <br>
-                                    <h5 class="problemas"> se necesita trabajdor de construccion para el cargo de Ayudante de Construccion</h5>
-                                     <br>
-                                     <p class="hora"> 3 horas </p>
+                                    <h5 class="problemas"> se necesita trabajdor de construccion para el cargo de Ayudante
+                                        de Construccion</h5>
+                                    <br>
+                                    <p class="hora"> 3 horas </p>
                                 </b-col>
                             </b-row>
                         </div>
@@ -110,15 +108,17 @@
                         <div class="tarjeta1">
                             <b-row>
                                 <b-col sm="2">
-                                    <img class="img5" src="https://i.pinimg.com/originals/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg">
+                                    <img class="img5"
+                                        src="https://i.pinimg.com/originals/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg">
                                 </b-col>
 
                                 <b-col sm="10">
                                     <h5 class="problemas">Ayudante de constrccion</h5>
                                     <br>
-                                    <h5 class="problemas"> se necesita trabajdor de construccion para el cargo de Maestro de Obra</h5>
-                                     <br>
-                                     <p class="hora"> 6 horas </p>
+                                    <h5 class="problemas"> se necesita trabajdor de construccion para el cargo de Maestro de
+                                        Obra</h5>
+                                    <br>
+                                    <p class="hora"> 6 horas </p>
                                 </b-col>
                             </b-row>
                         </div>
@@ -126,15 +126,17 @@
                         <div class="tarjeta1">
                             <b-row>
                                 <b-col sm="2">
-                                    <img class="img5" src="https://i.pinimg.com/originals/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg">
+                                    <img class="img5"
+                                        src="https://i.pinimg.com/originals/3f/94/70/3f9470b34a8e3f526dbdb022f9f19cf7.jpg">
                                 </b-col>
 
                                 <b-col sm="10">
                                     <h5 class="problemas">Ayudante de constrccion</h5>
                                     <br>
-                                    <h5 class="problemas"> se necesita trabajdor de construccion para el cargo de Ayudante Carpintero</h5>
-                                     <br>
-                                     <p class="hora"> 7 horas </p>
+                                    <h5 class="problemas"> se necesita trabajdor de construccion para el cargo de Ayudante
+                                        Carpintero</h5>
+                                    <br>
+                                    <p class="hora"> 7 horas </p>
                                 </b-col>
                             </b-row>
                         </div>
@@ -211,7 +213,7 @@ export default {
     width: 75px;
     height: 75px;
     margin-top: 18%;
-    
+
 }
 
 .row {
@@ -252,20 +254,21 @@ export default {
     width: 27em;
     border: 1px solid;
 }
-.combo2{
+
+.combo2 {
     width: 57em;
     height: 46.4em;
     border: 1px solid;
 }
-.hora{
-    text-align:right;
+
+.hora {
+    text-align: right;
 }
-.serna{
+
+.serna {
     background-color: rgb(4, 0, 255);
     border: 50%;
     width: 95.6%;
     height: 10%;
 
-}
-
-</style>
+}</style>

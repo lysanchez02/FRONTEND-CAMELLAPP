@@ -9,17 +9,13 @@ import ContrasenaView from'../views/login/ContrasenaView.vue'
 
 import PostulantesView from'../views/PostulantesView.vue'
 import PerfilPostulanteView from'../views/perfil/PerfilPostulanteView.vue'
-import MiPerfilPostulante from'../views/perfil/MiPerfilPostulante.vue'
+import Experiencia from'../views/perfil/Experiencia.vue'
 import PerfilAdministrador from'../views/perfil/PerfilAdministrador.vue'
-import PerfilEmpleador from'../views/perfil/PerfilEmpleador.vue'
-
-import PlantillaPerfil from'../views/perfil/PlantillaPerfil.vue'
+import OfertaEmpleo from'../views/perfil/OfertaEmpleo.vue'
 
 import PublicarView from'../components/PublicarView.vue'
-import AdmiView from'../views/AdmiView.vue'
-import CategoriaView from'../views/CategoriaView.vue'
 
-import ArchivosView from '../views/ArchivosView.vue'
+import ArchivoPostulanteView from '../views/ArchivoPostulante.vue'
 import AdministradorView from'../views/AdministradorView.vue'
 import PostulacionesView from'../views/PostulacionesView.vue'
 import AdmiOfertaView from'../views/AdmiOfertaView.vue'
@@ -64,9 +60,9 @@ const routes = [
     component: RegistroView
   },
   {
-    path: '/ArchivosView',
-    name: 'ArchivosView',
-    component: ArchivosView
+    path: '/ArchivoPostulanteView',
+    name: 'ArchivoPostulanteView',
+    component: ArchivoPostulanteView
   },
   {
     path: '/about',
@@ -88,9 +84,9 @@ const routes = [
     component: PerfilPostulanteView
   },
   {
-    path: '/MiPerfilPostulante',
-    name: 'MiPerfilPostulante',
-    component: MiPerfilPostulante
+    path: '/Experiencia',
+    name: 'Experiencia',
+    component: Experiencia
   },
   {
     path: '/PerfilAdministrador',
@@ -98,20 +94,11 @@ const routes = [
     component: PerfilAdministrador
   },
   {
-    path: '/PerfilEmpleador',
-    name: 'PerfilEmpleador',
-    component: PerfilEmpleador
+    path: '/OfertaEmpleo',
+    name: 'OfertaEmpleo',
+    component: OfertaEmpleo
   },
 
-  {
-    path: '/PlantillaPerfil',
-    name: 'PlantillaPerfil',
-    component: PlantillaPerfil
-  },{
-    path: '/CategoriaView',
-    name: 'CategoriaView',
-    component: CategoriaView
-  },
   {
     path: '/ContrasenaView',
     name: 'ContrasenaView',
@@ -120,11 +107,7 @@ const routes = [
     path: '/PublicarView',
     name: 'PublicarView',
     component: PublicarView
-  },{
-    path: '/AdmiView',
-    name: 'AdmiView',
-    component: AdmiView
-  },
+  }
 
 ]
 
