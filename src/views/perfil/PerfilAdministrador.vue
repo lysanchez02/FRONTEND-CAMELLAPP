@@ -30,7 +30,6 @@
           </b-card>
         </div>
       </div>
-
       <div class="col-1"></div>
       <div class="col-8">
         <div v-if="show === 'ListaPostulantes'">

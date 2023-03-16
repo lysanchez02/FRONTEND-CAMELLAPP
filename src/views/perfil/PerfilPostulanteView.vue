@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="container">
+      <NavBarLogin/>
       <div class="row">
         <div class="col-3">
           <div>
@@ -31,6 +32,7 @@
             </b-card>
           </div>
         </div>
+
         <div class="col-9">
           <div>
             <div class="container">
@@ -48,8 +50,8 @@
                         <h4 class="mb-0 m-1">Leyder Yesid Sanchez Benachi</h4>
                         <b-card-img
                           src="https://th.bing.com/th/id/R.ef11358a21182845c7c11c3e9c41b3a0?rik=CTY93EeLjopA6Q&pid=ImgRaw&r=0"
-                          img-top class="w-25" >
-                          
+                          img-top class="w-25">
+
                         </b-card-img>
                         <p>Editar</p>
                       </div>
@@ -64,9 +66,11 @@
                     <b-card-title>Ayudante Construccion</b-card-title>
                     <b-card-sub-title class="mb-2">Popayan - Cauca</b-card-sub-title>
                   </b-card-body>
+
                   <b-list-group flush>
                     <b-list-group-item href=""></b-list-group-item>
-                    <b-list-group-item href="">Detalles</b-list-group-item>
+                    
+                    <b-list-group-item href="">datos personales</b-list-group-item>
                     <b-list-group-item v-b-toggle.accordion-experiencia>Experiencia
                       <b-collapse id="accordion-experiencia" accordion="my-accordion" role="tabpanel">
                         <b-card-body>
@@ -171,7 +175,7 @@
 </template>
 
 <script>
-
+import NavBarLogin from "@/components/NavBarLogin.vue"
 export default {
   name: 'PerfilEmpleador',
 
@@ -181,6 +185,7 @@ export default {
     }
   },
   components: {
+    NavBarLogin
   },
   computed: {
   },

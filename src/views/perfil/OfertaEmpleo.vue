@@ -54,7 +54,6 @@
 <script>
 import OfertasEmpleador from '@/components/OfertasEmpleador.vue';
 import EditarPerfil from '@/components/EditarPerfil.vue';
-import PublicarView from '@/components/PublicarView.vue';
 import ListaPostulantes from '@/components/ListaPostulantes.vue';
 
 export default {
@@ -88,7 +87,6 @@ export default {
   components: {
     EditarPerfil,
     OfertasEmpleador,
-    PublicarView,
     ListaPostulantes
   },
   computed: {

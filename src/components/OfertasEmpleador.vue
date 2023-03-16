@@ -153,7 +153,7 @@
 </template>
 <script>
 import EditarOferta from '@/components/EditarOferta.vue'
-import PublicarView from '@/components/PublicarView.vue'
+
 
 export default {
   name: 'OfertasEmpleador',
@@ -165,7 +165,7 @@ export default {
   },
   components: {
     EditarOferta,
-    PublicarView
+    
   },
 }
 </script>

@@ -13,13 +13,14 @@ import Experiencia from'../views/perfil/Experiencia.vue'
 import PerfilAdministrador from'../views/perfil/PerfilAdministrador.vue'
 import OfertaEmpleo from'../views/perfil/OfertaEmpleo.vue'
 
-import PublicarView from'../components/PublicarView.vue'
+
 
 import ArchivoPostulanteView from '../views/ArchivoPostulante.vue'
-import AdministradorView from'../views/AdministradorView.vue'
 import PostulacionesView from'../views/PostulacionesView.vue'
 import AdmiOfertaView from'../views/AdmiOfertaView.vue'
 import AdmisubView from'../views/AdmisubView.vue'
+
+import PublicarView from '../views/PublicarView.vue'
 
 Vue.use(VueRouter)
 
@@ -40,9 +41,9 @@ const routes = [
     component: AdmisubView
   },
   {
-    path: '/AdministradorView',
-    name: 'AdministradorView',
-    component: AdministradorView
+    path: '/PublicarView',
+    name: 'PublicarView',
+    component: PublicarView
   },
   {
     path: '/AdmiOfertaView',

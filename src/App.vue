@@ -7,7 +7,6 @@
       <router-link to="/LoginView">Login</router-link>|
       
       <router-link to="/ArchivoPostulanteView">publicar experiencia </router-link>|
-      <router-link to="/AdministradorView">Adminsitrador</router-link>|
       <router-link to="/PostulacionesView">Postulaciones</router-link>|
       <router-link to="/AdmiOfertaView">ADMIN</router-link>|
       <router-link to="/AdmisubView">subcategorias</router-link> |
@@ -15,10 +14,9 @@
       <router-link to="/PerfilPostulanteView">PerfilPostulante</router-link>   |
       <router-link to="/PerfilAdministrador">PerfilAdministrador</router-link>   |
       <router-link to="/OfertaEmpleo">ofertas empleo</router-link>   |
-      <router-link to="/Experiencia">experiencia</router-link>|  
-      <router-link to="/PlantillaPerfil">Plantilla Perfil</router-link>   |
-      <router-link to="/CategoriaView">CategoriaView</router-link> |
-      <router-link to="/PublicarView">publicar</router-link>|
+      <router-link to="/Experiencia">experiencia</router-link> |  
+      <router-link to="/publicarView">publicarOferta</router-link> |  
+   
       
       
     
