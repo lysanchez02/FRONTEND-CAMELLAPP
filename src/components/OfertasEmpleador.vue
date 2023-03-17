@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <h2>CAMELLAPP</h2>
-        <div class="col-1"></div>
+        
         <div class="col-8">
           <div>
             <b-input-group>
@@ -150,9 +150,11 @@
       </div>
     </div>
   </div>
+  
 </template>
 <script>
 import EditarOferta from '@/components/EditarOferta.vue'
+
 
 
 export default {

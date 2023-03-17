@@ -64,7 +64,7 @@
 </template>
 <script>
 import axios from "axios"
-import DetalleOferta from '@/components/DetalleOferta.vue'
+
 
 export default {
   name: 'OfertasPostulante',
@@ -75,7 +75,7 @@ export default {
     }
   },
   components: {
-    DetalleOferta,
+    
 
   },
   mounted() {

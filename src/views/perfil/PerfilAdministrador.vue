@@ -40,7 +40,7 @@
   </div>
 </template>
 <script>
-import ListaPostulantes from '@/components/ListaPostulantes.vue';
+
 
 export default {
   name: 'PerfilAdministrador',
@@ -50,7 +50,7 @@ export default {
     }
   },
   components: {
-    ListaPostulantes
+    
   },
 }
 </script>

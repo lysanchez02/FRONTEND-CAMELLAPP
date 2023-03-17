@@ -28,21 +28,32 @@
                         <a href="#" class="card-link">Facebook</a>
                         <a href="#" class="card-link">Whatsapp</a>
                     </b-card-body>
-
-                   
                 </b-card>
 
             </div>
-            <div class="col-8">
+            
+            <div class="col-9">
                 <b-card>
                     <b-card-img src="https://help.fromdoppler.com/wp-content/uploads/2016/12/Alto_y_ancho-1024x531.png" img-top class="w-20"></b-card-img>
-                    <br> <br>
+                    <br><br>
                     <div class="row d-flex">
                         <div class="col-2">
                             <label for="">Titulo</label>
                         </div>
                         <div class="col-7">
                             <input class="from_control" placeholder="titulo">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row d-flex">
+                        <div class="col-2">
+                            <label for="">Categoria</label>
+                        </div>
+                        <div class="col-8">
+                            <div>
+                                <b-form-select v-model="selected" :options="options"></b-form-select>
+                                <div class="mt-3"><strong>{{ selected }}</strong></div>
+                            </div>
                         </div>
                     </div>
                     <br>
@@ -66,16 +77,10 @@
                     <br>
                     <div class="row d-flex">
                         <div class="col-2">
-                            <label for="">Fecha de Inicio del trabajo</label>
+                            <label for="">Tipo  de Contracto</label>
                         </div>
-                        <div class="col-4">
-                            <b-form-datepicker v-model="value" :min="min" :max="max" locale="es"></b-form-datepicker>
-                        </div>
-                        <div class="col-2">
-                            <label for="">Fecha de Finalizacion</label>
-                        </div>
-                        <div class="col-4">
-                            <b-form-datepicker v-model="value" :min="min" :max="max" locale="es"></b-form-datepicker>
+                        <div class="col-7">
+                            <input class="from_control" placeholder="">
                         </div>
                     </div>
                     <br>
@@ -96,11 +101,26 @@
 import NavBarLogin from "@/components/NavBarLogin.vue";
 
 export default {
-    
     name: 'MiPerfilPostulante',
     data() {
-        return {
 
+        return {
+            selected: null,
+        options: [
+          { value: null, text: 'Seleccionar Categoria' },
+          { value: '', text: 'MAESTRO DE CONSTRUCCION' },
+          { value: '', text: 'AUXILIAR DE CONSTRUCCION' },
+          { value: '', text: 'ALMACENISTA' },
+          { value: '', text: 'TOPOGRAFO' },
+          { value: '', text: 'ASEADORA DE RECIDUOS DE CONSTRUCION' },
+          { value: '', text: 'PLOMERO' },
+          { value: '', text: 'TECNICO IMPERMEABILIZACION' },
+          { value: '', text: 'MAESTRO DE SERAMISTA' },
+          { value: '', text: 'INSTALADOR DE VENTANAS Y CRISTALAMIENTO' },
+          { value: '', text: 'ESTUCADORES' },
+          { value: '', text: 'ACABADOS' },
+          
+        ]
         }
     },
     components: {
