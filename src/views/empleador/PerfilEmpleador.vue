@@ -37,7 +37,7 @@
                     </template>
   
                     <b-card-body>
-                      <b-card-title>Ayudante Construccion</b-card-title>
+                      <b-card-title></b-card-title>
                       <b-card-sub-title class="mb-2">Popayan - Cauca</b-card-sub-title>
                     </b-card-body>
   
@@ -45,82 +45,62 @@
                       <b-list-group-item href=""></b-list-group-item>
   
                       <b-list-group-item href="">datos personales</b-list-group-item>
-  
-  
+
                       <b-list-group-item href="#"><br>
                         <div class="row d-flex">
-                          <div class="col-3">
-                            <label for="nombres">Nombres:</label>
-                          </div>
-                          <div class="col-3">
-                            <input id="nombres" class="form-control" type="text" value=''>
+                          
+                          <div class="col-6">
+                            <input id="nombres" class="form-control" type="text" value='' placeholder="Nombres">
                           </div>
   
-                          <div class="col-2">
-                            <label for="apellidos">Apellidos:</label>
-                          </div>
-                          <div class="col-3">
-                            <input id="apellidos" class="form-control" type="text" value=''>
+                         
+                          <div class="col-6">
+                            <input id="apellidos" class="form-control" type="text" value='' placeholder="Apellidos">
                           </div>
                         </div><br>
-  
                         <div class="row d-flex">
-                          <div class="col-3">
-                            <label for="documento">Documentos:</label>
-                          </div>
-                          <div class="col-8">
-                            <input id="documento" class="form-control" type="text" value=''>
+                          
+                          <div class="col-12">
+                            <input id="documento" class="form-control" type="text" value='' placeholder="Documento">
                           </div>
   
                         </div><br>
                         <div class="row d-flex">
-  
-                          <div class="col-3">
-                            <label for="celular">Celular:</label>
-                          </div>
-                          <div class="col-8">
-                            <input id="celular" class="form-control" type="text" value=''>
+                          <div class="col-12">
+                            <input id="celular" class="form-control" type="text" value='' placeholder="Celular">
                           </div>
                         </div><br>
   
                         <div class="row d-flex">
-                          <div class="col-3">
-                            <label for="correo">Correo:</label>
-                          </div>
-                          <div class="col-8">
-                            <input id="correo" class="form-control" type="text" value=''>
+                         
+                          <div class="col-12">
+                            <input id="correo" class="form-control" type="text" value='' placeholder="Correo">
                           </div>
   
                         </div><br>
                         <div class="row d-flex">
   
-                          <div class="col-3">
-                            <label for="nacionalidad">Nacionalidad:</label>
+                          
+                          <div class="col-6">
+                            <input id="nacionalidad" class="form-control" type="text" value='' placeholder="Nacionalidad">
                           </div>
-                          <div class="col-3">
-                            <input id="nacionalidad" class="form-control" type="text" value=''>
-                          </div>
-                          <div class="col-2">
-                            <label for="direccion">Direccion:</label>
-                          </div>
-                          <div class="col-3">
-                            <input id="direccion" class="form-control" type="text" value=''>
+                         
+                          <div class="col-6">
+                            <input id="direccion" class="form-control" type="text" value='' placeholder="Direccion">
                           </div>
   
                         </div><br>
                         <div class="row d-flex">
   
-                          <div class="col-3">
-                            <label for="user name">nombre usuario:</label>
-                          </div>
-                          <div class="col-8">
-                            <input id="user name" class="form-control" type="text" value=''>
+                        
+                          <div class="col-12
+                          
+                          ">
+                            <input id="user name" class="form-control" type="text" value='' placeholder="usuario">
                           </div>
                         </div><br>
                       </b-list-group-item><br>
                     </b-list-group>
-                    
-                    <b-card-footer footer-bg-variant="danger" footer-text-variant="white">Bloquear</b-card-footer>
                     <b-card-footer footer-bg-variant="secondary" footer-text-variant="white">Reportar</b-card-footer>
                   </b-card>
   

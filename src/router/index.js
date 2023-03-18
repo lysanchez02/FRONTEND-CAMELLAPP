@@ -10,13 +10,15 @@ import ContrasenaView from'../views/login/ContrasenaView.vue'
 import PerfilPostulanteView from'../views/Postulante/PerfilPostulanteView.vue'
 import Experiencia from'../views/Postulante/Experiencia.vue'
 import ArchivoPostulanteView from '../views/Postulante/ArchivoPostulante.vue'
-import PerfilAdministrador from'../views/perfil/PerfilAdministrador.vue'
+import PerfilAdministrador from'../views/administrador/PerfilAdministrador.vue'
+import VistaOferta from'../views/Postulante/VistaOferta.vue'
 
 
 import PerfilEmpleador from'../views/empleador/PerfilEmpleador.vue'
 import OfertaEmpleo from'../views/empleador/OfertaEmpleo.vue'
 import PublicarView from '../views/empleador/PublicarView.vue'
 import PostulacionesView from'../views/Postulante/PostulacionesView.vue'
+
 
 Vue.use(VueRouter)
 
@@ -93,7 +95,14 @@ const routes = [
     path: '/ContrasenaView',
     name: 'ContrasenaView',
     component: ContrasenaView
-  },{
+  },
+  {
+    path: '/VistaOferta',
+    name: 'VistaOferta',
+    component: VistaOferta
+  },
+  
+  {
     path: '/PublicarView',
     name: 'PublicarView',
     component: PublicarView

@@ -1,7 +1,5 @@
 <template>
- <div class="container">
-
-
+  <div class="container">
     <div>
       <b-card no-body style="max-width: 20rem;"
         img-src="https://st3.depositphotos.com/6582994/13117/v/450/depositphotos_131177930-stock-illustration-user-icon-in-trendy-flat.jpg"
@@ -28,12 +26,11 @@
         </b-card-body>
         <b-card-footer>This is a footer</b-card-footer>
 
-            <b-card-img src="https://placekitten.com/480/210" alt="Image" bottom></b-card-img>
+        <b-card-img src="https://placekitten.com/480/210" alt="Image" bottom></b-card-img>
       </b-card>
-      
+
     </div>
   </div>
-
 </template>
 <script>
 export default {

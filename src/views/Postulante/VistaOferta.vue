@@ -3,7 +3,7 @@
         <NavBarLogin/>
         <div class="row">
             <div class="col-3">
-            <col_Empleador/>
+            <col_Postulante/>
             </div>
             <div class="col-9">
                 <b-card>
@@ -69,36 +69,20 @@
         </div>
     </div>
 </template>
-  
 <script>
 import NavBarLogin from "@/components/NavBarLogin.vue";
-import col_Empleador from "@/components/col_Empleador.vue";
+import col_Postulante from "@/components/col_Postulante.vue";
 export default {
     name: 'PublicarView',
     data() {
 
         return {
-            selected: null,
-        options: [
-          { value: null, text: 'Seleccionar Categoria' },
-          { value: '', text: 'MAESTRO DE CONSTRUCCION' },
-          { value: '', text: 'AUXILIAR DE CONSTRUCCION' },
-          { value: '', text: 'ALMACENISTA' },
-          { value: '', text: 'TOPOGRAFO' },
-          { value: '', text: 'ASEADORA DE RECIDUOS DE CONSTRUCION' },
-          { value: '', text: 'PLOMERO' },
-          { value: '', text: 'TECNICO IMPERMEABILIZACION' },
-          { value: '', text: 'MAESTRO DE SERAMISTA' },
-          { value: '', text: 'INSTALADOR DE VENTANAS Y CRISTALAMIENTO' },
-          { value: '', text: 'ESTUCADORES' },
-          { value: '', text: 'ACABADOS' },
-          
-        ]
+        
         }
     },
     components: {
-     NavBarLogin,
-     col_Empleador
+        NavBarLogin,
+        col_Postulante
     },
 
 }
