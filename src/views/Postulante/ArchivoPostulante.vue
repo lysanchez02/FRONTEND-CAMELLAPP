@@ -4,31 +4,7 @@
       <div class="row">
         <div class="col-3">
           <div>
-            <b-card no-body style="max-width: 20rem;"
-              img-src="https://st3.depositphotos.com/6582994/13117/v/450/depositphotos_131177880-stock-illustration-user-icon-in-trendy-flat.jpg"
-              img-alt="Image" img-top>
-              <template #header>
-                <h4 class="mb-0">Leyder Yesid Sanchez Benachi</h4>
-              </template>
-
-              <b-card-body>
-                <b-card-title>oficio y/o empresa</b-card-title>
-                <b-card-sub-title class="mb-2">Popayan - Cauca</b-card-sub-title>
-                <p>persona natural</p>
-              </b-card-body>
-              <b-list-group flush>
-                <b-list-group-item button @click="show = 'EditarPerfil'">Editar Perfil</b-list-group-item>
-                <b-list-group-item button @click="show = 'MisEmpleos'">Mis Empleos</b-list-group-item>
-                <b-list-group-item button @click="show = 'ListaPostulantes'">Postulantes</b-list-group-item>
-                <b-list-group-item button @click="show = ''">Trabajos terminados</b-list-group-item>
-                <b-list-group-item button @click="show = ''">Mi grupo de trabajo</b-list-group-item>
-              </b-list-group>
-              <b-card-body>
-                <h6>Redes:</h6>
-                <a href="#" class="card-link">Facebook</a>
-                <a href="#" class="card-link">Whatsapp</a>
-              </b-card-body>
-            </b-card>
+           <Col_Postulante/>
           </div>
         </div>
         <div class="col-9">
@@ -131,6 +107,8 @@
 </template>
 
 <script>
+import Col_Postulante from '@/components/col_Postulante.vue';
+
 export default {
   name: 'PerfilEmpleador',
 
@@ -140,7 +118,8 @@ export default {
     }
   },
   components: {
-  },
+    Col_Postulante
+},
   computed: {
     },
 }

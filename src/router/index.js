@@ -7,19 +7,16 @@ import LoginView from'../views/login/LoginView.vue'
 import RegistroView from'../views/login/RegistroView.vue'
 import ContrasenaView from'../views/login/ContrasenaView.vue'
 
-import PostulantesView from'../views/PostulantesView.vue'
-import PerfilPostulanteView from'../views/perfil/PerfilPostulanteView.vue'
-import Experiencia from'../views/perfil/Experiencia.vue'
+import PerfilPostulanteView from'../views/Postulante/PerfilPostulanteView.vue'
+import Experiencia from'../views/Postulante/Experiencia.vue'
+import ArchivoPostulanteView from '../views/Postulante/ArchivoPostulante.vue'
 import PerfilAdministrador from'../views/perfil/PerfilAdministrador.vue'
-import OfertaEmpleo from'../views/perfil/OfertaEmpleo.vue'
 
 
-
-import ArchivoPostulanteView from '../views/ArchivoPostulante.vue'
-import PostulacionesView from'../views/PostulacionesView.vue'
-import AdmiOfertaView from'../views/AdmiOfertaView.vue'
-
-import PublicarView from '../views/PublicarView.vue'
+import PerfilEmpleador from'../views/empleador/PerfilEmpleador.vue'
+import OfertaEmpleo from'../views/empleador/OfertaEmpleo.vue'
+import PublicarView from '../views/empleador/PublicarView.vue'
+import PostulacionesView from'../views/Postulante/PostulacionesView.vue'
 
 Vue.use(VueRouter)
 
@@ -29,6 +26,7 @@ const routes = [
     name: 'HomeView',
     component: HomeView
   },
+
   {
     path: '/LoginView',
     name: 'LoginView',
@@ -40,11 +38,7 @@ const routes = [
     name: 'PublicarView',
     component: PublicarView
   },
-  {
-    path: '/AdmiOfertaView',
-    name: 'AdmiOfertaView',
-    component: AdmiOfertaView
-  },
+
   {
     path: '/PostulacionesView',
     name: 'PostulacionesView',
@@ -70,14 +64,14 @@ const routes = [
   }, 
 
   {
-    path: '/PostulantesView',
-    name: 'PostulantesView',
-    component: PostulantesView
-  },
-  {
     path: '/PerfilPostulanteView',
     name: 'PerfilPostulanteView',
     component: PerfilPostulanteView
+  },
+  {
+    path: '/PerfilEmpleador',
+    name: 'PerfilEmpleador',
+    component: PerfilEmpleador
   },
   {
     path: '/Experiencia',

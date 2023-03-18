@@ -1,6 +1,6 @@
 <template>
     <div class="row">    <b-navbar class="d-flex" toggleable="lg" type="dark" variant="info">
-        <img class="mx-5" src="https://i.ibb.co/ZxFjSC0/logocamellapp.png" style="width: 5%; height: 70%;">
+        <img class="mx-5" src="https://i.ibb.co/ZxFjSC0/logocamellapp.png" style="width: 5%; height: 75%;">
         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav >
@@ -14,8 +14,6 @@
 </template>
 
 <script>
-
-
 
 export default {
   
