@@ -18,7 +18,6 @@ import OfertaEmpleo from'../views/perfil/OfertaEmpleo.vue'
 import ArchivoPostulanteView from '../views/ArchivoPostulante.vue'
 import PostulacionesView from'../views/PostulacionesView.vue'
 import AdmiOfertaView from'../views/AdmiOfertaView.vue'
-import AdmisubView from'../views/AdmisubView.vue'
 
 import PublicarView from '../views/PublicarView.vue'
 
@@ -35,11 +34,7 @@ const routes = [
     name: 'LoginView',
     component: LoginView
   },
-  {
-    path: '/AdmisubView',
-    name: 'AdmisubView',
-    component: AdmisubView
-  },
+  
   {
     path: '/PublicarView',
     name: 'PublicarView',

@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <NavBarLogin/>
     <div class="row">
       <div class="col-3">
         <div>
@@ -98,7 +99,7 @@
 <script>
   import OfertasPostulante from '@/components/OfertasPostulante.vue'
   import EditarPerfil from '@/components/EditarPerfil.vue'
-
+  import NavBarLogin from '@/components/NavBarLogin.vue'
   export default {
     name: 'MiPerfilPostulante',
     data() {
@@ -111,6 +112,7 @@
     components: {
       OfertasPostulante,
       EditarPerfil,
+      NavBarLogin
     },
 
   }
