@@ -4,23 +4,27 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/LoginView">Login</router-link> |      
       <router-link to="/RegistroView">Registro</router-link> |
-
+      
       <router-link to="/PerfilPostulanteView">Perfil Postulante</router-link>   |
       <router-link to="/Experiencia">experiencia</router-link> | 
       <router-link to="/ArchivoPostulanteView">publicar experiencia </router-link> |
       <router-link to="/Vistaoferta">vista oferta p </router-link>|
+      <router-link to="/PostulacionesView">Postulaciones</router-link> |
 
       <router-link to="/PerfilEmpleador">Perfil Empleador</router-link>   |
       <router-link to="/publicarView">publicarOferta</router-link> |  
       <router-link to="/OfertaEmpleo">ofertas empleo</router-link>   |
-      <router-link to="/PostulacionesView">Postulaciones</router-link> |
-
+      <router-link to="/Misofertas">Mis Ofertas</router-link> |
+      <router-link to="/Postulantes">postulantes</router-link> |
+      <router-link to="/Editaroferta">Editaroferta</router-link> |
       
       <router-link to="/PerfilAdministrador">PerfilAdministrador</router-link>   |
       <router-link to="/AdmisubView">subcategorias</router-link> |
-    
+      <router-link to="/Usuarios">Usuarios</router-link> |
     </nav>
     <router-view/>
+
+    
   </div>
 </template>
 <script>

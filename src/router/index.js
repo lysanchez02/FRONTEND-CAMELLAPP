@@ -10,15 +10,19 @@ import ContrasenaView from'../views/login/ContrasenaView.vue'
 import PerfilPostulanteView from'../views/Postulante/PerfilPostulanteView.vue'
 import Experiencia from'../views/Postulante/Experiencia.vue'
 import ArchivoPostulanteView from '../views/Postulante/ArchivoPostulante.vue'
-import PerfilAdministrador from'../views/administrador/PerfilAdministrador.vue'
 import VistaOferta from'../views/Postulante/VistaOferta.vue'
-
+import PostulacionesView from'../views/Postulante/PostulacionesView.vue'
 
 import PerfilEmpleador from'../views/empleador/PerfilEmpleador.vue'
 import OfertaEmpleo from'../views/empleador/OfertaEmpleo.vue'
 import PublicarView from '../views/empleador/PublicarView.vue'
-import PostulacionesView from'../views/Postulante/PostulacionesView.vue'
+import Postulantes from '../views/empleador/Postulantes.vue'
+import Misofertas from'../views/empleador/Misofertas.vue'
+import Editaroferta from'../views/empleador/Editaroferta.vue'
 
+import PerfilAdministrador from'../views/administrador/PerfilAdministrador.vue'
+import Usuarios from'../views/administrador/Usuarios.vue'
+import Subcategoria from '../views/administrador/Subcategoria.vue'
 
 Vue.use(VueRouter)
 
@@ -34,22 +38,22 @@ const routes = [
     name: 'LoginView',
     component: LoginView
   },
-  
   {
-    path: '/PublicarView',
-    name: 'PublicarView',
-    component: PublicarView
+      path: '/RegistroView',
+      name: 'RegistroView',
+      component: RegistroView
   },
 
+  // postulante
   {
-    path: '/PostulacionesView',
-    name: 'PostulacionesView',
-    component: PostulacionesView
-  },
+    path: '/ContrasenaView',
+    name: 'ContrasenaView',
+    component: ContrasenaView
+  },  
   {
-    path: '/RegistroView',
-    name: 'RegistroView',
-    component: RegistroView
+    path: '/PerfilPostulanteView',
+    name: 'PerfilPostulanteView',
+    component: PerfilPostulanteView
   },
   {
     path: '/ArchivoPostulanteView',
@@ -57,44 +61,38 @@ const routes = [
     component: ArchivoPostulanteView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }, 
-
-  {
-    path: '/PerfilPostulanteView',
-    name: 'PerfilPostulanteView',
-    component: PerfilPostulanteView
+    path: '/Experiencia',
+    name: 'Experiencia',
+    component: Experiencia
   },
+
+//Empleador
+  
+  
   {
     path: '/PerfilEmpleador',
     name: 'PerfilEmpleador',
     component: PerfilEmpleador
   },
-  {
-    path: '/Experiencia',
-    name: 'Experiencia',
-    component: Experiencia
-  },
-  {
-    path: '/PerfilAdministrador',
-    name: 'PerfilAdministrador',
-    component: PerfilAdministrador
-  },
-  {
+   {
     path: '/OfertaEmpleo',
     name: 'OfertaEmpleo',
     component: OfertaEmpleo
   },
-
   {
-    path: '/ContrasenaView',
-    name: 'ContrasenaView',
-    component: ContrasenaView
+    path: '/Postulantes',
+    name: 'Postulantes',
+    component: Postulantes
+  },
+  {
+    path: '/PublicarView',
+    name: 'PublicarView',
+    component: PublicarView
+  },
+  {
+    path: '/PostulacionesView',
+    name: 'PostulacionesView',
+    component: PostulacionesView
   },
   {
     path: '/VistaOferta',
@@ -106,6 +104,41 @@ const routes = [
     path: '/PublicarView',
     name: 'PublicarView',
     component: PublicarView
+  },
+  {
+    path: '/Misofertas',
+    name: 'Misofertas',
+    component: Misofertas
+  },
+  {
+    path: '/Editaroferta',
+    name: 'Editaroferta',
+    component: Editaroferta
+  },
+//administrador
+
+ {
+    path: '/PerfilAdministrador',
+    name: 'PerfilAdministrador',
+    component: PerfilAdministrador
+  },
+  {
+    path: '/Usuarios',
+    name: 'Usuarios',
+    component: Usuarios
+  },
+  {
+    path: '/Subcategoria',
+    name: 'Subcategoria',
+    component: Subcategoria
+  },
+  {
+    path: '/about',
+    name: 'about',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   }
 
 ]
