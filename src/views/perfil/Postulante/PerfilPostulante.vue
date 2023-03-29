@@ -16,26 +16,19 @@
       </template>
 
       <b-list-group flush>
-        <b-list-group-item button @click="show = 'EditarPerfil'">Editar Perfil</b-list-group-item>
-        <b-list-group-item button @click="show = 'Experiencia'">Mi Experiencia</b-list-group-item>
+        <b-list-group-item button @click="show = 'EditarPerfil'">Gestionar Perfil</b-list-group-item>
         <b-list-group-item button @click="show = 'Ofertas'">Ofertas de Empleo</b-list-group-item>
+        <b-list-group-item button @click="show = 'Experiencia'">Mi Experiencia</b-list-group-item>
         <b-list-group-item button @click="show = 'Ofertas'">Mis Postulaciones</b-list-group-item>
-
       </b-list-group>
-
-      <b-card-body>
-        <h6>Contacto:</h6>
-        <a href="#" class="card-link">Facebook</a>
-        <a href="#" class="card-link">Whatsapp</a>
-      </b-card-body>
-      <b-card-footer>camellapp</b-card-footer></b-card>
+    </b-card>
 </div></div>
 <div class="col-1"></div>
 <div class="col-8">
   <div v-if="show === 'Experiencia'">
     <h4>Experiencia</h4>
 <!--start card-->
-<div v-for="experiencia in lista" :key="lista" class="d-flex justify-content-center">
+<div v-for="experiencia in ListarExperiencia" class="d-flex justify-content-center">
   <b-card no-body class="my-4 overflow-hidden" style="max-width: 1540px;">
     <b-row no-gutters>
       <b-col md="7">
@@ -55,7 +48,7 @@
       <b-icon icon="plus-circle-dotted"></b-icon>
       <b-card-text>Añadir experiencia</b-card-text></b-card></a>
       </div><!--Experiencia--> 
-     <div v-else-if="show === 'Ofertas'"><OfertasPostulante/></div>
+     <div v-else-if="show === 'Ofertas'"><OfertasEmpleo/></div>
     <div v-else-if="show === 'EditarPerfil'"><EditarPerfil/></div>
     <div v-else-if="show === 'nuevoRegistroCatalogo'">
       <div class="row">
@@ -120,11 +113,11 @@
 </template>
 <script>
 import axios from 'axios'
-import OfertasPostulante from '@/components/OfertasPostulante.vue'
+import OfertasEmpleo from '@/components/OfertasEmpleo.vue'
 import EditarPerfil from '@/components/EditarPerfil.vue'
 import NavBar from '@/components/NavBar.vue';
 export default{
-  name:'MiPerfilPostulante',
+  name:'PerfilPostulante',
   data(){
     return{
       lista: null,
@@ -134,13 +127,13 @@ export default{
     }
   },
   components:{
-    OfertasPostulante,
+    OfertasEmpleo,
     EditarPerfil,
     NavBar
 },
 mounted(){
-    axios.get("http://localhost:4000/Listarmultimedia/").then(response=>{
-      this.lista=response.data
+    axios.get("http://localhost:3000/ListarExperiencia/").then(response=>{
+      this.ListarExperiencia=response.data
     })
   },
 }

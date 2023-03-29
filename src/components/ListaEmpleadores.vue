@@ -1,25 +1,25 @@
 <template>
-  <div>
-      <div class="container">
-      <div class="row">
-          <h2>CAMELLAPP</h2>
-  <div class="col">
-                    <div>
-                      <b-input-group><template #append>
-                            <b-button><b-icon icon="search"></b-icon></b-button>                   
-                            </template>
-                      <b-form-input></b-form-input><template #prepend>
-  <div>
-  <b-dropdown>
-    <template #button-content>
-      <b-icon icon="funnel" aria-hidden="true"></b-icon> Filtro
-    </template>
-            <b-dropdown-item v-for="categoria in listarCategoria" :key="listarCategoria.id" :title="categoria.descripcion">{{categoria.nombre}}</b-dropdown-item>
-  </b-dropdown>
-</div>
+    <div>
+        <div class="container">
+        <div class="row">
+            <h2>CAMELLAPP</h2>
+    <div class="col">
+                      <div>
+                        <b-input-group><template #append>
+                              <b-button><b-icon icon="search"></b-icon></b-button>                   
+                              </template>
+                        <b-form-input></b-form-input><template #prepend>
+    <div>
+    <b-dropdown>
+      <template #button-content>
+        <b-icon icon="funnel" aria-hidden="true"></b-icon> Filtro
+      </template>
+              <b-dropdown-item v-for="categoria in listarCategoria" :key="listarCategoria.id" :title="categoria.descripcion">{{categoria.nombre}}</b-dropdown-item>
+    </b-dropdown>
+  </div>
 </template></b-input-group></div>
-        <br>
-        <!--aqui termina la barra de busqueda-->
+          <br>
+          <!--aqui termina la barra de busqueda-->
     </div>
 
         </div><br>
@@ -50,7 +50,7 @@
 <script>
 import axios from "axios"
 export default{
-  name:'ListaPostulantes',
+  name:'ListaEmpleadores',
   data(){
     return{
       listar:null,

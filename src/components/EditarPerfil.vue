@@ -18,24 +18,19 @@
   </div><br>
   <div id="user" class="user" v-for="user in listar" :key="listar">
   <b-form>
-  <!--id_usuario-->
-<div role="group">
-    <label for="input-live">id_usuario:</label>
-    <input id="nombre" class="form-control" type="number" value='' :value="[[user.id_usuario]]">
-  </div><br>
-<!--id_usuario-->
+    
+    <!--foto-->
+    <div role="group">
+        <label for="input-live">foto:</label>
+        <input id="nombre" class="form-control" type="file" value=''>
+      </div><br>
+    <!--foto-->
 <!--Nombre-->
 <div role="group">
     <label for="input-live">Nombre:</label>
     <input id="nombre" class="form-control" type="text" value='' :value="[[user.nombres]]">
   </div><br>
 <!--Nombre-->
-<!--foto-->
-<div role="group">
-    <label for="input-live">foto:</label>
-    <input id="nombre" class="form-control" type="text" value='' :value="[[user.foto_perfil]]">
-  </div><br>
-<!--foto-->
 <!--Apellido-->
 <div role="group">
     <label for="input-live">Apellidos:</label>
@@ -54,16 +49,7 @@
     <label for="input-live">Direccion:</label>
     <input id="nombre" class="form-control" type="text" value='' :value="[[user.direccion]]">
   </div><br>
-<!--Direccion-->
-
-<!--Disponibilidad-->
-<template>
-  <div>    
-    <label for="input-live">Disponibilidad:</label><br>
-        <b-form-select  v-model="form.disponibilidad" :options="ListaDisponibilidad" style="width: 53.5rem; height: 2.5rem; border-radius: 0.35rem;" :selected="[[user.disponibilidad]]"></b-form-select>
-  </div>
-</template><br>
-<!--Disponibilidad-->
+<!--Direccion-->;
 <!--Nacionalidad-->
 <div role="group">
     <label for="input-live">Nacionalidad:</label>
@@ -115,14 +101,6 @@ export default {
       { value: 'pep', text: 'PEP' },
       { value: 'otro', text: 'Otro', disabled: true }
     ],
-    ListaDisponibilidad: [
-        {value: 'TiempoCompleto', text: 'Tiempo Completo'},
-        {value: 'MedioTiempo', text: 'Medio Tiempo'},
-        {value: 'PorHoras', text: 'Por Horas'},
-        {value: 'PorDias', text: 'Por Dias'},
-        {value: 'PorContrato', text: 'Por Contrato'},
-        {value: 'aConvenir', text: 'A Convenir'},
-    ]
  }
 },
 components:{},
@@ -130,17 +108,16 @@ computed: {},
 methods:{
 GuardarPostulante(){
   alert();
-  axios.post(" http://localhost:4000/GuardarPostulante",this.form)
+  axios.post(" http://localhost:3000/GuardarPostulante",this.form)
   .then((data) => {
     console.log(data);
   });
 },
 },
 mounted(id=1){
-    axios.get("http://localhost:4000/postulante/"+id).then(response=>{
+    axios.get("http://localhost:3000/usuario/"+id).then(response=>{
       this.listar=response.data
-
-    })
-  },
-  }
+  })
+ },
+}
 </script>

@@ -14,27 +14,21 @@
       <template #header>
         <h4 class="mb-0">Empleador</h4>
       </template>
-
-
       <b-list-group flush>
-        <b-list-group-item button @click="show = 'EditarPerfil'">Editar Perfil</b-list-group-item>
+        <b-list-group-item button @click="show = 'EditarPerfil'">Gestionar Perfil</b-list-group-item>
+        <b-list-group-item button @click="show = 'PublicarView'">Crea una oferta de empleo</b-list-group-item>
         <b-list-group-item button @click="show = 'MisEmpleos'">Mis Empleos</b-list-group-item>
         <b-list-group-item button @click="show = 'ListaPostulantes'">Postulantes</b-list-group-item>
         <b-list-group-item button @click="show = ''">Trabajos terminados</b-list-group-item>
         <b-list-group-item button @click="show = ''">Mi grupo de trabajo</b-list-group-item>
-      </b-list-group>
-      <b-card-body>
-        <h6>Redes:</h6>
-        <a href="#" class="card-link">Facebook</a>
-        <a href="#" class="card-link">Whatsapp</a>
-      </b-card-body>  
+      </b-list-group>  
     </b-card>
   </div>
           </div>
           <div class="col-1"></div>
           <div class="col-8">
 <div v-if="show === 'EditarPerfil'"><EditarPerfil/></div>
-  <div v-else-if="show === 'MisEmpleos'"><OfertasEmpleador/></div>
+  <div v-else-if="show === 'MisEmpleos'"><OfertasEmpleo/></div>
   <div v-else-if="show === 'PublicarView'"><PublicarView/></div>
   <div v-else-if="show === 'ListaPostulantes'"><ListaPostulantes/></div>
           </div>
@@ -42,11 +36,11 @@
     </div>
     </template>
     <script>
-    import OfertasEmpleador from '@/components/OfertasEmpleador.vue';
     import ListaPostulantes from '@/components/ListaPostulantes.vue';
     import EditarPerfil from '@/components/EditarPerfil.vue';
     import PublicarView from '@/components/PublicarView.vue';
     import NavBar from '@/components/NavBar.vue';
+import OfertasEmpleo from '@/components/OfertasEmpleo.vue';
     export default {
         name: 'PerfilEmpleador',
         
@@ -77,10 +71,10 @@
         },
         components:{
     EditarPerfil,
-    OfertasEmpleador,
     PublicarView,
     ListaPostulantes,
-    NavBar
+    NavBar,
+    OfertasEmpleo
 },
      computed: {
       nombreState() {return this.nombre.length > 0 ? true : false},
