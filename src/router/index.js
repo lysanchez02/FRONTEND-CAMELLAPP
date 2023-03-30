@@ -6,6 +6,7 @@ import HomeView from '../views/HomeView.vue'
 import LoginView from'../views/login/LoginView.vue'
 import RegistroView from'../views/login/RegistroView.vue'
 import ContrasenaView from'../views/login/ContrasenaView.vue'
+import RecuContraseña from'../views/login/RecuContraseña.vue'
 
 import PerfilPostulanteView from'../views/Postulante/PerfilPostulanteView.vue'
 import Experiencia from'../views/Postulante/Experiencia.vue'
@@ -43,13 +44,18 @@ const routes = [
       name: 'RegistroView',
       component: RegistroView
   },
-
-  // postulante
   {
     path: '/ContrasenaView',
     name: 'ContrasenaView',
     component: ContrasenaView
-  },  
+  },
+  {
+    path: '/RecuContraseña',
+    name: 'RecuContraseña',
+    component: RecuContraseña
+  },
+  // postulante
+
   {
     path: '/PerfilPostulanteView',
     name: 'PerfilPostulanteView',
@@ -115,6 +121,7 @@ const routes = [
     name: 'Editaroferta',
     component: Editaroferta
   },
+
 //administrador
 
  {

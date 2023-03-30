@@ -100,7 +100,6 @@
                 foto_perfil: null,
                 nacionalidad: null,
                 documento: null,
-                
                 telefono: null,
                 disponibilidad:null
               },

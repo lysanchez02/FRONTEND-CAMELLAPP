@@ -4,6 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/LoginView">Login</router-link> |      
       <router-link to="/RegistroView">Registro</router-link> |
+      <router-link to="/ContrasenaView">Enviar codigo</router-link> |
+      <router-link to="/RecuContraseÑa">Recuperar Contrasena</router-link> |
       
       <router-link to="/PerfilPostulanteView">Perfil Postulante</router-link>   |
       <router-link to="/Experiencia">experiencia</router-link> | 
