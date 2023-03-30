@@ -11,10 +11,20 @@
           <br />
           <div class="row">
             <div class="col-6">
-              <input class="form-control" v-model="form.nombres" type="text" placeholder="Nombres" />
+              <input
+                class="form-control"
+                v-model="form.nombres"
+                type="text"
+                placeholder="Nombres"
+              />
             </div>
             <div class="col-6">
-              <input class="form-control" v-model="form.apellidos" type="text" placeholder="Apellidos" />
+              <input
+                class="form-control"
+                v-model="form.apellidos"
+                type="text"
+                placeholder="Apellidos"
+              />
             </div>
           </div>
           <br />
@@ -122,8 +132,17 @@
           <br />
 
           <div class="d-flex justify-content-evenly">
-            <b-button v-on:click="success()" href="/admin" variant="info" class="m-1"><b-icon icon="search"></b-icon> Busco Empleo</b-button>
-            <b-button v-on:click="success()" variant="info" class="m-1"><b-icon icon="megaphone"></b-icon> Quiero Publicar Un Empleo</b-button><br/>
+            <b-button
+              v-on:click="success()"
+              href="/admin"
+              variant="info"
+              class="m-1"
+              ><b-icon icon="search"></b-icon> Busco Empleo</b-button
+            >
+            <b-button v-on:click="success()" variant="info" class="m-1"
+              ><b-icon icon="megaphone"></b-icon> Quiero Publicar Un
+              Empleo</b-button
+            ><br />
           </div>
         </div>
       </div>
@@ -131,7 +150,6 @@
   </div>
 </template>
 <script>
-
 import NavBarLogin from "@/components/NavBarLogin.vue";
 
 export default {
@@ -140,7 +158,7 @@ export default {
   data() {
     return {
       registro: "registro1",
-      form : {
+      form: {
         nombres: null,
         apellidos: null,
         nacionalida: null,
@@ -149,8 +167,8 @@ export default {
         telefono: null,
         direccion: null,
         username: null,
-        pasword: null
-       },
+        pasword: null,
+      },
     };
   },
   components: { NavBarLogin },
@@ -158,8 +176,6 @@ export default {
     success() {
       alert("Te has registrado exitosamente!");
     },
-
   },
-  
 };
 </script>
