@@ -47,7 +47,7 @@
       <a href="" @click="show = 'nuevoRegistroCatalogo'"><b-card img-src="" img-alt="Card image" img-left class="mb-3">
       <b-icon icon="plus-circle-dotted"></b-icon>
       <b-card-text>Añadir experiencia</b-card-text></b-card></a>
-      </div><!--Experiencia--> 
+      </div><!--Experiencia-->
      <div v-else-if="show === 'Ofertas'"><OfertasEmpleo/></div>
     <div v-else-if="show === 'EditarPerfil'"><EditarPerfil/></div>
     <div v-else-if="show === 'nuevoRegistroCatalogo'">
@@ -121,6 +121,7 @@ export default{
   data(){
     return{
       lista: null,
+      ListarExperiencia: null,
       show: 'Ofertas' ,
       value1: null,
       value2: null

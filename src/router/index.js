@@ -9,6 +9,9 @@ import PerfilAdministrador from'../views/perfil/Administrador/PerfilAdministrado
 import PerfilEmpleador from'../views/perfil/Empleador/PerfilEmpleador.vue';
 import PlantillaPerfil from'../views/perfil/PlantillaPerfil.vue';
 import PublicarView from'../components/PublicarView.vue';
+import detalleOferta from "../components/DetalleOferta.vue";
+import EditarPerfil from "../components/EditarPerfil.vue"
+import OfertasEmpleo from "../components/OfertasEmpleo.vue"
 
 Vue.use(VueRouter)
 
@@ -22,6 +25,11 @@ const routes = [
     path: '/LoginView',
     name: 'LoginView',
     component: LoginView
+  },
+  {
+    path: '/detalleOferta/:id',
+    name: 'detalleOferta',
+    component: detalleOferta
   },
 
   {
@@ -46,7 +54,7 @@ const routes = [
     component: PerfilAdministrador
   },
 
-
+  
   {
     path: '/PlantillaPerfil',
     name: 'PlantillaPerfil',
@@ -56,10 +64,21 @@ const routes = [
     path: '/ContrasenaView',
     name: 'ContrasenaView',
     component: ContrasenaView
-  },{
+  },
+  {
     path: '/PublicarView',
     name: 'PublicarView',
     component: PublicarView
+  },
+  {
+    path: '/EditarPerfil',
+    name: 'EditarPerfil',
+    component: EditarPerfil
+  },
+  {
+    path: '/OfertasEmpleo',
+    name: 'OfertasEmpleo',
+    component: OfertasEmpleo
   }
 ]
 

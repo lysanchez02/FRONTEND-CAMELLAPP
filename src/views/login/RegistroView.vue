@@ -31,7 +31,7 @@
             <div class="col-6 d-flex justify-content-between">
               <input
                 class="form-control"
-                v-model="form.username"
+                v-model="form.correo"
                 type="email"
                 placeholder="Correo"
               /><br />
@@ -40,8 +40,8 @@
           <br />
           <input
             class="form-control"
-            v-model="form.fotoPerfil"
-            type="image"
+            :v-model="form.fotoPerfil"
+            type="file"
             src="foto"
             alt="Selecciona una foto de perfil"
           />
@@ -60,7 +60,7 @@
             <div class="col-6">
               <input
                 class="form-control"
-                v-model="form.nacionalida"
+                v-model="form.nacionalidad"
                 type="text"
                 placeholder="Pais de Origen"
               />
@@ -106,7 +106,12 @@
             </div>
           </div>
           <br />
-
+          <input
+            class="form-control"
+            v-model="form.username"
+            type="text"
+            placeholder="username"
+          />
           <input
             class="form-control"
             v-model="form.pasword"
@@ -122,8 +127,8 @@
           <br />
 
           <div class="d-flex justify-content-evenly">
-            <b-button v-on:click="success()" href="/admin" variant="info" class="m-1"><b-icon icon="search"></b-icon> Busco Empleo</b-button>
-            <b-button v-on:click="success()" variant="info" class="m-1"><b-icon icon="megaphone"></b-icon> Quiero Publicar Un Empleo</b-button><br/>
+            <b-button v-on:click="GuardarUsuario()" href="/PerfilPostulante" variant="info" class="m-1"><b-icon icon="search"></b-icon> Busco Empleo</b-button>
+            <b-button v-on:click="GuardarUsuario()" href="/PerfilEmpleador"  variant="info" class="m-1"><b-icon icon="megaphone"></b-icon> Quiero Publicar Un Empleo</b-button><br/>
           </div>
         </div>
       </div>
@@ -143,10 +148,11 @@ export default {
       form : {
         nombres: null,
         apellidos: null,
-        nacionalida: null,
+        nacionalidad: null,
         documento: null,
         fotoPerfil: null,
         telefono: null,
+        correo:null,
         direccion: null,
         username: null,
         pasword: null
@@ -158,7 +164,13 @@ export default {
     success() {
       alert("Te has registrado exitosamente!");
     },
-
+    GuardarPostulante(){
+      alert('hecho');
+      axios.post(" http://localhost:3000/guardarUsuario",this.form)
+      .then((data) => {
+        console.log(data);
+      });
+  },
   },
   
 };
