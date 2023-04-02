@@ -1,7 +1,12 @@
 <template>
-    <div>
+    <div><NavBar/><br>
       <div class="container">
-        <div class="row">
+      <div class="row">
+<div class="col-3 d-flex align-self-start">
+  <b-button><b-icon icon="arrow-left" class="mx-2"></b-icon>   Regresar</b-button>
+</div>
+<div class="col-1"></div>
+<div class="col-8">
           <div>
             <b-card>
     <template #header>
@@ -18,16 +23,16 @@
 <b-button class="mx-1" variant="info">Postularme</b-button>
 <b-button class="mx-1" variant="danger">Cancelar</b-button>
     </b-card>
-  </div>
-
-
-  
+  </div>   
 </div>
-    </div>
-    </div>
+</div>
+</div>
+  </div>
 </template>
 <script>
 import axios from "axios"
+import MenuPostulante from "./MenuPostulante.vue"
+import NavBar from "./NavBar.vue"
 export default{
     name:'detalleOferta',
     data(){
@@ -37,7 +42,9 @@ export default{
       }
     },
     components:{
-  },
+    NavBar,
+    MenuPostulante
+},
   async mounted(){
     this.idOferta = this.$route.params.id  
     await this.verDetalleOferta()

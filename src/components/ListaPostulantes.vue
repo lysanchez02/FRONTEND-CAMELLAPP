@@ -25,20 +25,20 @@
         </div><br>
         <div class="row d-flex">  
 <!--start card-->
-            <div class="col-6" v-for="listar in listar" :key="listar.id">
+            <div class="col-6" v-for="usuario in listarUsuario" :key="usuario.id">
             <b-card
-            :title="listar.nombres+' '+listar.apellidos"
+            :title="usuario.nombres+' '+usuario.apellidos"
             img-src="https://st3.depositphotos.com/6582994/13117/v/450/depositphotos_131177892-stock-illustration-user-icon-in-trendy-flat.jpg"
-            :img-alt=listar.foto_perfil
+            :img-alt=usuario.foto_perfil
             img-top
             tag="article"
             style="max-width: 25rem;"
             >
-            {{listar.nacionalidad}}<br>
-            <b-card-text><p>{{listar.telefono}}</p></b-card-text>
-            <b-card-text><p>Disponible:{{listar.disponibilidad}}</p></b-card-text>
+            {{usuario.nacionalidad}}<br>
+            <b-card-text><p>{{usuario.telefono}}</p></b-card-text>
+            <b-card-text><p>Disponible:{{usuario.disponibilidad}}</p></b-card-text>
             <b-button href="#" variant="outline-primary" class="m-1">Contratar</b-button>
-            <b-button href="PerfilPostulanteView" variant="primary" class="m-1">Ver Perfil</b-button>
+            <router-link class="btn" :to="{name:'verPerfil',params:{id:usuario.id_usuario}}">ver</router-link>
             <b-button href="#" variant="danger" @click="eliminarpostulante(listar.id)" class="m-1">Eliminar</b-button>
           </b-card><br>
         </div>
@@ -53,7 +53,7 @@ export default{
   name:'ListaPostulantes',
   data(){
     return{
-      listar:null,
+      listarUsuario:[],
       listarCategoria: null
     }
   },
@@ -66,12 +66,12 @@ export default{
 }
 },
   mounted(){
-
+    
     axios.get("http://localhost:3000/listarCategoria/").then(response2=>{
      this.listarCategoria=response2.data
    }),
     axios.get("http://localhost:3000/listarUsuario").then(response=>{
-      this.listar=response.data
+      this.listarUsuario=response.data
    })
   },
 

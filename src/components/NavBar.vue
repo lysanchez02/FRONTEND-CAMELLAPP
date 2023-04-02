@@ -5,10 +5,7 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav >
             <b-nav-item href="/">Inicio</b-nav-item>
-            <b-nav-item href="/EditarPerfil">Gestionar perfil</b-nav-item>
-            <b-nav-item href="/">Mi Experiencia</b-nav-item>
-            <b-nav-item href="/">Mis Postulaciones</b-nav-item>
-            <b-nav-item href="/">Ofertas de empleo</b-nav-item>
+            
 
           </b-navbar-nav>
           </b-collapse>

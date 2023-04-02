@@ -12,6 +12,7 @@ import PublicarView from'../components/PublicarView.vue';
 import detalleOferta from "../components/DetalleOferta.vue";
 import EditarPerfil from "../components/EditarPerfil.vue"
 import OfertasEmpleo from "../components/OfertasEmpleo.vue"
+import verPerfil from "../views/verPerfil.vue"
 
 Vue.use(VueRouter)
 
@@ -79,6 +80,11 @@ const routes = [
     path: '/OfertasEmpleo',
     name: 'OfertasEmpleo',
     component: OfertasEmpleo
+  },
+  {
+    path: '/verPerfil',
+    name: 'verPerfil',
+    component: verPerfil
   }
 ]
 

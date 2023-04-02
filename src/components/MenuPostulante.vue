@@ -11,8 +11,8 @@
         <h5></h5>
       </template>
 
-      <b-list-group flush>
-        <b-list-group-item button @click="">Gestionar Perfil</b-list-group-item>
+      <b-list-group flush><a href="">
+        <b-list-group-item button href="/EditarPerfil"> Gestionar Perfil</b-list-group-item></a>
         <b-list-group-item button @click="">Ofertas de Empleo</b-list-group-item>
         <b-list-group-item button @click="">Mi Experiencia</b-list-group-item>
         <b-list-group-item button @click="">Mis Postulaciones</b-list-group-item>
