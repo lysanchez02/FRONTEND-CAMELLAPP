@@ -26,6 +26,15 @@ import NavBarLogin from "@/components/NavBarLogin.vue";
 export default {
   name: "InicioView",
   components: { NavBarLogin },
-  methods: {},
+  methods: {
+    iniciarSesion(){
+      //logica de iniciar sesión
+      localStorage.setItem("usuario", respuesta);
+
+    }
+  },
+  mounted(){
+    this.iniciarSesion()
+  }
 };
 </script>

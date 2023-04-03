@@ -9,6 +9,7 @@ import PerfilAdministrador from'../views/perfil/Administrador/PerfilAdministrado
 import PerfilEmpleador from'../views/perfil/Empleador/PerfilEmpleador.vue';
 import PlantillaPerfil from'../views/perfil/PlantillaPerfil.vue';
 import PublicarView from'../components/PublicarView.vue';
+import DetalleOferta from '../components/DetalleOferta.vue'
 
 Vue.use(VueRouter)
 
@@ -60,6 +61,11 @@ const routes = [
     path: '/PublicarView',
     name: 'PublicarView',
     component: PublicarView
+  }
+  ,{
+    path: '/DetalleOferta',
+    name: 'DetalleOferta',
+    component: DetalleOferta
   }
 ]
 

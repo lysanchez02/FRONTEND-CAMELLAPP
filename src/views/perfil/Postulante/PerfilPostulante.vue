@@ -40,7 +40,8 @@
             <h4>Experiencia</h4>
             <!--start card-->
             <div
-              v-for="experiencia in ListarExperiencia"
+              v-for="experiencia in ListarExperiencia" :key="experiencia.id"
+
               class="d-flex justify-content-center"
             >
               <b-card

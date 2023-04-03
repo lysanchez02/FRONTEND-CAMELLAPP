@@ -70,7 +70,7 @@
             <div class="col-6">
               <input
                 class="form-control"
-                v-model="form.nacionalida"
+                v-model="form.nacionalidad"
                 type="text"
                 placeholder="Pais de Origen"
               />
@@ -119,13 +119,13 @@
 
           <input
             class="form-control"
-            v-model="form.pasword"
+            v-model="form.password"
             type="password"
             placeholder="Contraseña"
           /><br />
           <input
             class="form-control"
-            v-model="form.pasword"
+            v-model="form.password"
             type="password"
             placeholder="Confirma tu Contraseña"
           />
@@ -161,13 +161,13 @@ export default {
       form: {
         nombres: null,
         apellidos: null,
-        nacionalida: null,
+        nacionalidad: null,
         documento: null,
         fotoPerfil: null,
         telefono: null,
         direccion: null,
         username: null,
-        pasword: null,
+        password: null,
       },
     };
   },

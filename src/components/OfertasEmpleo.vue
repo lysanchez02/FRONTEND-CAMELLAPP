@@ -17,8 +17,7 @@
                       <b-icon icon="funnel" aria-hidden="true"></b-icon> Filtro
                     </template>
                     <b-dropdown-item
-                      v-for="categoria in listarCategoria"
-                      :key="listarCategoria.id"
+                      v-for="categoria in listarCategoria" :key="categoria.id"
                       :title="categoria.descripcion"
                       >{{ categoria.nombre }}</b-dropdown-item
                     >
@@ -81,7 +80,8 @@ export default {
   data() {
     return {
       listar: null,
-      listarCategoria: null,
+      listarCategoria
+      : null,
       show: "Ofertas",
     };
   },
@@ -92,6 +92,7 @@ export default {
     axios.get("http://localhost:3000/listarOfertaEmpleo/").then((response) => {
       this.listar = response.data;
     });
+    
     axios.get("http://localhost:3000/listarCategoria/").then((response2) => {
       this.listarCategoria = response2.data;
     });

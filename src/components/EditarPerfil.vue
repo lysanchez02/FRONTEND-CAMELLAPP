@@ -22,12 +22,12 @@
         </div>
       </div>
       <br />
-      <div id="user" class="user" v-for="user in listar" :key="listar">
+      <div id="user" class="user" v-for="user in listar" :key="user.id">
         <b-form>
           <!--foto-->
           <div role="group">
             <label for="input-live">foto:</label>
-            <input id="nombre" class="form-control" type="file" value="" />
+            <input id="foto" class="form-control" type="file" value="" />
           </div>
           <br />
           <!--foto-->
@@ -38,7 +38,7 @@
               id="nombre"
               class="form-control"
               type="text"
-              value=""
+              
               :value="[[user.nombres]]"
             />
           </div>
@@ -48,10 +48,10 @@
           <div role="group">
             <label for="input-live">Apellidos:</label>
             <input
-              id="nombre"
+              id="apellidos"
               class="form-control"
               type="text"
-              value=""
+              
               :value="[[user.apellidos]]"
             />
           </div>
@@ -61,10 +61,10 @@
           <div role="group">
             <label for="input-live">Celular:</label>
             <input
-              id="nombre"
+              id="celular"
               class="form-control"
               type="text"
-              value=""
+              
               :value="[[user.telefono]]"
             />
           </div>
@@ -74,10 +74,10 @@
           <div role="group">
             <label for="input-live">Direccion:</label>
             <input
-              id="nombre"
+              id="direccion"
               class="form-control"
               type="text"
-              value=""
+              
               :value="[[user.direccion]]"
             />
           </div>
@@ -87,10 +87,10 @@
           <div role="group">
             <label for="input-live">Nacionalidad:</label>
             <input
-              id="nombre"
+              id="nacionalidad"
               class="form-control"
               type="text"
-              value=""
+              
               :value="[[user.nacionalidad]]"
             />
           </div>
@@ -100,10 +100,10 @@
             <label for="input-live">Documento:</label>
             <b-input-group>
               <input
-                id="nombre"
+                id="documento"
                 class="form-control"
                 type="text"
-                value=""
+                
                 :value="[[user.documento]]"
               />
             </b-input-group>

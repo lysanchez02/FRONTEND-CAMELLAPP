@@ -18,10 +18,10 @@
                     </template>
                     <b-dropdown-item
                       v-for="categoria in listarCategoria"
-                      :key="listarCategoria.id"
+                      :key="categoria.id"
                       :title="categoria.descripcion"
-                      >{{ categoria.nombre }}</b-dropdown-item
-                    >
+                      >{{ categoria.nombre }}
+                    </b-dropdown-item>
                   </b-dropdown>
                 </div>
               </template></b-input-group
