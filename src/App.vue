@@ -1,6 +1,11 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
     <nav>
+=======
+    <!--  <nav>
+      <router-link to="/RegistroView">Registro</router-link>|
+>>>>>>> camellapp
       <router-link to="/">Home</router-link> |
       <router-link to="/LoginView">Login</router-link> |      
       <router-link to="/RegistroView">Registro</router-link> |
@@ -21,9 +26,15 @@
       <router-link to="/Editaroferta">Editaroferta</router-link> |
       
       <router-link to="/PerfilAdministrador">PerfilAdministrador</router-link>   |
-      <router-link to="/AdmisubView">subcategorias</router-link> |
-      <router-link to="/Usuarios">Usuarios</router-link> |
-    </nav>
+      <router-link to="/PerfilEmpleador">PerfilEmpleador</router-link>   |
+      <router-link to="/MiPerfilPostulante">MiPerfilPostulante</router-link>|  
+      <router-link to="/PlantillaPerfil">Plantilla Perfil</router-link>   |
+      <router-link to="/CategoriaView">CategoriaView</router-link>
+      
+      <router-link to="/PublicarView">publicar</router-link>|
+      <router-link to="AdmiView">admiempleos</router-link>|
+      <router-link to="CategoriaView">categoria</router-link>
+    </nav>-->
     <router-view/>
 
     

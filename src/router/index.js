@@ -30,8 +30,8 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'HomeView',
-    component: HomeView
+    name: 'InicioView',
+    component: InicioView
   },
 
   {
@@ -40,66 +40,11 @@ const routes = [
     component: LoginView
   },
   {
-      path: '/RegistroView',
-      name: 'RegistroView',
-      component: RegistroView
-  },
-  {
-    path: '/ContrasenaView',
-    name: 'ContrasenaView',
-    component: ContrasenaView
-  },
-  {
-    path: '/RecuContraseña',
-    name: 'RecuContraseña',
-    component: RecuContraseña
-  },
-  // postulante
-
-  {
-    path: '/PerfilPostulanteView',
-    name: 'PerfilPostulanteView',
-    component: PerfilPostulanteView
-  },
-  {
-    path: '/ArchivoPostulanteView',
-    name: 'ArchivoPostulanteView',
-    component: ArchivoPostulanteView
-  },
-  {
-    path: '/Experiencia',
-    name: 'Experiencia',
-    component: Experiencia
+    path: '/detalleOferta/:id',
+    name: 'detalleOferta',
+    component: detalleOferta
   },
 
-//Empleador
-  
-  
-  {
-    path: '/PerfilEmpleador',
-    name: 'PerfilEmpleador',
-    component: PerfilEmpleador
-  },
-   {
-    path: '/OfertaEmpleo',
-    name: 'OfertaEmpleo',
-    component: OfertaEmpleo
-  },
-  {
-    path: '/Postulantes',
-    name: 'Postulantes',
-    component: Postulantes
-  },
-  {
-    path: '/PublicarView',
-    name: 'PublicarView',
-    component: PublicarView
-  },
-  {
-    path: '/PostulacionesView',
-    name: 'PostulacionesView',
-    component: PostulacionesView
-  },
   {
     path: '/VistaOferta',
     name: 'VistaOferta',
@@ -111,43 +56,55 @@ const routes = [
     name: 'PublicarView',
     component: PublicarView
   },
+
   {
-    path: '/Misofertas',
-    name: 'Misofertas',
-    component: Misofertas
+    path: '/PerfilPostulante',
+    name: 'PerfilPostulante',
+    component: PerfilPostulante
   },
   {
-    path: '/Editaroferta',
-    name: 'Editaroferta',
-    component: Editaroferta
+    path: '/PerfilEmpleador',
+    name: 'PerfilEmpleador',
+    component: PerfilEmpleador
   },
-
-//administrador
-
- {
+  {
     path: '/PerfilAdministrador',
     name: 'PerfilAdministrador',
     component: PerfilAdministrador
   },
-  {
-    path: '/Usuarios',
-    name: 'Usuarios',
-    component: Usuarios
-  },
-  {
-    path: '/Subcategoria',
-    name: 'Subcategoria',
-    component: Subcategoria
-  },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
 
+  
+  {
+    path: '/PlantillaPerfil',
+    name: 'PlantillaPerfil',
+    component: PlantillaPerfil,
+  },
+  {
+    path: '/ContrasenaView',
+    name: 'ContrasenaView',
+    component: ContrasenaView
+  },
+  {
+    path: '/PublicarView',
+    name: 'PublicarView',
+    component: PublicarView
+  },
+  {
+    path: '/EditarPerfil',
+    name: 'EditarPerfil',
+    component: EditarPerfil
+  },
+  {
+    path: '/OfertasEmpleo',
+    name: 'OfertasEmpleo',
+    component: OfertasEmpleo
+  },
+  {
+    path: '/verPerfil',
+    name: 'verPerfil',
+    component: verPerfil
+  }
+  
 ]
 
 const router = new VueRouter({
