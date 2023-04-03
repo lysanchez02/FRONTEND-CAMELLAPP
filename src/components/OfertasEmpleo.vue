@@ -14,7 +14,7 @@
                 <div>
                   <b-dropdown>
                     <template #button-content>
-                      <b-icon icon="funnel" aria-hidden="true"></b-icon> Filtro
+                      <b-icon icon="filter" aria-hidden="true"></b-icon> Filtro
                     </template>
                     <b-dropdown-item v-for="categoria in listarCategoria" :key="categoria.id"
                       :title="categoria.descripcion">{{categoria.nombre}}</b-dropdown-item>
@@ -32,25 +32,27 @@
           <DetalleOferta /></div>
         <div class="row d-flex justify-content-between" v-else-if="show === 'Ofertas'">
           <!--start card-->
-              <div v-for="ofertaEmpleo in listaOfertaEmpleo" :key="ofertaEmpleo.id_ofertaEmpleo" :title="ofertaEmpleo.nombres" 
-              img-alt="Image" img-top tag="article" style="max-width: 25rem;" class="card mb-2 m-1 btn-ligth"><br>
+          <div v-for="ofertaEmpleo in listaOfertaEmpleo" :key="ofertaEmpleo.id_ofertaEmpleo" class="d-flex w-50">
+            <router-link class="btn border border-0" :to="{name:'detalleOferta',params:{id:ofertaEmpleo.id_ofertaEmpleo}}">
+            <div :title="ofertaEmpleo.titulo" img-alt="Image" img-top tag="article" style="max-width: 25rem;" class="card btn btn-light">
+              <b-card-text class="d-flex">{{ofertaEmpleo.id_ofertaEmpleo}}. {{ofertaEmpleo.titulo}}</b-card-text>
               <img src="https://www.semana.com/resizer/JmiB52VJxZmk799j7D2CEeTZ1x4=/arc-anglerfish-arc2-prod-semana/public/R52D6MSO7ZB4DF3W4QM4LECYIA.jpg" alt="">
                 <b-card-text>{{ofertaEmpleo.descripcion}}</b-card-text>
-            <b-card-text>{{ofertaEmpleo.horario}}</b-card-text>
-            <b-card-text>{{ofertaEmpleo.tiempo_estimado}}</b-card-text>
+                <b-card-text>Lugar: {{ofertaEmpleo.ubicacion}}</b-card-text>
+            <b-card-text>Duracion: {{ofertaEmpleo.tipoDeContrato}}</b-card-text>
             <b-card-text>Pago: {{ofertaEmpleo.salario}}</b-card-text>
             <b-button href="#" variant="info" class="m-1">Aplicar a esta oferta</b-button>
-            <b-button variant="info" class="m-1"><b-icon icon="pencil"></b-icon></b-button>
+            <b-button variant="info" class="m-1"><b-icon icon="pencil"></b-icon>  Editar</b-button>
             <h1>{{ofertaEmpleo.id}}</h1>
-                <!-- <router-link class="btn" :to="{path:`detalleOferta${ofertaEmpleo.id_ofertaEmpleo}`}">ver</router-link> -->
-                <router-link @click="show = 'DetalleOferta'" class="btn" :to="{name:'detalleOferta',params:{id:ofertaEmpleo.id_ofertaEmpleo}}">ver</router-link>
-                <b-button href="#" variant="danger" class="m-1">
+                <!-- <router-link class="btn" :to="{path:`detalleOferta${ofertaEmpleo.id_ofertaEmpleo}`}">ver</router-link> --><b-button href="#" variant="danger" class="m-1">
                   <b-icon icon="trash"></b-icon>
                 </b-button>
                 <!-- <template #footer>
                   <small class="text-muted">Last updated 3 mins ago</small>
                 </template> -->
-          </div>
+              </div>
+            </router-link>
+            </div>
           <!--end card-->
         </div>
       </div>

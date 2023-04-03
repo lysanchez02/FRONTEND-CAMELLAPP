@@ -11,10 +11,20 @@
           <br />
           <div class="row">
             <div class="col-6">
-              <input class="form-control" v-model="form.nombres" type="text" placeholder="Nombres" />
+              <input
+                class="form-control"
+                v-model="form.nombres"
+                type="text"
+                placeholder="Nombres"
+              />
             </div>
             <div class="col-6">
-              <input class="form-control" v-model="form.apellidos" type="text" placeholder="Apellidos" />
+              <input
+                class="form-control"
+                v-model="form.apellidos"
+                type="text"
+                placeholder="Apellidos"
+              />
             </div>
           </div>
           <br />
@@ -114,30 +124,29 @@
           />
           <input
             class="form-control"
-            v-model="form.pasword"
+            v-model="form.password"
             type="password"
             placeholder="Contraseña"
           /><br />
           <input
             class="form-control"
-            v-model="form.pasword"
+            v-model="form.password"
             type="password"
             placeholder="Confirma tu Contraseña"
           />
           <br />
 
           <div class="d-flex justify-content-evenly">
-            <b-button v-on:click="GuardarUsuario()" href="/PerfilPostulante" variant="info" class="m-1"><b-icon icon="search"></b-icon> Busco Empleo</b-button>
-            <b-button v-on:click="GuardarUsuario()" href="/PerfilEmpleador"  variant="info" class="m-1"><b-icon icon="megaphone"></b-icon> Quiero Publicar Un Empleo</b-button><br/>
+            <b-button v-on:click="GuardarUsuario()"  variant="info" class="m-1"><b-icon icon="search"></b-icon> Busco Empleo</b-button>
+            <b-button v-on:click="GuardarUsuario()"   variant="info" class="m-1"><b-icon icon="megaphone"></b-icon> Quiero Publicar Un Empleo</b-button><br/>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<script>
-
-import NavBarLogin from "@/components/NavBarLogin.vue";
+<script>import NavBarLogin from "@/components/NavBarLogin.vue";
+import axios from "axios";
 
 export default {
   name: "RegistroView",
@@ -145,33 +154,27 @@ export default {
   data() {
     return {
       registro: "registro1",
-      form : {
-        nombres: null,
-        apellidos: null,
-        nacionalidad: null,
-        documento: null,
-        fotoPerfil: null,
-        telefono: null,
-        correo:null,
-        direccion: null,
-        username: null,
-        pasword: null
-       },
+      form: {
+        nombres: "",
+        apellidos: "",
+        nacionalidad: "",
+        documento: "",
+        fotoPerfil: "url",
+        telefono: "",
+        correo:"",
+        direccion: "",
+        username: "num1",
+        password: "",
+      },
     };
   },
   components: { NavBarLogin },
   methods: {
-    success() {
-      alert("Te has registrado exitosamente!");
-    },
-    GuardarPostulante(){
-      alert('hecho');
-      axios.post(" http://localhost:3000/guardarUsuario",this.form)
+    
+    GuardarUsuario(){      
+      axios.post(" http://localhost:3000/guardarUsuario", this.form)
       .then((data) => {
         console.log(data);
       });
   },
-  },
-  
-};
-</script>
+  },};</script>

@@ -16,10 +16,8 @@
     </b-avatar-group>
     </div>
   </div><br>
-  <div id="usuario" class="usuario">
-  <b-form>
-    
-    <!--foto-->
+  <div>
+  <b-form><!--foto-->
     <div role="group">
         <label for="input-live">foto:</label>
         <input id="nombre" class="form-control" type="file">

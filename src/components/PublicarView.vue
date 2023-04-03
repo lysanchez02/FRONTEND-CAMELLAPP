@@ -1,86 +1,101 @@
 <template >
   <div>
-          <div class="container">
-            <div class="row">
-              
-                <b-card>
-                  <template #header>
-                    <b-card-img
-                      src="https://help.fromdoppler.com/wp-content/uploads/2016/12/Alto_y_ancho-1024x531.png"
-                      img-top class="w-20"></b-card-img>
-                    <br> <br>
-                    <div class="row d-flex">
-                      <div class="col-4">
-                        <label for="">Titulo</label>
-                      </div>
-                      <div class="col-8">
-                        <input class="from_control" placeholder="titulo"> 
-                      </div>
-                    </div>
-                    <br>
-                    <div class="row d-flex">
-                      <div class="col-4">
-                       <label for="">Descripcion Del Trabajo</label> 
-                      </div>
-                      <div class="col-8">
-                       <b-form-textarea placeholder="se permite al menos 500 caracteres" rows="3"> </b-form-textarea> 
-                      </div>
-                    </div>
-                    <br>
-                    <div class="row d-flex">
-                      <div class="col-4">
-                        <label for="">Pago</label>
-                      </div>
-                      <div class="col-8">
-                        <input class="from_control" placeholder="$"> 
-                      </div>
-                    </div>
-                    <br>
-                    <div class="row d-flex">
-                      <div class="col-2">
-                        <label for="">Fecha de Inicio del trabajo</label>
-                      </div>  
-                      <div class="col-4">
-                        <b-form-datepicker v-model="value" :min="min" :max="max" locale="es"></b-form-datepicker>
-                      </div>  
-                      <div class="col-2">
-                        <label for="">Fecha de Finalizacion</label>
-                      </div>  
-                        <div class="col-4">
-                        <b-form-datepicker v-model="value" :min="min" :max="max" locale="es"></b-form-datepicker>
-                      </div>
-                    </div>
-                    <br>
-                  </template>
-                  <b-button href="#" variant="primary" class="m-1"><b-icon icon="check2"></b-icon>  Publicar Oferta</b-button> 
-                  <b-button href="#" variant="danger" class="m-1"><b-icon icon="x-circle"></b-icon> Cancelar</b-button>                 
-                </b-card>
+    <div class="container">
+      <div class="row">
+        <b-card>
+          <template #header>
+            <b-card-img src="" img-top class="w-20"></b-card-img>
+              <img src="https://www.semana.com/resizer/JmiB52VJxZmk799j7D2CEeTZ1x4=/arc-anglerfish-arc2-prod-semana/public/R52D6MSO7ZB4DF3W4QM4LECYIA.jpg" rounded  img-top alt="" class="w-50"><br><br>
+            <div class="row d-flex">
+              <div class="col-4">
+                <label for="">Titulo</label>
+              </div>
+              <div class="col-8">
+                <input class="from_control" v-model="ofertaEmpleo.titulo" placeholder="Titulo">
+              </div>
             </div>
-          </div>
-        </div>
+            <br>
+            <div class="row d-flex">
+              <div class="col-4">
+                <label for="">Descripcion Del Trabajo</label>
+              </div>
+              <div class="col-8">
+                <b-form-textarea placeholder="Se permite al menos 500 caracteres" v-model="ofertaEmpleo.descripcion"
+                  rows="2"> </b-form-textarea>
+              </div>
+            </div>
+            <br>
+            <div class="row d-flex">
+              <div class="col-4">
+                <label for="">Salario</label>
+              </div>
+              <div class="col-8">
+                <input class="from_control" v-model="ofertaEmpleo.salario" placeholder="$">
+              </div>
+            </div>
+            <br>
+
+            <div class="row d-flex">
+
+              <div class="col-4">
+                <label for="">Ubicacion</label>
+              </div>
+              <div class="col-8">
+                <input class="from_control" v-model="ofertaEmpleo.ubicacion" placeholder="">
+              </div>
+            </div>
+            <br>
+            <div class="row d-flex">
+
+              <div class="col-4">
+                <label for="">Tipo de Contrato</label>
+              </div>
+              <div class="col-8">
+                <input class="from_control" v-model="ofertaEmpleo.tipoDeContrato" placeholder="">
+              </div>
+            </div>
+            <br>
+          </template>
+          <b-button v-on:click="publicarOferta()" variant="primary" class="m-1"><b-icon icon="check2"></b-icon> Publicar
+            Oferta</b-button>
+          <b-button href="#" variant="danger" class="m-1"><b-icon icon="x-circle"></b-icon> Cancelar</b-button>
+        </b-card>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
+import axios from "axios";
 
 export default {
+  name: "PublicarView",
   data() {
     return {
-      form: {
-
-
-      },
-
-    }
+      ofertaEmpleo:{
+        titulo: "", 
+        salario:"" ,
+        descripcion: "",
+        ubicacion: "",
+        tipoDeContrato: "",
+        id_categoria: 1,
+        id_usuario: 1
+      }
+    };
   },
-
+  methods: {
+    publicarOferta() {
+    //   user = localStorage.getItem("usuario")
+    //   user.id
+      axios.post("http://localhost:3000/guardarOfertaEmpleo", this.ofertaEmpleo)
+        .then((data) => {
+          console.log(data);
+       });
+        
 }
+},
+};
 </script>
-
-<style>
-.preguntas {
-
-  text-align: center;
-}
-.from_control {
+<style>.from_control {
   width: 100%;
   max-height: 112%;
 }
@@ -144,17 +159,4 @@ export default {
   padding: 5px;
   border-radius: 5px;
 }
-
-.preguntas1 {
-  width: 25em;
-  height: 30em;
-
-  border-radius: 5px;
-}
-
-.Combo {
-  width: 50em;
-  border: 1px solid;
-  height: 46.2em;
-}
-</style> 
+</style>

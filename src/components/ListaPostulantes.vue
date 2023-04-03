@@ -12,7 +12,7 @@
   <div>
   <b-dropdown>
     <template #button-content>
-      <b-icon icon="funnel" aria-hidden="true"></b-icon> Filtro
+      <b-icon icon="filter" aria-hidden="true"></b-icon> Filtro
     </template>
             <b-dropdown-item v-for="categoria in listarCategoria" :key="listarCategoria.id" :title="categoria.descripcion">{{categoria.nombre}}</b-dropdown-item>
   </b-dropdown>
@@ -25,23 +25,25 @@
         </div><br>
         <div class="row d-flex">  
 <!--start card-->
-            <div class="col-6" v-for="usuario in listarUsuario" :key="usuario.id">
-            <b-card
-            :title="usuario.nombres+' '+usuario.apellidos"
+            <div v-for="usuario in listarUsuario" :key="usuario.id" class="col-6 d-flex w-50">
+              <router-link class="btn border border-0" :to="{name:'verPerfil',params:{id:usuario.id_usuario}}">
+            <div>
+            <b-card :title="usuario.nombres+' '+usuario.apellidos"
             img-src="https://st3.depositphotos.com/6582994/13117/v/450/depositphotos_131177892-stock-illustration-user-icon-in-trendy-flat.jpg"
             :img-alt=usuario.foto_perfil
             img-top
             tag="article"
             style="max-width: 25rem;"
+            class="btn btn-light"
             >
             {{usuario.nacionalidad}}<br>
             <b-card-text><p>{{usuario.telefono}}</p></b-card-text>
             <b-card-text><p>Disponible:{{usuario.disponibilidad}}</p></b-card-text>
-            <b-button href="#" variant="outline-primary" class="m-1">Contratar</b-button>
-            <router-link class="btn" :to="{name:'verPerfil',params:{id:usuario.id_usuario}}">ver</router-link>
-            <b-button href="#" variant="danger" @click="eliminarpostulante(listar.id)" class="m-1">Eliminar</b-button>
-          </b-card><br>
-        </div>
+            <b-button href="#" variant="outline-primary" class="m-1">Contratar</b-button>            <b-button href="#" variant="danger" @click="eliminarpostulante(listar.id)" class="m-1">Eliminar</b-button>
+            </b-card><br>
+            </div>
+          </router-link>
+            </div>
 <!--end card-->
   </div>
  </div>

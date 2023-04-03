@@ -3,7 +3,7 @@
       <div class="container">
       <div class="row">
 <div class="col-2 d-flex align-self-start">
-  <b-button><b-icon icon="arrow-left" class="mx-2"></b-icon>   Regresar</b-button>
+  <b-button @click="goBack"><b-icon icon="arrow-left" class="mx-2"></b-icon>   Regresar</b-button>
 </div>
 <div class="col-9">
   <h3>Informacion Personal</h3><br>
@@ -51,19 +51,15 @@ export default{
 },
   async mounted(){
     this.idUsuario = this.$route.params.id  
-    await this.verUsuario()    & this.verExperiencia()
-  //   axios.get("http://localhost:3000/listarExperiencia").then(response2=>{
-  //    this.listarExperiencia=response2.data
-  //  });
+    await this.verUsuario() & this.verExperiencia()
   },
   methods:{
     verUsuario(){
       axios.get("http://localhost:3000/usuario/"+this.idUsuario)
       .then((respuesta) => {
-        // console.log(respuesta.data);
        this.usuario = respuesta.data  
       })
-      .catch((err) => {//500
+      .catch((err) => {
         alert("error del servidor")
       })
       .finally(()=>{
@@ -77,6 +73,56 @@ export default{
       .catch((err)=>{
         alert("error del servidor")
       })
+    },
+    goBack() {
+      window.history.back();
+    }
+  }
+  }
+  </script>
+<script>
+import axios from "axios"
+import NavBar from "@/components/NavBar.vue"
+export default{
+    name:'verPerfil',
+    data(){
+      return{
+        usuario:{},
+        experiencia:{},
+        idUsuario:null,
+        listarExperiencia:null
+      }
+    },
+    components:{
+    NavBar,
+},
+  async mounted(){
+    this.idUsuario = this.$route.params.id  
+    await this.verUsuario() & this.verExperiencia()
+  },
+  methods:{
+    verUsuario(){
+      axios.get("http://localhost:3000/usuario/"+this.idUsuario)
+      .then((respuesta) => {
+       this.usuario = respuesta.data  
+      })
+      .catch((err) => {
+        alert("error del servidor")
+      })
+      .finally(()=>{
+      })
+    },
+    verExperiencia(){
+      axios.get("http://localhost:3000/listarExperiencia")
+      .then((resExperiencia)=> {
+        this.listarExperiencia=resExperiencia.data
+      })
+      .catch((err)=>{
+        alert("error del servidor")
+      })
+    },
+    goBack() {
+      window.history.back();
     }
   }
   }

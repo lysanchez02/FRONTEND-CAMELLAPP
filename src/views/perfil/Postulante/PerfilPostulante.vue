@@ -32,8 +32,11 @@
   <b-card no-body class="my-4 overflow-hidden" style="max-width: 1540px;">
     <b-row no-gutters>
       <b-col md="7">
-        <b-card-body class="my-4" :title="experiencia.titulo">
-          <b-card-text  class="my-4">{{experiencia.descripcion}}</b-card-text><br>
+        <b-card-body class="my-4">
+          <b-card-title class="d-flex">{{experiencia.id_experiencia}}.{{experiencia.titulo}}</b-card-title>
+          <b-card-sub-title class="d-flex">{{experiencia.lugarDeTrabajo}}</b-card-sub-title><br>
+          <p class="d-flex">Descripcion:  {{experiencia.descripcion}}</p>
+          <p class="d-flex">Experiencia:  {{experiencia.experienciaDeTrabajo}}</p>
         </b-card-body>
       </b-col>
       <b-col md="5">

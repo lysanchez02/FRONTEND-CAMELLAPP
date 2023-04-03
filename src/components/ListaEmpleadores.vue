@@ -12,7 +12,7 @@
     <div>
     <b-dropdown>
       <template #button-content>
-        <b-icon icon="funnel" aria-hidden="true"></b-icon> Filtro
+        <b-icon icon="filter" aria-hidden="true"></b-icon> Filtro
       </template>
               <b-dropdown-item v-for="categoria in listarCategoria" :key="listarCategoria.id" :title="categoria.descripcion">{{categoria.nombre}}</b-dropdown-item>
     </b-dropdown>
