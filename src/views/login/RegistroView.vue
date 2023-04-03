@@ -137,22 +137,8 @@
           <br />
 
           <div class="d-flex justify-content-evenly">
-<<<<<<< HEAD
-            <b-button
-              v-on:click="success()"
-              href="/admin"
-              variant="info"
-              class="m-1"
-              ><b-icon icon="search"></b-icon> Busco Empleo</b-button
-            >
-            <b-button v-on:click="success()" variant="info" class="m-1"
-              ><b-icon icon="megaphone"></b-icon> Quiero Publicar Un
-              Empleo</b-button
-            ><br />
-=======
-            <b-button v-on:click="GuardarUsuario()" href="/PerfilPostulante" variant="info" class="m-1"><b-icon icon="search"></b-icon> Busco Empleo</b-button>
-            <b-button v-on:click="GuardarUsuario()" href="/PerfilEmpleador"  variant="info" class="m-1"><b-icon icon="megaphone"></b-icon> Quiero Publicar Un Empleo</b-button><br/>
->>>>>>> 67d4833c88c465f019ba8fe3bc405e390d706132
+            <b-button v-on:click="GuardarUsuario()"  variant="info" class="m-1"><b-icon icon="search"></b-icon> Busco Empleo</b-button>
+            <b-button v-on:click="GuardarUsuario()"   variant="info" class="m-1"><b-icon icon="megaphone"></b-icon> Quiero Publicar Un Empleo</b-button><br/>
           </div>
         </div>
       </div>
@@ -161,6 +147,7 @@
 </template>
 <script>
 import NavBarLogin from "@/components/NavBarLogin.vue";
+import axios from "axios";
 
 export default {
   name: "RegistroView",
@@ -169,34 +156,30 @@ export default {
     return {
       registro: "registro1",
       form: {
-        nombres: null,
-        apellidos: null,
-        nacionalidad: null,
-        documento: null,
-        fotoPerfil: null,
-        telefono: null,
-        correo:null,
-        direccion: null,
-        username: null,
-        password: null,
+        nombres: "",
+        apellidos: "",
+        nacionalidad: "",
+        documento: "",
+        fotoPerfil: "url",
+        telefono: "",
+        correo:"",
+        direccion: "",
+        username: "num1",
+        password: "",
       },
     };
   },
   components: { NavBarLogin },
   methods: {
-    success() {
+    
+    GuardarUsuario(){
       alert("Te has registrado exitosamente!");
-    },
-<<<<<<< HEAD
-=======
-    GuardarPostulante(){
-      alert('hecho');
-      axios.post(" http://localhost:3000/guardarUsuario",this.form)
+      
+      axios.post(" http://localhost:3000/guardarUsuario", this.form)
       .then((data) => {
         console.log(data);
       });
   },
->>>>>>> 67d4833c88c465f019ba8fe3bc405e390d706132
   },
 };
 </script>

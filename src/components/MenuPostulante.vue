@@ -13,9 +13,7 @@
 
       <b-list-group flush><a href="">
         <b-list-group-item button href="/EditarPerfil"> Gestionar Perfil</b-list-group-item></a>
-        <b-list-group-item button @click="">Ofertas de Empleo</b-list-group-item>
-        <b-list-group-item button @click="">Mi Experiencia</b-list-group-item>
-        <b-list-group-item button @click="">Mis Postulaciones</b-list-group-item>
+        
       </b-list-group>
     </b-card>
 </div>

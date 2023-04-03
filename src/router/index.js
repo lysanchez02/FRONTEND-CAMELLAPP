@@ -9,7 +9,7 @@ import PerfilAdministrador from'../views/perfil/Administrador/PerfilAdministrado
 import PerfilEmpleador from'../views/perfil/Empleador/PerfilEmpleador.vue';
 import PlantillaPerfil from'../views/perfil/PlantillaPerfil.vue';
 import PublicarView from'../components/PublicarView.vue';
-import detalleOferta from "../components/DetalleOferta.vue";
+import detalleOferta from "../components/DetalleOferta";
 import EditarPerfil from "../components/EditarPerfil.vue"
 import OfertasEmpleo from "../components/OfertasEmpleo.vue"
 import verPerfil from "../views/verPerfil.vue"
@@ -86,11 +86,7 @@ const routes = [
     name: 'verPerfil',
     component: verPerfil
   }
-  ,{
-    path: '/DetalleOferta',
-    name: 'DetalleOferta',
-    component: DetalleOferta
-  }
+  
 ]
 
 const router = new VueRouter({

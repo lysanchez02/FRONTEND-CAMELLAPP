@@ -14,7 +14,7 @@
     <template #button-content>
       <b-icon icon="funnel" aria-hidden="true"></b-icon> Filtro
     </template>
-            <b-dropdown-item v-for="categoria in listarCategoria" :key="listarCategoria.id" :title="categoria.descripcion">{{categoria.nombre}}</b-dropdown-item>
+            <b-dropdown-item v-for="categoria in listarCategoria" :key="categoria.id" :title="categoria.descripcion">{{categoria.nombre}}</b-dropdown-item>
   </b-dropdown>
 </div>
 </template></b-input-group></div>

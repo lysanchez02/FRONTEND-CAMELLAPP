@@ -18,35 +18,33 @@
         <b-list-group-item button @click="show = 'Ofertas'">Mis Postulaciones</b-list-group-item>
       </b-list-group>
     </b-card>
-      </div></div>
+      
       <div class="col-1"></div>
       <div class="col-8">
-        <div v-if="show === 'Experiencia'">
-          <h4>Experiencia</h4>
-      <!--start card-->
-      <div v-for="experiencia in ListarExperiencia" class="d-flex justify-content-center">
-        <b-card no-body class="my-4 overflow-hidden" style="max-width: 1540px;">
-          <b-row no-gutters>
-            <b-col md="7">
-              <b-card-body class="my-4" :title="experiencia.titulo">
-                <b-card-text  class="my-4">{{experiencia.descripcion}}</b-card-text><br>
-              </b-card-body>
-            </b-col>
-            <b-col md="5">
-              <b-card-img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/JYRA6SJJXNCSNIWPTRXDJW2ABI.jpg" alt="Image" class="rounded-0"></b-card-img>
-            </b-col>
-          </b-row>
-        </b-card>
-      </div>
-      <br>
-      <!--end card-->
-            <a href="" @click="show = 'nuevoRegistroCatalogo'"><b-card img-src="" img-alt="Card image" img-left class="mb-3">
-            <b-icon icon="plus-circle-dotted"></b-icon>
-            <b-card-text>Añadir experiencia</b-card-text></b-card></a>
+        
+                    <h4>Experiencia</h4>
+                <!--start card-->
+                <div v-for="experiencia in ListarExperiencia" :key="experiencia" class="d-flex justify-content-center">
+                  <b-card no-body class="my-4 overflow-hidden" style="max-width: 1540px;">
+                    <b-row no-gutters>
+                      <b-col md="7">
+                        <b-card-body class="my-4" :title="experiencia.titulo">
+                          <b-card-text  class="my-4">{{experiencia.descripcion}}</b-card-text><br>
+                        </b-card-body>
+                      </b-col>
+                      <b-col md="5">
+                        <b-card-img src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/JYRA6SJJXNCSNIWPTRXDJW2ABI.jpg" alt="Image" class="rounded-0"></b-card-img>
+                      </b-col>
+                    </b-row>
+                  </b-card>
+                </div>
+                <br>
+                <!--end card-->
+                      <a href="" @click="show = 'nuevoRegistroCatalogo'"><b-card img-src="" img-alt="Card image" img-left class="mb-3">
+                      <b-icon icon="plus-circle-dotted"></b-icon>
+                      <b-card-text>Añadir experiencia</b-card-text></b-card></a>
             </div><!--Experiencia-->
-          <div v-else-if="show === 'Ofertas'"><OfertasEmpleo/></div>
-          <div v-else-if="show === 'EditarPerfil'"><EditarPerfil/></div>
-          <div v-else-if="show === 'nuevoRegistroCatalogo'">
+          
             <div class="row">
               <div class="col-3">
                 <div>
@@ -205,8 +203,7 @@
               </div>
             </div>
           </div>
-        </div>
-
+             
 </template>
 <script>
 import axios from "axios";
