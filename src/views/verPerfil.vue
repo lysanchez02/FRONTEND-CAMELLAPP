@@ -19,14 +19,14 @@
       <img img-left class="w-100" alt="">
     </div>
   </div><hr>
-        <div>
-            <h4 class="my-4">Experiencia</h4>
+  <h4 class="my-4">Experiencia</h4>
+        <div v-for="experiencia in listarExperiencia" >
             <b-card img-src="https://www.semana.com/resizer/JmiB52VJxZmk799j7D2CEeTZ1x4=/arc-anglerfish-arc2-prod-semana/public/R52D6MSO7ZB4DF3W4QM4LECYIA.jpg" img-alt="Card image" img-left img-width="33%">
-      <b-card-text class="d-flex justify-content-end">titulo</b-card-text>
+      <b-card-text class="d-flex justify-content-end">{{experiencia.titulo}}</b-card-text>
       <b-card-text class="d-flex justify-content-end">lugar de trabajo</b-card-text>
       <b-card-text class="d-flex justify-content-end">descripcion</b-card-text>
       <b-card-text class="d-flex justify-content-end">duracion del trabajo</b-card-text>
-    </b-card>
+    </b-card><br>
 </div>
 </div>
 </div>
@@ -41,7 +41,9 @@ export default{
     data(){
       return{
         usuario:{},
-        idUsuario:null
+        experiencia:{},
+        idUsuario:null,
+        listarExperiencia:null
       }
     },
     components:{
@@ -49,7 +51,10 @@ export default{
 },
   async mounted(){
     this.idUsuario = this.$route.params.id  
-    await this.verUsuario()
+    await this.verUsuario()    & this.verExperiencia()
+  //   axios.get("http://localhost:3000/listarExperiencia").then(response2=>{
+  //    this.listarExperiencia=response2.data
+  //  });
   },
   methods:{
     verUsuario(){
@@ -62,9 +67,16 @@ export default{
         alert("error del servidor")
       })
       .finally(()=>{
-
       })
-
+    },
+    verExperiencia(){
+      axios.get("http://localhost:3000/listarExperiencia")
+      .then((resExperiencia)=> {
+        this.listarExperiencia=resExperiencia.data
+      })
+      .catch((err)=>{
+        alert("error del servidor")
+      })
     }
   }
   }

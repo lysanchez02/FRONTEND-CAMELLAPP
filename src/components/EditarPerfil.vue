@@ -16,56 +16,56 @@
     </b-avatar-group>
     </div>
   </div><br>
-  <div id="user" class="user" v-for="user in listar" :key="listar">
+  <div id="usuario" class="usuario">
   <b-form>
     
     <!--foto-->
     <div role="group">
         <label for="input-live">foto:</label>
-        <input id="nombre" class="form-control" type="file" value=''>
+        <input id="nombre" class="form-control" type="file">
       </div><br>
     <!--foto-->
 <!--Nombre-->
 <div role="group">
     <label for="input-live">Nombre:</label>
-    <input id="nombre" class="form-control" type="text" value='' :value="[[user.nombres]]">
+    <input id="nombre" class="form-control" type="text" :value="[[usuario.nombres]]">
   </div><br>
 <!--Nombre-->
 <!--Apellido-->
 <div role="group">
     <label for="input-live">Apellidos:</label>
-    <input id="nombre" class="form-control" type="text" value='' :value="[[user.apellidos]]">
+    <input id="nombre" class="form-control" type="text" :value="[[usuario.apellidos]]">
 
   </div><br>
 <!--Apellido-->
 <!--Celular-->
 <div role="group">
     <label for="input-live">Celular:</label>
-    <input id="nombre" class="form-control" type="text" value='' :value="[[user.telefono]]">
+    <input id="nombre" class="form-control" type="text" :value="[[usuario.telefono]]">
   </div><br>
 <!--Celular-->
 <!--Direccion-->
 <div role="group">
     <label for="input-live">Direccion:</label>
-    <input id="nombre" class="form-control" type="text" value='' :value="[[user.direccion]]">
+    <input id="nombre" class="form-control" type="text" :value="[[usuario.direccion]]">
   </div><br>
 <!--Direccion-->
 <!--Correo-->
 <div role="group">
     <label for="input-live">Correo:</label>
-    <input id="nombre" class="form-control" type="text" value='' :value="[[user.correo]]">
+    <input id="nombre" class="form-control" type="text" :value="[[usuario.correo]]">
   </div><br>
 <!--Correo-->
 <!--Nacionalidad-->
 <div role="group">
     <label for="input-live">Nacionalidad:</label>
-    <input id="nombre" class="form-control" type="text" value='' :value="[[user.nacionalidad]]">
+    <input id="nombre" class="form-control" type="text" :value="[[usuario.nacionalidad]]">
   </div><br>
 <!--Documento-->
 <div role="group">
    <label for="input-live">Documento:</label>
 <b-input-group>
-  <input id="nombre" class="form-control" type="text" value='' :value="[[user.documento]]">
+  <input id="nombre" class="form-control" type="text" :value="[[usuario.documento]]">
 </b-input-group>
   </div><br>
 <!--Documento-->
@@ -86,19 +86,9 @@ export default {
     data(){
         return{
           show: null,
-          listar:null,
-          form : {
-            id_usuario:null,
-            nombres: null,
-            apellidos: null,
-            direccion: null,
-            foto_perfil: null,
-            nacionalidad: null,
-            documento: null,
-            correo: null,
-            telefono: null,
-            disponibilidad:null
-          },
+          usuario:{},
+          idUsuario:null,
+          form :[],
 
            options: [
       { value: null, text: 'Tipo de documento' },
@@ -120,10 +110,24 @@ GuardarPostulante(){
   });
 },
 },
-mounted(id=1){
-    axios.get("http://localhost:3000/usuario/"+id).then(response=>{
-      this.listar=response.data
-  })
- },
+  async mounted(){
+    await this.listarDatos()
+  },
+  methods:{
+    listarDatos(){
+      axios.get("http://localhost:3000/usuario/"+1)
+      .then((respuesta) => {
+        // console.log(respuesta.data);
+       this.usuario = respuesta.data  
+      })
+      .catch((err) => {//500
+        alert("error del servidor")
+      })
+      .finally(()=>{
+
+      })
+
+    }
+  }
 }
 </script>

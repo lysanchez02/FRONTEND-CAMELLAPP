@@ -32,8 +32,8 @@
           <DetalleOferta /></div>
         <div class="row d-flex justify-content-between" v-else-if="show === 'Ofertas'">
           <!--start card-->
-              <div v-for="ofertaEmpleo in listaOfertaEmpleo" :key="ofertaEmpleo.id_ofertaEmpleo" :title="ofertaEmpleo.nombres"
-                img-alt="Image" img-top tag="article" style="max-width: 25rem;" class="card mb-2 m-1 btn-ligth">
+              <div v-for="ofertaEmpleo in listaOfertaEmpleo" :key="ofertaEmpleo.id_ofertaEmpleo" :title="ofertaEmpleo.nombres" 
+              img-alt="Image" img-top tag="article" style="max-width: 25rem;" class="card mb-2 m-1 btn-ligth"><br>
               <img src="https://www.semana.com/resizer/JmiB52VJxZmk799j7D2CEeTZ1x4=/arc-anglerfish-arc2-prod-semana/public/R52D6MSO7ZB4DF3W4QM4LECYIA.jpg" alt="">
                 <b-card-text>{{ofertaEmpleo.descripcion}}</b-card-text>
             <b-card-text>{{ofertaEmpleo.horario}}</b-card-text>
