@@ -1,11 +1,7 @@
 <template>
   <div id="app">
-<<<<<<< HEAD
-    <nav>
-=======
     <!--  <nav>
       <router-link to="/RegistroView">Registro</router-link>|
->>>>>>> camellapp
       <router-link to="/">Home</router-link> |
       <router-link to="/LoginView">Login</router-link> |      
       <router-link to="/RegistroView">Registro</router-link> |
