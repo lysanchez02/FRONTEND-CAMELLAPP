@@ -41,7 +41,7 @@
             <div class="col-6 d-flex justify-content-between">
               <input
                 class="form-control"
-                v-model="form.username"
+                v-model="form.correo"
                 type="email"
                 placeholder="Correo"
               /><br />
@@ -50,8 +50,8 @@
           <br />
           <input
             class="form-control"
-            v-model="form.fotoPerfil"
-            type="image"
+            :v-model="form.fotoPerfil"
+            type="file"
             src="foto"
             alt="Selecciona una foto de perfil"
           />
@@ -116,7 +116,12 @@
             </div>
           </div>
           <br />
-
+          <input
+            class="form-control"
+            v-model="form.username"
+            type="text"
+            placeholder="username"
+          />
           <input
             class="form-control"
             v-model="form.password"
@@ -132,6 +137,7 @@
           <br />
 
           <div class="d-flex justify-content-evenly">
+<<<<<<< HEAD
             <b-button
               v-on:click="success()"
               href="/admin"
@@ -143,6 +149,10 @@
               ><b-icon icon="megaphone"></b-icon> Quiero Publicar Un
               Empleo</b-button
             ><br />
+=======
+            <b-button v-on:click="GuardarUsuario()" href="/PerfilPostulante" variant="info" class="m-1"><b-icon icon="search"></b-icon> Busco Empleo</b-button>
+            <b-button v-on:click="GuardarUsuario()" href="/PerfilEmpleador"  variant="info" class="m-1"><b-icon icon="megaphone"></b-icon> Quiero Publicar Un Empleo</b-button><br/>
+>>>>>>> 67d4833c88c465f019ba8fe3bc405e390d706132
           </div>
         </div>
       </div>
@@ -165,6 +175,7 @@ export default {
         documento: null,
         fotoPerfil: null,
         telefono: null,
+        correo:null,
         direccion: null,
         username: null,
         password: null,
@@ -176,6 +187,16 @@ export default {
     success() {
       alert("Te has registrado exitosamente!");
     },
+<<<<<<< HEAD
+=======
+    GuardarPostulante(){
+      alert('hecho');
+      axios.post(" http://localhost:3000/guardarUsuario",this.form)
+      .then((data) => {
+        console.log(data);
+      });
+  },
+>>>>>>> 67d4833c88c465f019ba8fe3bc405e390d706132
   },
 };
 </script>
